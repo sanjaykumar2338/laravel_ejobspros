@@ -1,0 +1,503 @@
+@media (max-width: 1399.98px) { 
+    .section1 p span.typed-text {
+        font-size: 30PX;
+      }
+      .section1 p span.cursor {
+        top:2%;
+      }
+      .about-section-2 .style-box .text {
+        width: 100%;
+        border-radius: 0px;
+        height: 100%;
+    }
+}
+/* close the 1399 media  */
+@media (max-width: 1199.98px) {
+    .edit {
+        font-size: 13px;
+        padding: 4px;
+        margin: 5px;
+    }
+    .section1 .style h3 {
+        font-size: 25px;
+    }
+    .section1 p span.typed-text {
+        font-size: 20PX;
+      }
+      .section1 p span.cursor {
+        top:1%;
+      }
+      .section1 .all {
+        font-size: 22px;
+    }
+    .section1 .We {
+        font-size: 16px;
+    }
+    footer .style li {
+        padding: 7px;
+        font-size: 13px;
+    }.section3 .design {
+        width: 100%;
+        max-width: 55%;
+    }
+    .section5 .card-style p {
+        font-size: 14px;
+    }
+    .section9 .edit-box .img img {
+        height: 146px;
+    }
+    .section9 .edit-box .text {
+        font-size: 13px;
+    }
+    /* about us page css  */
+    .about-section-2 .style-box .text p {
+        font-size: 15px;
+        padding-top: 3px;
+    }
+
+
+    .c-section .box-style .text{
+        /* height: 450PX; */
+        width: 100%;
+        padding: 25PX;
+    }
+
+
+
+}
+/* close the 1199 media  */
+
+@media (max-width: 991.98px) { 
+    .dropdown-item{
+        text-align: center;
+    }
+    .navbar-toggler {
+        background-color:  #005cff;
+        z-index: 7;
+        color: white;
+        padding: 10px 13px 10px 13px;
+    }
+    .navbar-collapse {
+        padding: 20px 0px !important;
+        padding: 24px 0px !important;
+        text-align: center;
+    }
+    .edit{
+        font-size: 15px;
+        padding: 6px;
+        margin: 5px;
+    }    
+    .login {
+        margin-left: 0px;
+        max-width: 150px;
+        width: 100%;
+        margin: auto;
+        display: block;
+    }
+    .section2 .style-1 {
+        margin: 12px 0px;
+    }
+    .section2 .style-1 .text p {
+        font-size: 13px;
+    }
+    .section3::before {
+        min-height: 750px;
+        left: 0%;
+    }
+    .section3 {
+        padding: 13px;
+    }
+    .section3 .website {
+        font-size: 14px;
+    }
+    .section3 .Build {
+        color: white;
+        font-size: 13px;
+        width: 100%;
+        max-width: 100%;
+        padding-top: 15px;
+        line-height: 23px;
+    }
+    .section3 .design {
+        width: 100%;
+        max-width: 100%;
+    }
+    .section3 .design {
+        
+        font-size: 13px;
+    }
+    .section3 .development {
+        color: white;
+        font-size: 13px;
+        width: 100%;
+        line-height: 23px;
+        padding-top: 0px;
+    }
+    .section3 .Get {
+        margin-left: 0px;
+    }
+    .tel {
+        margin-left: 0px !important; 
+    }
+    .section6::before {
+        min-height: 770px;
+    }
+    .section6 .box-edit {
+        padding: 20px;
+    }
+    .section6 .box-edit .DIGITAL {
+        font-size: 15px;
+        line-height: 149%;
+    }
+    .section6 .box-edit h3 {
+        font-size: 28px;
+    }
+    .section6 .box-edit .Scale {
+        width: 100%;
+    }
+    .section6 .box-edit .Learn {
+        margin-left: 0px;
+    }
+    .section6 .box-edit .Now {
+        margin-left: 0px;
+    }
+    .section7 .style .WEB {
+        line-height: 23px;
+    }
+    .section7 .style H3 {
+        font-size: 25px;
+    }
+    .section7 .style .Schedule {
+        font-size: 15px;
+    }
+    .section7 .style .Start-Now {
+        margin-left: 0px;
+    }
+    .section3 h3 {
+        font-size: 29px;
+    }
+    .section9 .edit-box .img img {
+        height: 171px;
+    }
+    .section10 .style h4 {
+        font-size: 20px;
+    }
+    .section10 .style p {
+        font-size: 13px;
+        width: 100%;
+        line-height: 23px;
+    }
+    /* about us css   */
+    section .Website {
+        max-width: 100%;
+        width: 100%;
+    }
+    .about-section-2 .style-box .text {
+        transform: translatey(700px);
+    }
+    /* website page css  */
+    .banner-section .style .text h4 {
+        padding-top: 20px;
+    }
+    /* .competitve-section css  */
+    .competitve-section h4 {
+        font-size: 29px;
+        font-weight: 600;
+        font-family: Poppins, sans-serif;
+        padding-top: 19px;
+    }
+    .c-section .box-style .text {
+        width: 100%;
+        padding: 25PX;
+        height: auto;
+        border-radius: 0PX;
+    }
+
+
+
+
+
+ }
+/* close the 991 media  */
+
+
+@media (max-width: 767.98px) { 
+    .dropdown-item{
+        text-align: center;
+    }
+    .section2 .style-1 .text p {
+        font-size: 14px;
+    }   
+    .section4 section .text h4 {
+        font-size: 22px;
+    } 
+    .section4 section .text p {
+        padding-top: 5px;
+        width: 100%;
+        max-width: 100%;
+    }
+    .section5 .card-style {
+        margin: 10px 0px;
+    }
+    .section6::before {
+        min-height: 796px;
+    }
+    .style-g{
+        margin: 17px 0px;
+    }
+    .section8::before {
+        min-height: 494px;
+    }
+    .section9 .edit-box .img img {
+        height:auto;
+        width: 100%;
+    }
+    .section9 .edit-box .text {
+        font-size: 15px;
+    }
+    .section10 .style p {
+        font-size: 14px;
+    }
+    /* website design css  */
+    .web-section1 .card-style .text {
+        transform: translatey(500px);
+    }
+
+    /* digital marketing css  */
+    .cards-section .style-box .text {
+        transform: translatey(500px);
+        
+    }
+    /* digitalsolutions  */
+    .section-to .style-box .text {
+        transform: translatey(580px);
+    }
+    /* .competitve-page css  */
+    .competitve-section h4 {
+        font-size: 21px;
+        padding-top: 0px;
+    }
+    /* pay per page css  */
+    .pay h4 {
+        font-size: 25px;
+    }
+
+    .perf-section h4 {
+        font-size: 20px;
+    }
+    .perf-section form h5 {
+        font-size: 25px;
+    }
+    /* brading page css  */
+    .section-br h4 {
+        font-size:19px;
+    }
+    /* maintence  */
+    .m-section h4 {
+        font-size: 26px;
+    }
+    .ca-section h4 {
+        padding-top: 19px;
+        font-size: 21px;
+        line-height: 30px;
+    }
+    .pr-section h4 {
+        padding-bottom: 20px !important;
+        font-size: 24px !important;
+    }
+    .about-section-2 .style-box .text{
+        padding: 5px;
+    }
+    .about-section-2 .style-box .text h4 {
+        font-size: 15px;
+    }
+ }
+/* close the 767 media  */
+
+@media (max-width: 575px) { 
+    .dropdown-item{
+        text-align: center;
+    }
+    .login {
+        font-size: 12px;
+        max-width: 120px;
+        width: 100%;
+    }
+    .section4 section .text h4 {
+            font-size: 13px;
+    }
+    .section4 section .text p {
+        color: white;
+        font-size: 15px;
+        width: 100%;
+        max-width: 100%;
+    }
+    .section5 .card-style p {
+        font-size: 15px;
+        line-height: 28px;
+    }
+    .section6 .box-edit .Now {
+        margin-left: 10px;
+    }
+    .section9 {
+        padding: 13px;
+    }
+    .section1 .Get {
+        margin-left: 0px;
+    }
+    footer{
+        padding: 10px;
+    }
+    footer .li {
+        font-size: 15px;
+    }
+    footer .icon i {
+        padding: 12px;
+    }
+    /* about us css  */
+    .about-section-2 .style-box .text p {
+        font-size: 14px;
+    }
+    section .Website {
+        font-size: 24px;
+    }
+    .about-section-1 .card-design .text h3 {
+        padding-top: 18px;
+        font-size: 24px;
+    }
+    /* success-essential page css  */
+    .success-1 h4 {
+        font-size: 25px;
+    }
+    .w-section h4 {
+        font-size: 26px;
+    }
+    .c-section .box-style .text {
+        padding: 1PX;
+    }
+    .ca-section h4 {
+        padding-top: 19px;
+        font-size: 18px;
+        line-height: 27px;
+    }
+    .pr-section h4 {
+        padding-bottom:10px !important;
+    }
+    .about-section-2 .style-box .text p {
+        font-size: 9px;
+    }
+    .c-section .box-style .text p {
+        font-size:9px;
+    }
+    .contact-banner::before{
+        min-height:100%;
+    
+    }
+    .contact-banner .text h4 {
+        font-size: 23px;
+        line-height: 36px;
+    }
+    .section-cards-1 .box-style{
+        margin: 7px 0px;
+    }
+  
+        
+}
+/* close the 575 media  */
+
+
+
+@media (max-width: 375px) {
+    .dropdown-item{
+        text-align: center;
+    } 
+    .section3::before {
+        min-height: 100%;
+    }
+    .section3 {
+        min-height: 490px;
+    }
+    .section4 section .text .tel {
+        padding: 13px 13px 9px 13px;
+        font-size: 12px;
+    }
+    .section4 section .text .tel::before {
+        height: 43px;
+    }
+    .section6::before {
+        min-height: 100% ;
+    }
+    .section8::before {
+        min-height: 100%;
+    }
+    footer {
+        padding: 0PX;
+    }
+    /* about us page css  */
+    section .Website {
+        font-size: 17px;
+    }
+    /* free consultation css  */
+    .banner-f .text h4 {
+        font-size: 20PX;
+    }
+    .banner-f .text p{
+        font-size: 15px !important;
+    }
+    .f-section .text-center h4 {
+        font-size: 23px !important;
+    }
+    .competitve-section form h5 {
+        font-size: 22px;
+    }
+    .social-section h4 {
+        font-size: 25px;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        padding-top: 19px;
+    }
+    .pay h4 {
+        font-size: 17px;
+    }
+
+    .c-section .box-style .text h3{
+        font-size: 18px !important;
+    }
+    .speed-section h4 {
+        font-size: 24px;
+    }
+    .get-section h4 {
+        font-size: 24px;
+    }
+    .pr-section h4 {
+        padding-bottom:10px !important;
+    }
+    .contact-banner .text h4 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .c-section-2 .styleling .text h5 {
+        font-size: 20PX;
+    }
+    .c-section-2 .main-style .Send {
+        font-size: 20px;
+      
+    }
+    .bg p {
+        font-size: 13px !important;
+        line-height: 21px !important;
+    }
+    .c-section .box-style .text p {
+        font-size: 10px;
+    }
+    .contact-banner::before{
+        width: 100%;
+        min-height:100%;
+    }
+    .section-cards-1 .box-style{
+        margin: 7px 0px;
+    }
+  
+    
+}
+
