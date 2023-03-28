@@ -3,7 +3,7 @@
           <div class="container">
             <div class="row mt-5 gap-5 d-flex justify-content-lg-center align-items-center">
               <div class="col-lg-3 col-md-6 col-sm-12 mt-5 style-li">
-                <img src="{{ asset('/images/logo.png')}}" alt="">
+                <img src="{{url('/asset/images/logo.png')}}" alt="">
                 <div class="d-flex align-items-center mt-5">
               <i class="fa-solid fa-envelope"></i>
                  <a href="mailto:contact@ejobs4pros.com"><li class="li"> contact@ejobs4pros.com</li></a>
@@ -14,10 +14,9 @@
                 </div>
                 <!-- call mail close  -->
                 <div class="icon mt-4">
-                  <i class="fa-brands fa-facebook"></i>
-                  <i class="fa-brands fa-instagram"></i>
-                  <i class="fa-brands fa-linkedin"></i>
-                  <i class="fa-brands fa-twitter"></i>
+                  <a href="https://www.facebook.com/ejobs4pros/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="https://www.youtube.com/c/Ejobs4pros/featured" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                  <a href="https://www.linkedin.com/in/ejobs4pros" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
               </div>
             <!-- col-close  -->
@@ -215,3 +214,4 @@
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="{{ asset('/js/common.js')}}?v={{time()}}"></script>

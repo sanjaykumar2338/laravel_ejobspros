@@ -3146,3 +3146,294 @@ padding: 50px 0px 50px 0px;
     width: 100%;
     height: 400px;
 }
+
+:root{
+    --small-heading:#005cff;
+    --btn-bg:#005cff;
+    --btn-hover:#232323;
+    --heading-text-color:#13121d;
+    --hover-line:#005cff;
+    --p-color:#13121d;
+}
+.section1{
+    min-height: 800px;
+    background-color: gray;
+    background-image: url("./../images/banner.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.section1::before{
+    width: 100%;
+    position: absolute;
+    content: '';
+    background-color: black;
+    min-height: 800px;
+    opacity: 0.3;
+    top: 0%;
+}
+
+/* col-style  */
+.section1 .all {
+    font-weight: normal;
+    color: white;
+    z-index: 7;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40PX;
+    letter-spacing: 1PX;
+    font-weight: 600;
+    position: relative;
+
+}
+.section1 .We{
+    color: white;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    line-height: 148%;
+    width: 100%;
+    max-width: 86%;
+
+}
+
+/* button:hover  */
+.section1 .tel{
+    border:  var(--btn-bg);
+    padding: 15px 30px 15px 30px;
+    color: white;
+    font-size: 17px;
+    margin-top: 15px;
+    transition: 0.3s;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--btn-bg);
+    position: relative;
+    z-index: 7;
+
+}
+.section1 .tel::before{
+    position: absolute;
+    content: '';
+    height: 56px;
+    width: 0%;
+    background-color: transparent;
+    left: 0%;
+    top: 0%;
+    transition: 0.3s;
+    border-radius: 5px;
+    z-index: -7;
+
+}
+.section1 .tel:hover::before{
+    width: 100%;
+    background-color: var(--btn-hover);
+}
+.section1 .Get{
+    padding: 15px 30px 15px 30px;
+    font-size: 17px;
+    margin-left: 12px;
+    outline: none;
+    border: #005cff;
+    border-radius: 5px;
+    background-color: var(--btn-bg);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    z-index: 7;
+    margin-top: 10px;
+
+}
+.section1 .Get::before{
+    position: absolute;
+    content: '';
+    height: 56px;
+    width: 0%;
+    background-color: transparent;
+    left: 0%;
+    top: 0%;
+    transition: 0.3s;
+    z-index: -7;
+    border-radius: 5px;
+}
+.section1 .Get:hover::before{
+    width: 100%;
+    background-color: var(--btn-hover);
+}
+/* button:hover  */
+
+
+.section1 p span.typed-text {
+  font-weight: normal;
+  color: white;
+  z-index: 7;
+  font-family: 'Poppins', sans-serif;
+  font-size: 30PX;
+  letter-spacing: 1PX;
+  font-weight: 700;
+}
+.section1 p span.cursor {
+  display: inline-block;
+  margin-left: 0.2rem;
+  width: 3px;
+  height: 30PX;
+  animation: blink 1s infinite;
+  background-color: white;
+  min-height: 40px;
+  position: absolute;
+}
+.section1 p span.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0%  { background-color: #ccc; }
+  49% { background-color: #ccc; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #ccc; }
+}
+/* col-one style close  */
+.section1 .style{
+    min-height: 350px;
+    padding: 26px;
+    border-radius: 9px;
+    backdrop-filter: blur(4px);
+    /* border: 1px solid #eee; */
+    /* opacity: 0.3; */
+    background: rgb(128 146 174 / 34%);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    position: relative;    
+}
+.section1 .style h3{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+
+
+}
+.section1 .style .form-1{
+    /* margin-top: 10px !important; */
+}
+.section1 label:hover{
+    cursor: pointer;
+}
+.section1 label{
+    color: white;
+    font-size: 17px;
+    padding-left: 10px;
+}
+.section1 label:hover
+{
+    cursor: pointer;
+}
+.section1 .style input{
+    height: 20px;
+    width: 23px;
+    border: none;
+    outline: none;
+    position: relative;
+    background-color:transparent;
+    position: relative;
+}
+.section1 .style input::before{
+    position: absolute;
+    content: '';
+    height: 21px;
+    border-radius: 50%;
+    width: 22px;
+    border:2px solid var(--btn-bg);
+    background-color: transparent;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+}
+.section1 .style .btn-submit{
+    padding: 10px 25px 10px 25px;
+    outline: none;
+    margin-left: 2.1%;
+    color: white;
+    font-size: 17px;
+    border-radius: 3px;
+    background-color: transparent;
+    border:1px solid white;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+.section1 .style .btn-submit::before{
+    position: absolute;
+    content: '';
+    height: 48px;
+    width: 0%;
+    background-color: transparent;
+    left: 0%;
+    top: 0%;
+    transition: 0.3s;
+    border-radius: 5px;
+    z-index: -7;
+}
+.section1 .style .btn-submit:hover{
+    border: 1px solid var(--btn-hover);
+
+}
+.section1 .style .btn-submit:hover::before{
+    background-color: var(--btn-hover);
+    width: 100%;
+    
+}
+
+
+
+
+/* GET A QUOTE start  */
+.section1 .GET-A-QUOTE .form-style-2{
+    height: 442px !important;
+    padding: 26px;
+    border-radius: 9px;
+    backdrop-filter: blur(4px);
+    background: rgb(128 146 174 / 34%);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    display: none;
+} 
+.section1 .GET-A-QUOTE .form-style-2 h4{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    padding-bottom: 10px;
+}
+.section1 .GET-A-QUOTE .form-style-2 input{
+    width: 100%;
+    margin: 7px 0px;
+    border-radius: 2px;
+    padding:11px;
+    background-color: #F3F6FB;
+    border: none;
+    outline: none;
+    background-color: #F3F6FB;
+} 
+.section1 .GET-A-QUOTE .form-style-2 button{
+    padding: 10px 30px 10px 30px;
+    outline: none;
+    font-size: 17px;
+    border-radius: 3px;
+    color: white;
+    border: none;
+    outline: none;
+    background-color: var(--btn-bg);
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+}
+/* GET A QUOTE CLOSE */
+
+/* section1 css close  */

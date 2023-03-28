@@ -2,28 +2,28 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                
-              <a class="navbar-brand" href="index.html"><img src="{{ asset('/images/logo.png')}}" alt=""></a>
+              <a class="navbar-brand" href="{{url('/')}}"><img src="{{url('/asset/images/logo.png')}}" alt=""></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa-solid fa-bars"></i>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link edit " href="index.html">Home</a>
+                    <a class="nav-link edit " href="{{url('/')}}">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link edit " href="about.html">ABOUT US</a>
+                    <a class="nav-link edit " href="{{url('/aboutus')}}">ABOUT US</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle edit" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       SERVICES
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="websitedesign.html">web design</a></li>
-                      <li><a class="dropdown-item" href="DigitalMarketing.html">Digital marketing</a></li>
-                      <li><a class="dropdown-item" href="digitalsolutions.html">Digital solutions</a></li>
-                      <li><a class="dropdown-item" href="seoresources.html">seo resources</a></li>
-                      <li><a class="dropdown-item" href="freeconsultation.html">free consultation</a></li>
+                      <li><a class="dropdown-item" href="{{url('web-design')}}">web design</a></li>
+                      <li><a class="dropdown-item" href="{{url('digital-solutions')}}">Digital marketing</a></li>
+                      <li><a class="dropdown-item" href="{{url('digital-solutions')}}">Digital solutions</a></li>
+                      <li><a class="dropdown-item" href="{{url('digital-solutions')}}">seo resources</a></li>
+                      <li><a class="dropdown-item" href="{{url('digital-solutions')}}">free consultation</a></li>
                     </ul>
                   </li>
                   <li class="nav-item dropdown">

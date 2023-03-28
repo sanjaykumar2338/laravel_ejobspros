@@ -3,10 +3,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HOME</title>
 <!-- bootstrap file  -->
-<link rel="stylesheet" href="{{ asset('/css/bootstrap.min.css')}}">
-<script src="{{ asset('/js/bootstrap.bundle.min.js')}}"></script>
+<link rel="stylesheet" href="{{url('/asset/css/bootstrap.min.css')}}">
+<script src="{{url('/asset/js/bootstrap.bundle.min.js')}}"></script>
 <!-- stylesheet  -->
-<link rel="stylesheet" href="{{ asset('/css/stylesheet.css')}}">
+<link rel="stylesheet" href="{{url('/asset/css/stylesheet.css')}}">
 <!-- font-awesome cdn  -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!-- font-family  -->
@@ -16,4 +16,4 @@
 <!-- slider section 10 css-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <!-- responsive css  -->
-<link rel="stylesheet" href="{{ asset('/css/responsive.css')}}">
+<link rel="stylesheet" href="{{url('/asset/css/responsive.css')}}">
