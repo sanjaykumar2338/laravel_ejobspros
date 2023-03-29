@@ -4,17 +4,13 @@
 <!-- header close  -->
 <section class="get-section">
     <div class="container">
-        <h4>Get a Quote for you website
+        <h4>Schedule an Appointment
         </h4>
-        <P> Like all business owners, you care about the bottom line of your business. You might be interested in digital marketing, SEO, website design, and more but you are wondering how much it’s going to cost. Contact us to get a quote today!</P>
-	    
-	    
-	    
 	    @if (Session::has('message'))
 		   <div class="alert alert-info">{{ Session::get('message') }}</div>
 		@endif
 
-	    <form class="mt-5" name="get_quote" method="post" action="{{url('post_quote')}}">
+	    <form class="mt-5" name="get_quote" method="post" action="{{url('post_appointment')}}">
 	    	@csrf
 	        <h5> GET A QUOTE</h5>
 	        <div class="row ">
@@ -42,10 +38,33 @@
                     <span class="text-danger">{{ $errors->first('contact_number') }}</span>
                 @endif
 	        </div>
+	        
 	        <div class="col-lg-12  ">
 	            <input type="url" placeholder="Website url" name="website_url" value="{{old('website_url')}}">
 	            @if ($errors->has('website_url'))
                     <span class="text-danger">{{ $errors->first('website_url') }}</span>
+                @endif
+	        </div>
+
+	        <div class="col-lg-6  ">
+	            <input type="date" placeholder="Date" name="date" value="{{old('date')}}">
+	            @if ($errors->has('website_url'))
+                    <span class="text-danger">{{ $errors->first('date') }}</span>
+                @endif
+	        </div>
+
+
+			<div class="col-lg-6">
+	            <input type="time" placeholder="Time" name="time" value="{{old('time')}}">
+	            @if ($errors->has('website_url'))
+                    <span class="text-danger">{{ $errors->first('time') }}</span>
+                @endif
+	        </div>
+
+	        <div class="col-lg-12">
+	            <input type="place" placeholder="Place" name="place" value="{{old('place')}}">
+	            @if ($errors->has('website_url'))
+                    <span class="text-danger">{{ $errors->first('place') }}</span>
                 @endif
 	        </div>
 

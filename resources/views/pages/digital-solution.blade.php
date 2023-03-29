@@ -2,7 +2,7 @@
 @section('content')
 
  <!-- header close  -->
-<section class="banner-s-1 d-flex align-items-center">
+<section class="section1 banner-s-1 d-flex align-items-center">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12  d-flex align-items-center z-3">
@@ -14,43 +14,72 @@
                           </div>
                 </div>
                 <!-- col-close  -->
-                <div class="col-lg-6 col-md-12 col-sm-12  z-3">
+                <div class="col-lg-6 col-md-12 col-sm-12">
                     <div class="style-1">
-                        <h3>DIGITAL SOLUTIONS
-                        </h3>
-                    <form action="sumbit">
+
+                      @if (Session::has('message'))
+                        <div class="alert alert-info">{{ Session::get('message') }}</div>
+                      @endif
+                      
+                      <form action="sumbit" id="main_frm">
+                        
+                        <h3>DIGITAL SOLUTIONS</h3>
+
                         <div class="form-1  mt-5 d-flex align-items-center" action="sumbit">
-                            <input type="radio" id="Success Essentials" name="services" value="Success Essentials">
+                            <input type="radio" required id="Success Essentials" name="services" value="Success Essentials">
                         <label for="Success Essentials">Success Essentials</label>
                         </div>
       
                         <div class="form-1 mt-3  d-flex align-items-center">
-                            <input type="radio" id="Competitive Edge" name="services" value="Competitive Edge">
+                            <input type="radio" required id="Competitive Edge" name="services" value="Competitive Edge">
                           <label for="Competitive Edge">Competitive Edge</label>
                           </div>
       
                           <div class="form-1 mt-3 d-flex align-items-center">
-                              <input type="radio" id="Social E-Commerce" name="services" value="Social E-Commerce">
+                              <input type="radio" required id="Social E-Commerce" name="services" value="Social E-Commerce">
                            <label for="Social E-Commerce">Social E-Commerce</label>
                            </div>
       
                            <div class="form-1 mt-3 d-flex align-items-center">
-                              <input type="radio" id="Pay Per Lead" name="services" value="Pay Per Lead">
+                              <input type="radio" required id="Pay Per Lead" name="services" value="Pay Per Lead">
                             <label for="Pay Per Lead">Pay Per Lead</label>
                             </div>
       
                              <div class="form-1 mt-3 d-flex align-items-center">
-                                <input type="radio" id="Pay Per Performance" name="services" value="Pay Per Performance">
+                                <input type="radio" required id="Pay Per Performance" name="services" value="Pay Per Performance">
                              <label for="Pay Per Performance">Pay Per Performance</label>
                            </div>
                            <div class="form-1 mt-3 d-flex align-items-center">
-                              <input type="radio" id="Branding" name="services" value="Branding">
+                              <input type="radio" required id="Branding" name="services" value="Branding">
                            <label for="Branding">Branding</label>
                          </div>
-                           <button type="submit" value="submit" class="btn-submit mt-4">CONTINUE</button>
+                           <button type="submit" value="submit" class="btn-submit mt-4 web_design_btn">CONTINUE</button>
                            </form>
                         <!-- form  -->
                            </div>
+
+                           <!-- I AM LOOKING FOR:FORM HTML CLOSE  -->
+                          <form class="GET-A-QUOTE" method="post" action="{{url('/post_quote')}}">
+
+                              @csrf
+                              <div class="form-style-2" style="display:none;">
+                                <h4> GET A QUOTE</h4>
+                                <!-- heading close  -->
+                                <input type="text" required name="your_name" placeholder="First Name">
+                                <input type="text" required name="last_name" placeholder="Last Name">
+                                <input type="email" required name="email" placeholder="email">
+                                <input type="tel" name="contact_number" placeholder="contact number">
+                                <input type="text" name="website_url" placeholder="Website url">
+
+                                <input type="hidden" name="category" value="Web Design" id="category">
+                                <input type="hidden" name="sub_category" id="sub_category">
+
+                                <button class="" type="submit" name="frm_submit">Send</button>
+                                <button class="back_last_btn"> Back</button>
+                              </div>
+
+                          </form>
+                          <!-- GET-A-QUOTE FORM CLOSE  -->
                 </div>
             </div>
         </div>
@@ -168,4 +197,24 @@
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184552.57289742303!2d-79.51814179377936!3d43.71815566213178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sin!4v1678602016785!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
 <!-- section close     -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $('.web_design_btn').on('click', function(e){
+      e.preventDefault();
+      var radioValue = $("input[name='services']:checked").val();
+      if (typeof radioValue  !== "undefined"){
+        $('#sub_category').val(radioValue);
+        $('#main_frm').hide();
+        $('.form-style-2').show();
+      }
+  });
+
+  $('.back_last_btn').on('click', function(e){
+    e.preventDefault();
+    $('#main_frm').show();
+    $('.form-style-2').hide();    
+  });
+</script>
+
 @stop

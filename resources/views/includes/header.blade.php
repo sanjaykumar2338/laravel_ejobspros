@@ -20,10 +20,10 @@
                     </a>
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="{{url('web-design')}}">web design</a></li>
-                      <li><a class="dropdown-item" href="{{url('digital-solutions')}}">Digital marketing</a></li>
+                      <li><a class="dropdown-item" href="{{url('digital-marketing')}}">Digital marketing</a></li>
                       <li><a class="dropdown-item" href="{{url('digital-solutions')}}">Digital solutions</a></li>
-                      <li><a class="dropdown-item" href="{{url('digital-solutions')}}">seo resources</a></li>
-                      <li><a class="dropdown-item" href="{{url('digital-solutions')}}">free consultation</a></li>
+                      <li><a class="dropdown-item" href="{{url('seo-resources')}}">seo resources</a></li>
+                      <li><a class="dropdown-item" href="{{url('free-consultation')}}">free consultation</a></li>
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
@@ -31,13 +31,13 @@
                       Digital Solutions
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="success-essentials.html">success essentials</a></li>
-                      <li><a class="dropdown-item" href="CompetitiveEdge.html">competitve edge</a></li>
-                      <li><a class="dropdown-item" href="Social.html">social ecommerce</a></li>
-                      <li><a class="dropdown-item" href="PayPer.html">pay per lead</a></li>
-                      <li><a class="dropdown-item" href="Performance.html">pay per performance</a></li>
-                      <li><a class="dropdown-item" href="Branding.html">branding</a></li>
-                      <li><a class="dropdown-item" href="Maintenance.html">maintenace</a></li>
+                      <li><a class="dropdown-item" href="{{url('digital-solutions/success-essentials')}}">success essentials</a></li>
+                      <li><a class="dropdown-item" href="{{url('digital-solutions/competitive-edge')}}">competitve edge</a></li>
+                      <li><a class="dropdown-item" href="{{url('digital-solutions/social-ecommerce')}}">social ecommerce</a></li>
+                      <li><a class="dropdown-item" href="{{url('digital-solutions/pay-per-lead')}}">pay per lead</a></li>
+                      <li><a class="dropdown-item" href="{{url('digital-solutions/pay-per-performance-2')}}">pay per performance</a></li>
+                      <li><a class="dropdown-item" href="{{url('digital-solutions/branding2')}}">branding</a></li>
+                      <li><a class="dropdown-item" href="{{url('digital-solutions/maintenance')}}">maintenace</a></li>
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
@@ -45,13 +45,13 @@
                       resources
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="WebsiteAudit.html">free website audit</a></li>
-                      <li><a class="dropdown-item" href="CompetitorAnalysis.html">competitive analiysis</a></li>
-                      <li><a class="dropdown-item" href="WebsiteSpeed.html">website speed grade</a></li>
-                      <li><a class="dropdown-item" href="GetaQuote .html">Get a Quote</a></li>
-                      <li><a class="dropdown-item" href="Ge aProposal.html">get a proposal</a></li>
-                      <li><a class="dropdown-item" href="Appointment.html">shedule an appointment</a></li>
-                      <li><a class="dropdown-item" href="Contact.html">contact us</a></li>
+                      <li><a class="dropdown-item" href="{{url('seo-resources/website-audit')}}">free website audit</a></li>
+                      <li><a class="dropdown-item" href="{{url('seo-resources/competitor-analysis')}}">competitive analiysis</a></li>
+                      <li><a class="dropdown-item" href="{{url('seo-resources/website-speed')}}">website speed grade</a></li>
+                      <li><a class="dropdown-item" href="{{url('free-consultation/get-a-quote')}}">Get a Quote</a></li>
+                      <li><a class="dropdown-item" href="{{url('free-consultation/get-a-proposal')}}">get a proposal</a></li>
+                      <li><a class="dropdown-item" href="{{url('analysis/appointment')}}">shedule an appointment</a></li>
+                      <li><a class="dropdown-item" href="{{url('contact-us')}}">contact us</a></li>
                     </ul>
                   </li>
 

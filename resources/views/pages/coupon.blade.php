@@ -4,9 +4,9 @@
 <!-- header close  -->
 <section class="get-section">
     <div class="container">
-        <h4>Get a Quote for you website
+        <h4>Are You Ready to Take Your Website to the Next Level?
         </h4>
-        <P> Like all business owners, you care about the bottom line of your business. You might be interested in digital marketing, SEO, website design, and more but you are wondering how much it’s going to cost. Contact us to get a quote today!</P>
+        <P>Call the team at eJobs4Pros to book a free consultation to discuss all of your digital marketing needs. Whether you want to focus on SEO, PPC, digital marketing, branding, or a redesign of your current website – we are here to meet all of your needs!</P>
 	    
 	    
 	    
@@ -49,8 +49,9 @@
                 @endif
 	        </div>
 
-	        <input type="hidden" name="category" value="Free Consultation" id="category">
-            <input type="hidden" name="sub_category" value="Quote" id="sub_category">
+	        <input type="hidden" name="category" value="Request Coupon" id="category">
+            <input type="hidden" name="sub_category" value="Coupon" id="sub_category">
+            
 	     </div> 
 	     <button class="mt-3" type="submit" name="submit_form">SEND </button>
     </form>

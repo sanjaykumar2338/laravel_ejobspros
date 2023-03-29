@@ -1,8 +1,7 @@
 @extends('layouts.getquote')
 @section('content')
 
-
-<div class="banner-section d-flex align-items-center">
+<div class="section1 banner-section d-flex align-items-center">
         <div class="container">
             <div class="row">
               <div class="col-lg-6 col-md-12 col-sm-12 d-flex align-items-center ">
@@ -16,43 +15,76 @@
                 </div>
               </div>
               <!-- col-close  -->
-              <div class="col-lg-6 col-md-12 col-sm-12  ">
+              <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="style-to">
-                  <h3> WEB DESIGN</h3>
-                  <!-- form  -->
-                  <form action="sumbit">
-                  <div class="form-1  mt-5 d-flex align-items-center">
-                      <input type="radio" id="website" name="services" value="website">
-                  <label for="website">website</label>
-                  </div>
 
-                  <div class="form-1 mt-3  d-flex align-items-center">
-                      <input type="radio" id="Landing-Page" name="services" value="Landing-Page">
-                    <label for="Landing-Page">Landing Page</label>
+                  @if (Session::has('message'))
+                   <div class="alert alert-info">{{ Session::get('message') }}</div>
+                  @endif
+                  <!-- form  -->
+                  <form action="sumbit" id="main_frm">
+                    
+                    <h3> WEB DESIGN</h3>
+
+                    <div class="form-1  mt-5 d-flex align-items-center">
+                      <input type="radio" required id="website" name="services" value="website">
+                      <label for="website">website</label>
+                    </div>
+
+                    <div class="form-1 mt-3  d-flex align-items-center">
+                      <input type="radio" required id="Landing-Page" name="services" value="Landing-Page">
+                      <label for="Landing-Page">Landing Page</label>
                     </div>
 
                     <div class="form-1 mt-3 d-flex align-items-center">
-                        <input type="radio" id="Social-Shop" name="services" value="Social-Shop">
-                     <label for="Social-Shop">Social Shop</label>
-                     </div>
+                      <input type="radio" required id="Social-Shop" name="services" value="Social-Shop">
+                      <label for="Social-Shop">Social Shop</label>
+                    </div>
 
-                     <div class="form-1 mt-3 d-flex align-items-center">
-                        <input type="radio" id="Marketing-Automation" name="services" value="Marketing-Automation">
+                    <div class="form-1 mt-3 d-flex align-items-center">
+                      <input type="radio" required id="Marketing-Automation" name="services" value="Marketing-Automation">
                       <label for="Marketing-Automation">Marketing Automation</label>
-                      </div>
+                    </div>
 
-                       <div class="form-1 mt-3 d-flex align-items-center">
-                          <input type="radio" id="Campaign-Design" name="services" value="Campaign-Design">
-                       <label for="Campaign-Design">Campaign Design</label>
+                    <div class="form-1 mt-3 d-flex align-items-center">
+                      <input type="radio" required id="Campaign-Design" name="services" value="Campaign-Design">
+                      <label for="Campaign-Design">Campaign Design</label>
                      </div>
                      <div class="form-1 mt-3 d-flex align-items-center">
-                        <input type="radio" id="E-Catalog & Inventory" name="services" value="E-Catalog & Inventory">
+                      <input type="radio" required id="E-Catalog & Inventory" name="services" value="E-Catalog & Inventory">
                      <label for="E-Catalog & Inventory">E-Catalog & Inventory</label>
                    </div>
-                     <button type="submit" value="submit" class="btn-submit mt-4">CONTINUE</button>
-                     </form>
+                    
+                    <button type="submit" value="submit" class="btn-submit mt-4 web_design_btn">CONTINUE</button>
+                    </form>
                   <!-- form  -->
-                </div>
+                  </div>
+                  
+                  <!-- I AM LOOKING FOR:FORM HTML CLOSE  -->
+                  <form class="GET-A-QUOTE" method="post" action="{{url('/post_quote')}}">
+
+                      @csrf
+                      <div class="form-style-2" style="display:none;">
+                        <h4> GET A QUOTE</h4>
+                        <!-- heading close  -->
+                        <input type="text" required name="your_name" placeholder="First Name">
+                        <input type="text" required name="last_name" placeholder="Last Name">
+                        <input type="email" required name="email" placeholder="email">
+                        <input type="tel" name="contact_number" placeholder="contact number">
+                        <input type="text" name="website_url" placeholder="Website url">
+
+                        <input type="hidden" name="category" value="Web Design" id="category">
+                        <input type="hidden" name="sub_category" id="sub_category">
+
+                        <button class="" type="submit" name="frm_submit">Send</button>
+                        <button class="back_last_btn"> Back</button>
+                      </div>
+
+                  </form>
+                  <!-- GET-A-QUOTE FORM CLOSE  -->
+
+
+                
                 </div>
             </div>
         </div>
@@ -148,4 +180,23 @@
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184552.57289742303!2d-79.51814179377936!3d43.71815566213178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sin!4v1678602016785!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
 <!-- section close     -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $('.web_design_btn').on('click', function(e){
+      e.preventDefault();
+      var radioValue = $("input[name='services']:checked").val();
+      if (typeof radioValue  !== "undefined"){
+        $('#sub_category').val(radioValue);
+        $('#main_frm').hide();
+        $('.form-style-2').show();
+      }
+  });
+
+  $('.back_last_btn').on('click', function(e){
+    e.preventDefault();
+    $('#main_frm').show();
+    $('.form-style-2').hide();    
+  });
+</script>
 @stop

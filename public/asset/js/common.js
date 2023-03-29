@@ -59,7 +59,7 @@ $(document).ready(function(){
     	$(".alert-info").slideUp(500);
 	});
 
-	$('label').on('click', function(e){
+	$('label').on('click', function(){
 		$(this).prev().attr('checked',true);
 	})
 });

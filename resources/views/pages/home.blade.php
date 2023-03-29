@@ -144,7 +144,7 @@
               <p class="Build"> Build you online presence by relating your vision and goals to a professional website designer. Explore responsive and effective page designs here.</p>
               <p class="design"> Get a website design quote now!</p><hr>
               <p class="development"> cl Get a quote from a website development company that offers small business pricing plans.</p>
-            <a href="{{url('/free-consultation/get-a-quote')}}"><button class="Get mt-3">Get a Quote</button></a>
+            <a href="{{url('/web-design')}}"><button class="Get mt-3">Get a Quote</button></a>
             <a href="tel:347-391-1811"><button class="tel">347-391-1811 </button></a>
             </div>
 
@@ -154,7 +154,7 @@
               <p class="Build"> Implement a custom digital marketing strategy that fits your small business needs. Grab attention, engage users and influence followers with organic optimization, social marketing campaigns and paid ads.</p>
               <p class="design"> Get a website design quote now!</p><hr>
               <p class="development">Contact the top rated digital marketing agency for quality SEO, SEM and SMM services.</p>
-              <a href="{{url('/free-consultation/get-a-quote')}}"><button class="Get mt-3">Get a Quote</button></a>
+              <a href="{{url('/digital-marketing')}}"><button class="Get mt-3">Get a Quote</button></a>
               <a href="tel:347-391-1811"><button class="tel">347-391-1811 </button></a>
             </div>
 
@@ -164,7 +164,7 @@
               <p class="Build"> Do It Yourself website report generation tools are here and just a click away. Use the website analyzer to get a free website speed test.</p>
               <p class="design"> Get a FREE Website Grade now!</p><hr>
               <p class="development">Connect with a professional website analysis consultant for best market approach. Use the free website audit tools to generate reports and analyze page grade.</p>
-              <a href="{{url('/free-consultation/get-a-quote')}}"><button class="Get mt-3">Get a Quote</button></a>
+              <a href="{{url('/seo-resources')}}"><button class="Get mt-3">Get a Quote</button></a>
               <a href="tel:347-391-1811"><button class="tel">347-391-1811 </button></a>
             </div>
 
@@ -174,7 +174,7 @@
               <p class="Build"> Discover effective marketing strategies that improves your business sales, and branding. Explore creative tactics that generate custom campaigns alongside an expert digital consultant.</p>
               <p class="design">Talk to a Digital Marketing Expert now!</p><hr>
               <p class="development">Discuss your online business plans with a web design and marketing professional. Start generating leads, sell more and build a digital brand. Get advice that Improves your conversion rate and your ROI here.</p>
-              <a href="{{url('/free-consultation/get-a-quote')}}"><button class="Get mt-3">Get a Quote</button></a>
+              <a href="{{url('/free-consultation')}}"><button class="Get mt-3">Get a Quote</button></a>
             <a href="tel:347-391-1811"><button class="tel">347-391-1811 </button></a>
             </div>
           </div>
@@ -192,7 +192,7 @@
             <h4>DO YOU QUALIFY FOR A COUPON?</h4>
             <p> Tell us about your business, your design goals and marketing expectations.
               Tell us the website project scope and budget.</p>
-            <button class="tel">Request a Coupon</button>
+            <button class="tel"><a onclick="location.href='{{url("coupon")}}'">Request a Coupon</button>
           </div>
         </section>
         </div>
@@ -203,27 +203,15 @@
               <h4> How It Works!</h4>
             </div>
             <div class="row mt-3 gap-2 d-flex align-items-center justify-content-center">
-              <div class="col-lg-4 col-md-5 col-sm-12 ">
+              <div class="col-lg-8 col-md-5 col-sm-12 ">
                 <div class="card-style">
                  <div class="img">
                   <img src="{{ asset('/images/1.avif')}}" alt="">
                  </div>
                    <p class="EJOBS4PROS mt-2"> EJOBS4PROS</p>
                   <h3> How It Works!</h3>
-                  <p> Do your Own Website Analysis here. Use the free SEO resources to get your website audit and page grades. Chat with an expert seo strategist now!                  </p>
-              <a href="Appointment.html"><button class="Start">Start a Project Now</button></a>
-                </div>
-              </div>
-              <!-- col-close  -->
-              <div class="col-lg-4 col-md-5 col-sm-12 ">
-                <div class="card-style">
-                 <div class="img">
-                  <img src="{{ asset('/images/2.avif')}}" alt="">
-                 </div>
-                   <p class="EJOBS4PROS mt-2"> EJOBS4PROS</p>
-                  <h3> How It Works!</h3>
-                  <p> Do your Own Website Analysis here. Use the free SEO resources to get your website audit and page grades. Chat with an expert seo strategist now!                  </p>
-                  <a href="Appointment.html"><button class="Start">Start a Project Now</button></a>
+                  <p>Do your Own Website Analysis here. Use the free SEO resources to get your website audit and page grades. Chat with an expert seo strategist now!                  </p>
+                  <a href="{{url('analysis/appointment')}}"><button class="Start">Start a Project Now</button></a>
                 </div>
               </div>
             </div>
@@ -251,7 +239,7 @@
                     <p class="DIGITAL">DIGITAL SOLUTIONS FOR ONLINE BUSINESSES</p>
                     <h3> Success Essentials</h3>
                     <p class=" Scale mt-4"> Scale your digital footprint and do business like the big online players. This turnkey integrated marketing package is perfect for designers and online sellers. Upgrade your e-commerce game to include integrated solutions.</p>
-                    <a href="success-essentials.html"><button class="Learn"> Learn More	</button></a>
+                    <a href="{{url('/digital-solutions/success-essentials')}}"><button class="Learn"> Learn More	</button></a>
                   <a href="{{url('/free-consultation/get-a-quote')}}"><button class="Now"> Start Now</button></a>
                   </div>
                   <div class="tab-pane fade" id="v-pills-profile-2" role="tabpanel" aria-labelledby="v-pills-profile-tab-2" tabindex="0">
@@ -260,7 +248,7 @@
                     </h3>
                     <p class=" Scale mt-4"></p>
                       <p class=" Scale"> The perfect package for sellers who want to bypass organic marketing and demand instant results. Start a budget friendly, turnkey e-commerce solution with custom remarketing campaigns setup to generate leads. Subscribe to services to strengthen your brand and customer relations now.</p>
-                  <a href="CompetitiveEdge.html"><button class="Learn"> Learn More	</button></a>
+                  <a href="{{url('/seo-resources/competitor-analysis')}}"><button class="Learn"> Learn More	</button></a>
                   <a href="{{url('/free-consultation/get-a-quote')}}"><button class="Now"> Start Now</button></a>
                   </div>
                   <div class="tab-pane fade" id="v-pills-messages-3" role="tabpanel" aria-labelledby="v-pills-messages-tab-3" tabindex="0">
@@ -268,21 +256,21 @@
                     <h3>Social E-Commerce</h3>
                     <p class=" Scale mt-4">Promote products and sell on social platforms that your customer is using. reach your target market with content rich ads.</p>
                       <p class=" Scale"> Get social media optimization, consistent social posting and ad management services to engage with prospect customers.</p>
-               <a href="Social.html"><button class="Learn"> Learn More	</button></a>
+               <a href="{{url('/digital-solutions/social-ecommerce')}}"><button class="Learn"> Learn More	</button></a>
                <a href="{{url('/free-consultation/get-a-quote')}}"><button class="Now"> Start Now</button></a>
                     </div>
                   <div class="tab-pane fade" id="v-pills-settings-4" role="tabpanel" aria-labelledby="v-pills-settings-tab-4" tabindex="0">
                     <p class="DIGITAL">DIGITAL SOLUTIONS FOR ONLINE BUSINESSES</p>
                     <h3>Pay Per Lead</h3>
                     <p class=" Scale mt-4">Attract shoppers and generate leads with creative, relevant and effective campaigns. respond and engage qualified leads that provide best ROI results. </p>
-          <a href="PayPer.html"><button class="Learn"> Learn More	</button></a>
-          <a href="GetaQuote .html"><button class="Now"> Start Now</button></a>
+          <a href="{{url('/digital-solutions/pay-per-lead')}}"><button class="Learn"> Learn More	</button></a>
+          <a href="{{url('/free-consultation/get-a-quote')}}"><button class="Now"> Start Now</button></a>
                 </div>
                 <div class="tab-pane fade" id="v-pills-Performance-5" role="tabpanel" aria-labelledby="v-pills-Performance-tab-5" tabindex="0">
                   <p class="DIGITAL">DIGITAL SOLUTIONS FOR ONLINE BUSINESSES</p>
                   <h3>Pay Per Performance</h3>
                   <p class=" Scale mt-4">minimize risk with performance based advertising and get measurable results that justify the marketing cost and pay per sale.</p>
-             <a href="Performance.html"><button class="Learn"> Learn More	</button></a>
+             <a href="{{url('/digital-solutions/pay-per-performance-2')}}"><button class="Learn"> Learn More	</button></a>
              <a href="{{url('/free-consultation/get-a-quote')}}"><button class="Now"> Start Now</button></a>
                 </div>
                 <div class="tab-pane fade" id="v-pills-Branding-6" role="tabpanel" aria-labelledby="v-pills-Branding-tab-6" tabindex="0">
@@ -290,7 +278,7 @@
                   <h3>Branding</h3>
                   <p class=" Scale mt-4">Stand on top of your reputation, demand attention and receive recognition. Stand apart of your competitors, influence the market and strengthen customer loyalty.</p>
                   <p class=" Scale mt-4">Start your small business or corporate branding campaigns with an eye on results and reputation.</p>
-                 <a href="Branding.html"><button class="Learn"> Learn More	</button></a>
+                 <a href="{{url('/digital-solutions/branding2')}}"><button class="Learn"> Learn More	</button></a>
                  <a href="{{url('/free-consultation/get-a-quote')}}"><button class="Now"> Start Now</button></a>
                   </div>
                 <div class="tab-pane fade" id="v-pills-Maintenance-7" role="tabpanel" aria-labelledby="v-pills-Maintenance-tab-7" tabindex="0">
@@ -298,7 +286,7 @@
                   <h3>Maintenance</h3>
                   <p class=" Scale mt-4">Website maintenance services are available including domain name registration, website hosting and third party plugin integration.</p>
                   <p class=" Scale mt-4">We are here to build a strong online foundation...</p>
-                  <a href="Maintenance.html"><button class="Learn"> Learn More	</button></a>
+                  <a href="{{url('/digital-solutions/maintenance')}}"><button class="Learn"> Learn More	</button></a>
                   <a href="{{url('/free-consultation/get-a-quote')}}"><button class="Now"> Start Now</button></a>
                   </div>
             </div>
@@ -316,7 +304,7 @@
                   <h3> Digital Design Experts</h3>
                   <P class="Schedule mt-2"> Schedule a free consultation to discover digital marketing strategies that can help your business reach it's online marketing goals.</P>
                   <P class="Schedule"> Learn more about SEO and optimization that makes a website rank at top of search engine result pages. Get more details, Speak to an expert marketing consultant now!</P>
-                <a href="websitedesign.html"><button class="Learn-Now"> Learn Now</button></a>
+                <a href="{{url('/web-design')}}"><button class="Learn-Now"> Learn Now</button></a>
                 <a href="{{url('/free-consultation/get-a-quote')}}"><button class="Start-Now"> Start Now</button></a>
                 </div>
               </div>
@@ -412,7 +400,7 @@
                     <p class="SEO"> SEO RESOURCES & WEBSITE TESTING TOOLS</p>
                     <h3> Website Audit</h3>
                     <p class="Identify"> Identify your market position, evaluate your marketing strategies, discover page errors and explore strategies that quickly achieve your on page goals.</p>
-                   <a href="WebsiteAudit.html"><button class="More mt-3"> Learn More	</button></a>
+                   <a href="{{url('/seo-resources/website-audit')}}"><button class="More mt-3"> Learn More	</button></a>
                   <a href="{{url('/free-consultation/get-a-quote')}}"><button class="More"> Start Now	</button></a>
                   </div>
                   <div class="tab-pane fade" id="v-pills-profile-Speed" role="tabpanel" aria-labelledby="v-pills-profile-tab-Speed" tabindex="0">
@@ -421,7 +409,7 @@
                     <p class="Identify"> Page download speed is essential to search engine ranking so start using the website testing tools to get page speed insights.</p>
                     <p class="Get"> Get advice, analyze and optimize all page elements</p>
                     <p class="Identify"> Take advantage of page speed optimization suggestions to clear the road for search inquires.</p>
-                    <a href="WebsiteSpeed.html"><button class="More mt-3"> Learn More	</button></a>
+                    <a href="{{url('/seo-resources/website-speed')}}"><button class="More mt-3"> Learn More	</button></a>
                     <a href="{{url('/free-consultation/get-a-quote')}}"><button class="More"> Start Now	</button></a>
                   </div>
 
@@ -432,7 +420,7 @@
                     <p class="Get">Get advice, analyze and optimize all page elements</p>
                     <p class="Identify">Take advantage of page speed optimization suggestions to clear the road for search inquires.
                     </p>
-                  <a href="CompetitorAnalysis.html"><button class="More mt-3"> Learn More	</button></a>
+                  <a href="{{url('/seo-resources/competitor-analysis')}}"><button class="More mt-3"> Learn More	</button></a>
                   <a href="{{url('/free-consultation/get-a-quote')}}"><button class="More"> Start Now	</button></a>
                   </div>
                 </div>
@@ -456,7 +444,7 @@
                 <div class="text">
                   <span class="SEM"> SEM </span>
                   <p class="mt-3"> Search engine marketing gurus are available to design strategies for online businesses, retail shops and companies.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                  <button> Learn More</button>
+                  <button onclick="location.href='{{url("seo-resources")}}'"> Learn More</button>
                 </div>
               </div>
               <!-- col-close  -->
@@ -467,7 +455,7 @@
                 <div class="text">
                   <span class="SEM"> SMM </span>
                   <p class="mt-3"> Social media marketing experts are ready to customize campaigns that reach, engage and sell to customers on social media platforms.</p>
-                  <button> Learn More</button>
+                  <button onclick="location.href='{{url("seo-resources")}}'"> Learn More</button>
                 </div>
               </div>
               <!-- col-close  -->
@@ -478,7 +466,7 @@
                 <div class="text">
                   <span class="SEM"> Branding</span>
                   <p class="mt-3"> Reputation management and growth experts are ready to provide digital branding and influence marketing strategies.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                  <button> Learn More</button>
+                  <button onclick="location.href='{{url("digital-solutions/branding2")}}'">Learn More</a></button>
                 </div>
               </div>
               <!-- col-close  -->
@@ -489,7 +477,7 @@
                 <div class="text">
                   <span class="SEM"> PPC </span>
                   <p class="mt-3"> Talk to a Google ads expert about a pay per click strategy. Start a paid search advertising campaign to instantly achieve sales goals.</p>
-                  <button> Learn More</button>
+                  <button onclick="location.href='{{url("seo-resources")}}'"> Learn More</button>
                 </div>
               </div>
               <!-- col-close  -->
@@ -500,7 +488,7 @@
                 <div class="text">
                   <span class="SEM"> Funnel Marketing</span>
                   <p class="mt-3"> Explore Affiliate marketing sales funnel strategies that generate high conversion rate. Custom build a sales funnel website here</p>
-                  <button> Learn More</button>
+                  <button onclick="location.href='{{url("seo-resources")}}'"> Learn More</button>
                 </div>
               </div>
               <!-- col-close  -->
@@ -511,7 +499,7 @@
                 <div class="text">
                   <span class="SEM"> Integrated Marketing</span>
                   <p class="mt-3">Discover integrated strategies designed to broadcast one message throughout popular social media platforms. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                  <button> Learn More</button>
+                  <button onclick="location.href='{{url("seo-resources")}}'"> Learn More</button>
                 </div>
               </div>
               <!-- col-close  -->

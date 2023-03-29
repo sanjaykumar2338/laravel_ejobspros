@@ -50,7 +50,7 @@
 	        </div>
 
 	        <input type="hidden" name="category" value="Free Consultation" id="category">
-            <input type="hidden" name="sub_category" value="Quote" id="sub_category">
+            <input type="hidden" name="sub_category" value="Get a Proposal" id="sub_category">
 	     </div> 
 	     <button class="mt-3" type="submit" name="submit_form">SEND </button>
     </form>
