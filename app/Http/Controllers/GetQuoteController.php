@@ -25,8 +25,24 @@ class GetQuoteController extends Controller
         return view('pages.contactus');
     }
 
+    public function portfolio(){
+        return view('pages.portfolio');
+    }
+
+    public function  industries(){
+        return view('pages.industries');
+    }
+
+    public function privacy_policy(){
+        return view('pages.privacy-policy');   
+    }
+
     public function coupon(){
         return view('pages.coupon');
+    }
+
+    public function terms_of_use(){
+        return view('pages.terms-of-use');
     }
 
     public function appointment()

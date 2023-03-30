@@ -4,9 +4,9 @@
 <!-- header close  -->
 <section class="get-section">
     <div class="container">
-        <h4>Get a Quote for you website
+        <h4>Schedule a Consultation to Get a Proposal!
         </h4>
-        <P> Like all business owners, you care about the bottom line of your business. You might be interested in digital marketing, SEO, website design, and more but you are wondering how much it’s going to cost. Contact us to get a quote today!</P>
+        <P>The team at eJobs4Pros would love to sit down with you to discuss all of your business needs. We will outline a strategy that addresses all of your concerns and future goals. Schedule a consultation to get a proposal today!</P>
 	    
 	    
 	    
@@ -16,7 +16,7 @@
 
 	    <form class="mt-5" name="get_quote" method="post" action="{{url('post_quote')}}">
 	    	@csrf
-	        <h5> GET A QUOTE</h5>
+	        <h5> GET A PROPOSAL</h5>
 	        <div class="row ">
 	        <div class="col-lg-6 col-md-12 col-sm-12 ">
 	            <input type="text" placeholder="Your Name" name="your_name" value="{{old('your_name')}}">

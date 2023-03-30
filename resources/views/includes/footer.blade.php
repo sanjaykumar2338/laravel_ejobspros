@@ -20,30 +20,32 @@
                 </div>
               </div>
             <!-- col-close  -->
+            
             <div class="col-lg-2  col-md-5 col-sm-12  style">
               <h4> Quick Links</h4>
-             <a href="index.html"><li>Home</li></a>
-            <a href="DigitalMarketing.html"><li>digital markting</li></a>
-              <li>industries</li>
-              <li>rosources</li>
-              <li>privacy policy</li>
+             	<a href="{{url('/')}}"><li>Home</li></a>
+            	<a href="{{url('/digital-marketing')}}"><li>digital markting</li></a>
+              <a href="{{url('/industries')}}"><li>industries</li></a>
+              <a href="{{url('/seo-resources')}}"><li>rosources</li></a>
+              <a href="{{url('/privacy-policy')}}"><li>privacy policy</li></a>
             </div>
+
             <!-- col-close   -->
             <div class="col-lg-2  col-md-5 col-sm-12  style">
-             <a href="about.html"><li>About us</li></a>
-              <li>portfolio</li>
-             <a href="digitalsolutions.html"><li>digital solution</li></a>
-              <a href="Contact.html"><li>contact us</li></a>
-              <li>terms of use</li>
+             	<a href="{{url('/aboutus')}}"><li>About us</li></a>
+              <a href="{{url('/portfolio')}}"><li>portfolio</li></a>
+             	<a href="{{url('/digital-solutions')}}"><li>digital solution</li></a>
+              <a href="{{url('/contact-us')}}"><li>contact us</li></a>
+              <a href="{{url('/terms-of-use')}}"><li>terms of use</li></a>
             </div>
             <!-- col-close  -->
             <div class="col-lg-2  col-md-6 col-sm-12  style">
               <h4> Services</h4>
-             <a href="websitedesign.html"><li>web design</li></a>
-            <a href="DigitalMarketing.html"><li>digital marketing</li></a>
-             <a href="digitalsolutions.html"> <li>digital solutions</li></a>
-            <a href="seoresources.html"><li>seo resources</li></a>
-              <a href="freeconsultation.html"><li>free consultaic</li></a>
+             	<a href="{{url('/web-design')}}"><li>web design</li></a>
+            	<a href="{{url('/digital-marketing')}}"><li>digital marketing</li></a>
+            	<a href="{{url('/digital-solutions')}}"> <li>digital solutions</li></a>
+            	<a href="{{url('/seo-resources')}}"><li>seo resources</li></a>
+              <a href="{{url('/free-consultation')}}"><li>free consultation</li></a>
             </div>
             <!-- col-close  -->
             </div>

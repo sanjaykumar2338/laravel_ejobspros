@@ -55,6 +55,10 @@ Route::get('/seo-resources/website-speed', [GetQuoteController::class, 'website_
 Route::get('/contact-us', [GetQuoteController::class, 'contact_us']);
 Route::post('/contact-us-save', [GetQuoteController::class, 'contact_us_save']);
 Route::get('/coupon', [GetQuoteController::class, 'coupon']);
+Route::get('/terms-of-use', [GetQuoteController::class, 'terms_of_use']);
+Route::get('/portfolio', [GetQuoteController::class, 'portfolio']);
+Route::get('/industries', [GetQuoteController::class, 'industries']);
+Route::get('/privacy-policy', [GetQuoteController::class, 'privacy_policy']);
 
 //Main Controller
 Route::get('/aboutus', [MainController::class, 'aboutus']);

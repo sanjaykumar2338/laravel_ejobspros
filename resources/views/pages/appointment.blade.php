@@ -4,15 +4,13 @@
 <!-- header close  -->
 <section class="get-section">
     <div class="container">
-        <h4>Schedule an Appointment
-        </h4>
 	    @if (Session::has('message'))
 		   <div class="alert alert-info">{{ Session::get('message') }}</div>
 		@endif
 
 	    <form class="mt-5" name="get_quote" method="post" action="{{url('post_appointment')}}">
 	    	@csrf
-	        <h5> GET A QUOTE</h5>
+	        <h5>Schedule an Appointment</h5>
 	        <div class="row ">
 	        <div class="col-lg-6 col-md-12 col-sm-12 ">
 	            <input type="text" placeholder="Your Name" name="your_name" value="{{old('your_name')}}">
