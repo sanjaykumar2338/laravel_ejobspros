@@ -477,7 +477,7 @@
                 <div class="text">
                   <span class="SEM"> PPC </span>
                   <p class="mt-3"> Talk to a Google ads expert about a pay per click strategy. Start a paid search advertising campaign to instantly achieve sales goals.</p>
-                  <button onclick="location.href='{{url("seo-resources")}}'"> Learn More</button>
+                  <button onclick="location.href='{{url("digital-solutions/pay-per-performance-2")}}'"> Learn More</button>
                 </div>
               </div>
               <!-- col-close  -->
