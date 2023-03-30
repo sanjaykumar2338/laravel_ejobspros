@@ -87,7 +87,7 @@
         <div class="row mt-3 ">
           <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="style-1 d-flex ">
-              <img src="{{ asset('/images/Social Selling.png')}}" alt="">
+              <img src="{{ url('/asset/images/Social Selling.png')}}" alt="">
               <div class="text mt-4">
                 <h4> Social Selling</h4>
                 <p>Reach, connect and relate to your target demographics, Stay competitive and connected using influencer marketing strategies that leverage social media campaigns, improve recognition and increase online sales.</p>
@@ -98,19 +98,19 @@
           <!-- col-close  -->
           <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="style-1 d-flex ">
-              <img src="{{ asset('/images/Integrated Marketing.png')}}" alt="">
+              <img src="{{url('/asset/images/Integrated Marketing.png')}}" alt="">
               <div class="text mt-4">
                 <h4>Integrated Marketing</h4>
                 <p>Improve customer experience, engagement and loyalty using social platforms. Boost brand recognition with effective small business marketing upgrade.</p>
                 <br/>
-                <a href="{{url('/digital-solutions/pay-per-performance')}}"><span class="start"> <i class="fa-sharp fa-solid fa-arrow-right"></i>Start Now</span></a>
+                <a href="{{ url('/digital-solutions/pay-per-performance')}}"><span class="start"> <i class="fa-sharp fa-solid fa-arrow-right"></i>Start Now</span></a>
               </div>
             </div>
           </div>
           <!-- col-clsoe  -->
           <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="style-1 d-flex ">
-              <img src="{{ asset('/images/Conversion Rate Optimization.png')}}" alt="">
+              <img src="{{ url('/asset/images/Conversion Rate Optimization.png')}}" alt="">
               <div class="text mt-4">
                 <h4>Conversion Rate Optimization</h4>
                 <p>increase page effectiveness, optimize actionable goals and convert visitors to customers. Reduce acquisition cost and generate revenue by connecting with qualified leads.                </p>
@@ -206,7 +206,7 @@
               <div class="col-lg-8 col-md-5 col-sm-12 ">
                 <div class="card-style">
                  <div class="img">
-                  <img src="{{ asset('/images/1.avif')}}" alt="">
+                  <img src="{{ url('/asset/images/1.avif')}}" alt="">
                  </div>
                    <p class="EJOBS4PROS mt-2"> EJOBS4PROS</p>
                   <h3> How It Works!</h3>
@@ -314,7 +314,7 @@
                   <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="style-box text-center">
                       <div class="img">
-                        <img src="{{ asset('/images/Website Desig.png')}}" alt="">
+                        <img src="{{ url('/asset/images/Website Desig.png')}}" alt="">
                       </div>
                       <div class="text">
                         <h4> Website Design</h4>
@@ -325,7 +325,7 @@
                   <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="style-box text-center">
                       <div class="img">
-                        <img src="{{ asset('/images/Landingpage Design.png')}}" alt="">
+                        <img src="{{ url('/asset/images/Landingpage Design.png')}}" alt="">
                       </div>
                       <div class="text">
                         <h4>Landingpage Design</h4>
@@ -336,7 +336,7 @@
                   <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="style-box text-center">
                       <div class="img">
-                        <img src="{{ asset('/images/Social Shop Design.png')}}" alt="">
+                        <img src="{{ url('/asset/images/Social Shop Design.png')}}" alt="">
                       </div>
                       <div class="text">
                         <h4> Social Shop Design</h4>
@@ -347,7 +347,7 @@
                   <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="style-box text-center">
                       <div class="img">
-                        <img src="{{ asset('/images/Maraketing Automation.png')}}" alt="">
+                        <img src="{{ url('/asset/images/Maraketing Automation.png')}}" alt="">
                       </div>
                       <div class="text">
                         <h4> M.. Automation</h4>
@@ -358,7 +358,7 @@
                   <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="style-box text-center">
                       <div class="img">
-                        <img src="{{ asset('/images/Campaign Design.png')}}" alt="">
+                        <img src="{{ url('/asset/images/Campaign Design.png')}}" alt="">
                       </div>
                       <div class="text">
                         <h4>Campaign Design</h4>
@@ -369,7 +369,7 @@
                   <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="style-box text-center">
                       <div class="img">
-                        <img src="{{ asset('/images/E-Catalog & Inventory.png')}}" alt="">
+                        <img src="{{ url('/asset/images/E-Catalog & Inventory.png')}}" alt="">
                       </div>
                       <div class="text">
                         <h4>E-Catalog & Inventory</h4>
@@ -439,18 +439,18 @@
             <div class="row mt-5 d-flex justify-content-lg-center  justify-content-md-center gap-4">
               <div class="col-lg-3 col-md-5 col-sm-12  edit-box">
                 <div class="img">
-                  <img src="{{ asset('/images/card-1.avif')}}" alt="">
+                  <img src="{{ url('/asset/images/card-1.avif')}}" alt="">
                 </div>
                 <div class="text">
                   <span class="SEM"> SEM </span>
                   <p class="mt-3"> Search engine marketing gurus are available to design strategies for online businesses, retail shops and companies.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                  <button onclick="location.href='{{url("seo-resources")}}'"> Learn More</button>
+                  <button onclick="location.href='{{url("digital-marketing/search-engine-optimization-seo")}}'"> Learn More</button>
                 </div>
               </div>
               <!-- col-close  -->
               <div class="col-lg-3 col-md-5 col-sm-12  edit-box">
                 <div class="img">
-                  <img src="{{ asset('/images/card-2.avif')}}" alt="">
+                  <img src="{{ url('/asset/images/card-2.avif')}}" alt="">
                 </div>
                 <div class="text">
                   <span class="SEM"> SMM </span>
@@ -461,7 +461,7 @@
               <!-- col-close  -->
               <div class="col-lg-3 col-md-5 col-sm-12  edit-box">
                 <div class="img">
-                  <img src="{{ asset('/images/card-3.avif')}}" alt="">
+                  <img src="{{ url('/asset/images/card-3.avif')}}" alt="">
                 </div>
                 <div class="text">
                   <span class="SEM"> Branding</span>
@@ -472,7 +472,7 @@
               <!-- col-close  -->
               <div class="col-lg-3 col-md-5 col-sm-12  edit-box">
                 <div class="img">
-                  <img src="{{ asset('/images/card-4.avif')}}" alt="">
+                  <img src="{{ url('/asset/images/card-4.avif')}}" alt="">
                 </div>
                 <div class="text">
                   <span class="SEM"> PPC </span>
@@ -483,7 +483,7 @@
               <!-- col-close  -->
               <div class="col-lg-3 col-md-5 col-sm-12  edit-box">
                 <div class="img">
-                  <img src="{{ asset('/images/card-5.avif')}}" alt="">
+                  <img src="{{ url('/asset/images/card-5.avif')}}" alt="">
                 </div>
                 <div class="text">
                   <span class="SEM"> Funnel Marketing</span>
@@ -494,7 +494,7 @@
               <!-- col-close  -->
               <div class="col-lg-3 col-md-5 col-sm-12  edit-box">
                 <div class="img">
-                  <img src="{{ asset('/images/card-6.avif')}}" alt="">
+                  <img src="{{ url('/asset/images/card-6.avif')}}" alt="">
                 </div>
                 <div class="text">
                   <span class="SEM"> Integrated Marketing</span>
@@ -528,28 +528,28 @@
           <div class="slider">
             <div class="slide-track">
               <div class="slide">
-                <img src="{{ asset('/images/1.avif')}}" alt="">
+                <img src="{{ url('/asset/images/1.avif')}}" alt="">
               </div>
               <div class="slide">
-                <img src="{{ asset('/images/l2.png')}}" alt="">
+                <img src="{{ url('/asset/images/l2.png')}}" alt="">
               </div>
               <div class="slide">
-                <img src="{{ asset('/images/l3.png')}}" alt="">
+                <img src="{{ url('/asset/images/l3.png')}}" alt="">
               </div>
               <div class="slide">
-                <img src="{{ asset('/images/14.jpg')}}" alt="">
+                <img src="{{ url('/asset/images/14.jpg')}}" alt="">
               </div>
               <div class="slide">
-                <img src="{{ asset('/images/15.png')}}" alt="">
+                <img src="{{ url('/asset/images/15.png')}}" alt="">
               </div>
               <div class="slide">
-                <img src="{{ asset('/images/16.png')}}" alt="">
+                <img src="{{ url('/asset/images/16.png')}}" alt="">
               </div>
               <div class="slide">
-                <img src="{{ asset('/images/17.png')}}" alt="">
+                <img src="{{ url('/asset/images/17.png')}}" alt="">
               </div>
               <div class="slide">
-                <img src="{{ asset('/images/18.png')}}" alt="">
+                <img src="{{ url('/asset/images/18.png')}}" alt="">
               </div>
             </div>
           </div>

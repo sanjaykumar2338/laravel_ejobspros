@@ -60,5 +60,8 @@ Route::get('/portfolio', [GetQuoteController::class, 'portfolio']);
 Route::get('/industries', [GetQuoteController::class, 'industries']);
 Route::get('/privacy-policy', [GetQuoteController::class, 'privacy_policy']);
 
+
+Route::get('/digital-marketing/search-engine-optimization-seo', [GetQuoteController::class, 'search_engine_optimization_seo']);
+
 //Main Controller
 Route::get('/aboutus', [MainController::class, 'aboutus']);

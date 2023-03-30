@@ -60,6 +60,10 @@ class GetQuoteController extends Controller
         return view('pages.digital_solutions_menu.success-essentials');
     }
 
+    public function search_engine_optimization_seo(){
+        return view('pages.digital_solutions_menu.sem');
+    }
+
     public function social_ecommerce()
     {
         return view('pages.digital_solutions_menu.social-e-commerce');
