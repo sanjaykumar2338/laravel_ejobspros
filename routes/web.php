@@ -62,6 +62,10 @@ Route::get('/privacy-policy', [GetQuoteController::class, 'privacy_policy']);
 
 
 Route::get('/digital-marketing/search-engine-optimization-seo', [GetQuoteController::class, 'search_engine_optimization_seo']);
+Route::get('/digital-marketing/social-media-marketing-smm', [GetQuoteController::class, 'search_media_marketing_smm']);
+Route::get('/digital-marketing/local-marketing', [GetQuoteController::class, 'local_marketing']);
+Route::get('/digital-marketing/content-marketing', [GetQuoteController::class, 'content_marketing']);
+Route::get('/contact-website-design-and-digital-marketing-professionals', [GetQuoteController::class, 'digital_marketing_professionals']);
 
 //Main Controller
 Route::get('/aboutus', [MainController::class, 'aboutus']);

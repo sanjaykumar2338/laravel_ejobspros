@@ -455,7 +455,7 @@
                 <div class="text">
                   <span class="SEM"> SMM </span>
                   <p class="mt-3"> Social media marketing experts are ready to customize campaigns that reach, engage and sell to customers on social media platforms.</p>
-                  <button onclick="location.href='{{url("seo-resources")}}'"> Learn More</button>
+                  <button onclick="location.href='{{url("digital-marketing/social-media-marketing-smm")}}'"> Learn More</button>
                 </div>
               </div>
               <!-- col-close  -->
@@ -488,7 +488,7 @@
                 <div class="text">
                   <span class="SEM"> Funnel Marketing</span>
                   <p class="mt-3"> Explore Affiliate marketing sales funnel strategies that generate high conversion rate. Custom build a sales funnel website here</p>
-                  <button onclick="location.href='{{url("seo-resources")}}'"> Learn More</button>
+                  <button onclick="location.href='{{url("digital-marketing/local-marketing")}}'"> Learn More</button>
                 </div>
               </div>
               <!-- col-close  -->
@@ -499,7 +499,7 @@
                 <div class="text">
                   <span class="SEM"> Integrated Marketing</span>
                   <p class="mt-3">Discover integrated strategies designed to broadcast one message throughout popular social media platforms. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                  <button onclick="location.href='{{url("seo-resources")}}'"> Learn More</button>
+                  <button onclick="location.href='{{url("digital-marketing/content-marketing")}}'"> Learn More</button>
                 </div>
               </div>
               <!-- col-close  -->
@@ -507,6 +507,8 @@
           </div>
         </div>
         <!-- section9 close  -->
+
+
         <div class="section10">
           <div class="container">
             <div class="row">

@@ -99,7 +99,7 @@
           <div class="col-lg-4 col-md-6 col-sm-12 ">
             <div class="card-style">
               <div class="img">
-                <img src="{{ asset('/images/web-1.png')}}" alt="">
+                <img src="{{ url('/asset/images/web-1.png')}}" alt="">
               </div>
               <div class="text">
               <h4>LANDING PAGE DESIGN</h4>
@@ -112,7 +112,7 @@
           <div class="col-lg-4 col-md-6 col-sm-12 ">
             <div class="card-style">
               <div class="img">
-                <img src="{{ asset('/images/web-2.png')}}" alt="">
+                <img src="{{ url('/asset/images/web-2.png')}}" alt="">
               </div>
               <div class="text">
               <h4>LANDING PAGE DESIGN</h4>
@@ -125,7 +125,7 @@
           <div class="col-lg-4 col-md-6 col-sm-12 ">
             <div class="card-style">
               <div class="img">
-                <img src="{{ asset('/images/web-3.png')}}" alt="">
+                <img src="{{ url('/asset/images/web-3.png')}}" alt="">
               </div>
               <div class="text">
                 <h4>SOCIAL SHOP DESIGN</h4>
@@ -137,7 +137,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12 ">
               <div class="card-style">
                 <div class="img">
-                  <img src="{{ asset('/images/web-4.png')}}" alt="">
+                  <img src="{{ url('/asset/images/web-4.png')}}" alt="">
                 </div>
                 <div class="text ">
                   <h4>MARKETING
@@ -150,7 +150,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12 ">
               <div class="card-style">
                 <div class="img">
-                  <img src="{{ asset('/images/web-5.png')}}" alt="">
+                  <img src="{{ url('/asset/images/web-5.png')}}" alt="">
                 </div>
                 <div class="text">
                   <h4>CAMPAIGN
@@ -163,7 +163,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12 ">
               <div class="card-style">
                 <div class="img">
-                  <img src="{{ asset('/images/web-6.png')}}" alt="">
+                  <img src="{{ url('/asset/images/web-6.png')}}" alt="">
                 </div>
                 <div class="text">
                   <h4>E-CATALOG AND INVENTORY PLATFORM DESIGN</h4>

@@ -60,8 +60,20 @@ class GetQuoteController extends Controller
         return view('pages.digital_solutions_menu.success-essentials');
     }
 
+    public function local_marketing(){
+        return view('pages.digital_solutions_menu.local-marketing');
+    }
+
+    public function content_marketing(){
+        return view('pages.digital_solutions_menu.content-marketing');
+    }
+
     public function search_engine_optimization_seo(){
         return view('pages.digital_solutions_menu.sem');
+    }
+
+    public function search_media_marketing_smm(){
+        return view('pages.digital_solutions_menu.smm');
     }
 
     public function social_ecommerce()
@@ -103,6 +115,11 @@ class GetQuoteController extends Controller
     public function branding2()
     {
         return view('pages.digital_solutions_menu.branding');
+    }
+
+    public function digital_marketing_professionals()
+    {
+        return view('pages.digital_solutions_menu.digital-marketing-professionals');
     }
 
     public function seo_resources()
