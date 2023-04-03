@@ -90,6 +90,7 @@
             </div>
 
             <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+            <a href="{{url('register')}}">Create New Account</a>
             </div>
     </form>
 @endsection

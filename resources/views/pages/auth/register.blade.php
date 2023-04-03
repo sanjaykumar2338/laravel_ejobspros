@@ -112,6 +112,7 @@
 	        </div>
 
 	        <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+          <a href="{{url('login')}}">Login</a>
     	</div>
     </form>
 @endsection

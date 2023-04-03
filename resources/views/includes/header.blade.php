@@ -54,8 +54,13 @@
                   <li><a class="dropdown-item" href="{{url('contact-us')}}">contact us</a></li>
                 </ul>
               </li>
+              @auth                
+                  <a class="login" href="{{url('dashboard/customer')}}"><i class="fa-solid fa-user"></i>Dashboard</a>
+              @endauth
 
-              <a class="login" href="{{url('login')}}"><i class="fa-solid fa-user"></i>client login </a>
+              @guest
+                  <a class="login" href="{{url('login')}}"><i class="fa-solid fa-user"></i>client login </a>
+              @endguest
             </ul>
           </div>
         </div>

@@ -1,9 +1,7 @@
 @extends('layouts.getquote')
 @section('content')
-
-
-<!-- header close  -->
-    <section class="section1 digital-section-1 d-flex align-items-center">
+  <!-- header close  -->
+  <section class="section1 digital-section-1 d-flex align-items-center">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12  d-flex align-items-center">

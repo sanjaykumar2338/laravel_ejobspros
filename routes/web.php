@@ -68,36 +68,35 @@ Route::get('/digital-marketing/local-marketing', [GetQuoteController::class, 'lo
 Route::get('/digital-marketing/content-marketing', [GetQuoteController::class, 'content_marketing']);
 Route::get('/contact-website-design-and-digital-marketing-professionals', [GetQuoteController::class, 'digital_marketing_professionals']);
 
-//Main Controller
+//main Controller
 Route::get('/aboutus', [MainController::class, 'aboutus']);
 
-
+//Auth routes
 Route::group(['namespace' => 'App\Http\Controllers'], function()
 {   
-    /**
-     * Home Routes
-     */
     Route::get('/home', 'HomeController@index');
-
     Route::group(['middleware' => ['guest']], function() {
-        /**
-         * Register Routes
-         */
         Route::get('/register', 'RegisterController@show')->name('register.show');
         Route::post('/register', 'RegisterController@register')->name('register.perform');
-
-        /**
-         * Login Routes
-         */
         Route::get('/login', 'LoginController@show')->name('login.show');
         Route::post('/login', 'LoginController@login')->name('login.perform');
-
     });
 
-    Route::group(['middleware' => ['auth']], function() {
-        /**
-         * Logout Routes
-         */
+    Route::group(['middleware' => ['auth']], function() {      
         Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
     });
+});
+
+
+//customer routes
+Route::group(['namespace' => 'App\Http\Controllers'], function(){ 
+    Route::group(['middleware' => ['auth']], function() {      
+        Route::get('/dashboard/customer', 'CustomerController@index');
+        Route::get('/dashboard/customer/my-request', 'CustomerController@my_request');
+    });
+});
+
+//admin routes
+Route::group(['namespace' => 'App\Http\Controllers'], function(){ 
+
 });

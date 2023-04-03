@@ -1,5 +1,10 @@
 @extends('layouts.homepage')
 @section('content')
+    
+    @if (Session::has('message'))
+      <div class="alert alert-info">{{ Session::get('message') }}</div>
+    @endif
+
     <div class="section1  d-flex align-items-center">
         <div class="container">
             <div class="row gap-5">
@@ -14,11 +19,6 @@
 
                 <div class="col-lg-5 col-md-12 col-sm-12  z-3">
                     <div class="style">
-                    
-                    @if (Session::has('message'))
-                       <div class="alert alert-info">{{ Session::get('message') }}</div>
-                    @endif
-                    
                     <h3 class="heading_title"> I AM LOOKING FOR:</h3>
                     <!-- form  -->
                     <form action="sumbit" id="main-form">
