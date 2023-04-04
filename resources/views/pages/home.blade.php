@@ -519,7 +519,37 @@
           </div>
         </div>
         <!-- section9 close  -->
+        <!-- testimonials start -->
+        <div class="section9">
+          <div class="container">
+            <div style="text-align: center;color: #005cff;">
+              <h3 class="txt_yellow mb-0"><strong>Digital Marketing Essentials</strong></h3>
+              <p style="color: #1d4d89;">What do customers want from a website?</p>
+            </div>
+            <div class="slideshow-container">
 
+            <div class="mySlides">
+              <q>increase local traffic to a neighborhood shop, restaurant or clinic and appear at search engine maps. Online presence and effective landing pages are essential to reach and engage local customers.</q>
+              <p class="author">- Local SEO</p>
+            </div>
+
+            <div class="mySlides">
+              <q>A turnkey design solution where an effective internet marketing strategy yields high conversion rate.Start a website evaluation and discuss mobile design options that engage customers, for the small business owner, the page outline and story board should be well planned</q>
+              <p class="author">- Website Design</p>
+            </div>
+
+            <div class="mySlides">
+              <q>An effective digital marketing campaign that yields high ROI. An instant paid advertising campaign supported by a long term organic marketing strategy. Website owners want to complete online.</q>
+              <p class="author">- Website Marketing</p>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+            </div>
+          </div>
+        </div>
+        <!-- testimonials close  -->
 
         <div class="section10">
           <div class="container">
