@@ -91,6 +91,9 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
     Route::group(['middleware' => ['auth']], function() {      
         Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
     });
+
+
+    Route::get('/sitemap.xml', 'SitemapController@index')->name('sitemap.index');
 });
 
 
