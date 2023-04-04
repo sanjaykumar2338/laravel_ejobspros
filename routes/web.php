@@ -67,6 +67,12 @@ Route::get('/digital-marketing/social-media-marketing-smm', [GetQuoteController:
 Route::get('/digital-marketing/local-marketing', [GetQuoteController::class, 'local_marketing']);
 Route::get('/digital-marketing/content-marketing', [GetQuoteController::class, 'content_marketing']);
 Route::get('/contact-website-design-and-digital-marketing-professionals', [GetQuoteController::class, 'digital_marketing_professionals']);
+Route::get('/web-design/website', [GetQuoteController::class, 'website']);
+Route::get('/web-design/landing-page', [GetQuoteController::class, 'landing_page']);
+Route::get('/web-design/social-shop', [GetQuoteController::class, 'social_shop']);
+Route::get('/web-design/marketing-automation', [GetQuoteController::class, 'marketing_automation']);
+Route::get('/web-design/campaign-design', [GetQuoteController::class, 'campaign_design']);
+Route::get('/web-design/e-catalog-inventory', [GetQuoteController::class, 'e_catalog_inventory']);
 
 //main Controller
 Route::get('/aboutus', [MainController::class, 'aboutus']);

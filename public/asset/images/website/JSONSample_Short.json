@@ -1,0 +1,215 @@
+[
+  {
+    "id": "110821",
+    "incidentStatus": {
+      "Value": "AW",
+      "Description": "In the holding area, awaiting review"
+    },
+    "incidentVersion": {
+      "Value": "12"
+    },
+    "incidentName": {
+      "Value": "TEST EVENT "
+    },
+    "incidentReference": {
+      "Value": "SI-9999"
+    },
+    "additionalDataItem3": {
+      "Value": "2019-07-01 00:00:00.000"
+    },
+    "additionalDataItem928": null,
+    "contacts": [
+      {
+        "contactEventLinkId": {
+          "Value": "654645"
+        },
+        "id": "86587",
+        "contactLinkType": {
+          "Value": "A"
+        },
+        "contactLinkRole": {
+          "Value": "PERSON",
+          "Description": "Person injured/affected"
+        },
+        "contactLinkDear": null,
+        "contactLastUpdatedDate": {
+          "Value": "2019-07-11 14:56:07.000"
+        },
+        "contactLastUpdatedBy": null,
+        "contactLinkAge": {
+          "Value": "44"
+        },
+        "additionalDataItem928": null
+      },
+      {
+        "contactEventLinkId": {
+          "Value": "57657"
+        },
+        "id": "457574",
+        "contactLinkType": {
+          "Value": "A"
+        },
+        "contactLinkRole": {
+          "Value": "PERSON1",
+          "Description": "Person injured/affected"
+        },
+        "contactLinkDear": null,
+        "contactLastUpdatedDate": {
+          "Value": "2016-07-11 14:56:07.000"
+        },
+        "contactLastUpdatedBy": null,
+        "contactLinkAge": {
+          "Value": "44"
+        },
+        "additionalDataItem928": null
+      }
+    ],
+    "devices": [],
+    "medications": [],
+    "progressNotes": [],
+    "payments": []
+  },
+  {
+    "id": "101",
+    "incidentStatus": {
+      "Value": "ABC",
+      "Description": "Test approved"
+    },
+    "incidentVersion": {
+      "Value": "19"
+    },
+    "incidentName": {
+      "Value": "test1 pat1"
+    },
+    "incidentReference": {
+      "Value": "SI-9999"
+    },
+    "incidentInvestigators": [
+      {
+        "Value": "INV1",
+        "Description": "Test Inv"
+      },
+      {
+        "Value": "INV2",
+        "Description": "Test1 Inv1"
+      }
+    ],
+    "incidentRootCauses": [
+      {
+        "Value": "5.02",
+        "Description": "Distractions, interruptions"
+      },
+      {
+        "Value": "7.04",
+        "Description": "Inattention"
+      }
+    ],
+    "additionalDataItem3": null,
+    "additionalDataItem557": null,
+    "contacts": [
+      {
+        "contactEventLinkId": {
+          "Value": "271813"
+        },
+        "id": "464",
+        "contactLinkType": {
+          "Value": "A"
+        },
+        "contactLinkRole": {
+          "Value": "PERSON",
+          "Description": "Person injured/affected"
+        },
+        "contactLinkDear": null,
+        "contactLastUpdatedDate": {
+          "Value": "2017-10-16 21:39:22.000"
+        },
+        "contactLastUpdatedBy": null,
+        "contactLinkAge": {
+          "Value": "61"
+        },
+        "additionalDataItem538": null
+      },
+      {
+        "contactEventLinkId": {
+          "Value": "997769"
+        },
+        "id": "99949",
+        "contactLinkType": {
+          "Value": "N"
+        },
+        "contactLinkRole": {
+          "Value": "REP",
+          "Description": "Reporter"
+        },
+        "contactLinkDear": null,
+        "contactLastUpdatedDate": {
+          "Value": "2019-01-10 10:55:34.000"
+        },
+        "contactLastUpdatedBy": {
+          "Value": "PATMON"
+        },
+        "contactLinkAge": null,
+        "additionalDataItem538": null
+      }
+    ],
+    "devices": [],
+    "medications": [
+      {
+        "id": "5454",
+        "medicationVersion": null,
+        "medicationListOrder": null,
+        "medicationClassAdministered": null,
+        "medicationClassCorrect": null,
+        "medicationNameAdministered": {
+          "Value": "4544",
+          "Description": "Etoposide                                                   "
+        },
+        "medicationNameCorrect": {
+          "Value": "4456",
+          "Description": "Etoposide                                                   "
+        },
+        "medicationBrandAdministered": {
+          "Value": "4564",
+          "Description": "Etoposide                     "
+        },
+        "medicationBrandCorrect": {
+          "Value": "5646",
+          "Description": "Etopophos                     "
+        },
+        "medicationTypeAdministered": {
+          "Value": "456",
+          "Description": "*Mitotic Inhibitors**                                       "
+        },
+        "medicationTypeCorrect": {
+          "Value": "10456",
+          "Description": "*Mitotic Inhibitors**                                       "
+        },
+        "medicationAdministeredParallelImport": null
+      }
+    ],
+    "progressNotes": [
+      {
+        "pno_progress_notes": {
+          "Value": "Consulting and awaiting pharmacy response"
+        },
+        "pno_createdby": {
+          "Value": "KEE"
+        },
+        "pno_createddate": {
+          "Value": "2017-10-17 06:43:17.727"
+        }
+      },
+      {
+        "pno_progress_notes": {
+          "Value": "Incorrect tubing attached to chemo during"},
+        "pno_createdby": {
+          "Value": "PAMREY"
+        },
+        "pno_createddate": {
+          "Value": "2017-10-18 08:41:17.583"
+        }
+      }
+    ],
+    "payments": []
+  }
+]

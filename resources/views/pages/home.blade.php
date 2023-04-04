@@ -313,67 +313,79 @@
                 <div class="row">
                   <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="style-box text-center">
+                    <a href="{{url('/web-design/website')}}" style="color: black;">
                       <div class="img">
                         <img src="{{ url('/asset/images/Website Desig.png')}}" alt="">
                       </div>
                       <div class="text">
                         <h4> Website Design</h4>
                       </div>
+                    </a>
                     </div>
                   </div>
                   <!-- col-close  -->
                   <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="style-box text-center">
+                    <a href="{{url('web-design/landing-page')}}" style="color: black;">
                       <div class="img">
                         <img src="{{ url('/asset/images/Landingpage Design.png')}}" alt="">
                       </div>
                       <div class="text">
                         <h4>Landingpage Design</h4>
                       </div>
+                    </a>
                     </div>
                   </div>
                   <!-- col-close  -->
                   <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="style-box text-center">
+                    <a href="{{url('web-design/social-shop')}}" style="color: black;">
                       <div class="img">
                         <img src="{{ url('/asset/images/Social Shop Design.png')}}" alt="">
                       </div>
                       <div class="text">
                         <h4> Social Shop Design</h4>
                       </div>
+                    </a>
                     </div>
                   </div>
                   <!-- col-close  -->
                   <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="style-box text-center">
+                      <a href="{{url('web-design/marketing-automation')}}" style="color: black;">
                       <div class="img">
                         <img src="{{ url('/asset/images/Maraketing Automation.png')}}" alt="">
                       </div>
                       <div class="text">
                         <h4> M.. Automation</h4>
                       </div>
+                      </a>
                     </div>
                   </div>
                   <!-- col-close  -->
                   <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="style-box text-center">
-                      <div class="img">
-                        <img src="{{ url('/asset/images/Campaign Design.png')}}" alt="">
-                      </div>
-                      <div class="text">
-                        <h4>Campaign Design</h4>
-                      </div>
+                      <a href="{{url('web-design/campaign-design')}}" style="color: black;">
+                        <div class="img">
+                          <img src="{{ url('/asset/images/Campaign Design.png')}}" alt="">
+                        </div>
+                        <div class="text">
+                          <h4>Campaign Design</h4>
+                        </div>
+                      </a>
                     </div>
                   </div>
                   <!-- col-close  -->
                   <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="style-box text-center">
-                      <div class="img">
-                        <img src="{{ url('/asset/images/E-Catalog & Inventory.png')}}" alt="">
-                      </div>
-                      <div class="text">
-                        <h4>E-Catalog & Inventory</h4>
-                      </div>
+                      <a href="{{url('web-design/e-catalog-inventory')}}" style="color: black;">
+                        <div class="img">
+                          <img src="{{ url('/asset/images/E-Catalog & Inventory.png')}}" alt="">
+                        </div>
+                        <div class="text">
+                          <h4>E-Catalog & Inventory</h4>
+                        </div>
+                        </a>
                     </div>
                   </div>
                   <!-- col-lose  -->

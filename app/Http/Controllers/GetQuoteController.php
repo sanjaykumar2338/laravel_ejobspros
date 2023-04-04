@@ -55,6 +55,10 @@ class GetQuoteController extends Controller
         return view('pages.pay-per-performance');
     }
 
+    public function website(){
+        return view('pages.web-design.website');
+    }
+
     public function success_essentials()
     {
         return view('pages.digital_solutions_menu.success-essentials');
@@ -140,6 +144,26 @@ class GetQuoteController extends Controller
     public function web_design()
     {
         return view('pages.web-design');
+    }
+
+    public function landing_page(){
+        return view('pages.web-design.landing-page');
+    }
+
+    public function social_shop(){
+        return view('pages.web-design.social-shop');
+    }
+
+    public function marketing_automation(){
+        return view('pages.web-design.marketing-automation');
+    }
+
+    public function campaign_design(){
+        return view('pages.web-design.campaign-design');
+    }
+
+    public function e_catalog_inventory(){
+        return view('pages.web-design.e-catalog-inventory');
     }
 
     public function digital_solutions()
