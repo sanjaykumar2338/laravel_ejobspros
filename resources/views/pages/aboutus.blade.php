@@ -1,7 +1,10 @@
 
 @extends('layouts.main')
 @section('content')
-<!-- header close  -->
+    
+    <title>Digital Service Company for Website redesign and Marketing</title>
+    <meta name="description" content="Digital service company offering affordable website redesign services, creative online marketing strategies and effective search engine optimization techniques.">
+    <!-- header close  -->
     <section class=" bg d-flex align-items-center">
         <div class="container">
             <h3 class="Website"> Website Design and Marketing Company</h3>

@@ -1,5 +1,8 @@
 @extends('layouts.getquote')
 @section('content')
+    
+    <title>Website Services for Selling Online, Branding and Social Media</title>
+    <meta name="description" content="Sign up for this web package to get the essential features of a good website from selling online and brand identity design to social media integration.">
 
 	<!-- header close  -->
     <section class="section1 seo d-flex align-items-center">

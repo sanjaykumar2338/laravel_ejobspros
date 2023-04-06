@@ -1,6 +1,9 @@
 @extends('layouts.getquote')
 @section('content')
 
+<title>Digital Marketing Solutions for Large and Small Business</title>
+<meta name="description" content="We provide digital solutions that large and small businesses can benefit from. Our web development and marketing packages will help you compete for customers.">
+
  <!-- header close  -->
 <section class="section1 banner-s-1 d-flex align-items-center">
         <div class="container">

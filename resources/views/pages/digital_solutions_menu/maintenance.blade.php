@@ -1,5 +1,8 @@
 @extends('layouts.getquote')
 @section('content')
+    
+    <title>Website Maintenance Services- Domain Name and Hosting</title>
+    <meta name="description" content="We provide domain name search, registration and website hosting services. Sign up to take advantage of our secure website features, functions and applications.">
 
 	<!-- header close  -->
     <section class="section1 seo d-flex align-items-center">

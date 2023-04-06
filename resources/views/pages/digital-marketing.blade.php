@@ -1,5 +1,9 @@
 @extends('layouts.getquote')
 @section('content')
+
+  <title>Digital Marketing Services for Strategies and Better ROI</title>
+  <meta name="description" content="Take your digital marketing to the next level with creative strategies that improve your ROI. At Ejobs4Pros.com our specialists will provide marketing ideas.">
+  
   <!-- header close  -->
   <section class="section1 digital-section-1 d-flex align-items-center">
         <div class="container">

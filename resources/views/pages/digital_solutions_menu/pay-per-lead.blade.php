@@ -1,5 +1,8 @@
 @extends('layouts.getquote')
 @section('content')
+    
+    <title>Lead Generation Services for Best Conversion and Profit</title>
+    <meta name="description" content="Sign up for this lead generation package to pay for qualified leads that generate you profit. Hire the pros for best pay per click and lead generation strategy.">
 
 	<!-- header close  -->
     <section class="section1 seo d-flex align-items-center">

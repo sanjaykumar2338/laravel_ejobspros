@@ -1,7 +1,10 @@
 @extends('layouts.getquote')
 @section('content')
+  
+  <title>Free Marketing Consultation By Expert SEO Consultant</title>
+  <meta name="description" content="Fill out this form to book a free marketing consultation with an SEO consultant. Take advantage of SEO expertise, advice and services offered by top marketers.">
 
-<!-- header close  -->
+  <!-- header close  -->
     <div class="section1 banner-f d-flex align-items-center">
         <div class="container">
             <div class="row">

@@ -1,6 +1,9 @@
 @extends('layouts.getquote')
 @section('content')
 
+<title>Web Design Services for Conversion Centered Websites</title>
+<meta name="description" content="We are an affordable website design firm that produces conversion-centered websites. Our web designers improve the ux design impact of your business.">
+
 <div class="section1 banner-section d-flex align-items-center">
         <div class="container">
             <div class="row">

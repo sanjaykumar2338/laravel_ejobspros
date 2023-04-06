@@ -5,6 +5,9 @@
       <div class="alert alert-info">{{ Session::get('message') }}</div>
     @endif
 
+    <title>Digital Agency for Web Design and Marketing Services</title>
+    <meta name="description" content="Professional digital agency offering web development, website design, digital marketing, social media management and local SEO services for small business.">
+
     <div class="section1  d-flex align-items-center">
         <div class="container">
             <div class="row gap-5">

@@ -52,6 +52,7 @@
                   <li><a class="dropdown-item" href="{{url('free-consultation/get-a-proposal')}}">get a proposal</a></li>
                   <li><a class="dropdown-item" href="{{url('analysis/appointment')}}">shedule an appointment</a></li>
                   <li><a class="dropdown-item" href="{{url('contact-us')}}">contact us</a></li>
+                  <li><a class="dropdown-item" href="{{url('plan/list')}}">buy plan</a></li>
                 </ul>
               </li>
               @auth                

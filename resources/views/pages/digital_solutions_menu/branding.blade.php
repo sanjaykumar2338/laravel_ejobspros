@@ -1,5 +1,8 @@
 @extends('layouts.getquote')
 @section('content')
+    
+    <title>Branding Services for Better Brand Awareness and Online Identity</title>
+    <meta name="description" content="We provide small business branding services that improve brand awareness, identity and personality. Signup for a brand assessment and logo design evaluation.">
 
 	<!-- header close  -->
     <section class="section1 seo d-flex align-items-center">

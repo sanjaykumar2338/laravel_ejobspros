@@ -1,5 +1,8 @@
 @extends('layouts.getquote')
 @section('content')
+    
+    <title>SEO Resources - Tools for Website Audit Reports and Proposal</title>
+    <meta name="description" content="Our search engine optimization resources include SEO tools that generate website audit reports, page speed statistics and competitor analysis; Get a proposal.">
 
 	<!-- header close  -->
     <section class="section1 seo d-flex align-items-center">

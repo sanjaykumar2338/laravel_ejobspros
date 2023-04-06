@@ -35,7 +35,6 @@ Route::get('/digital-solutions/branding', [GetQuoteController::class, 'branding'
 Route::get('/digital-solutions/branding', [GetQuoteController::class, 'branding']);
 
 Route::get('/web-design', [GetQuoteController::class, 'web_design']);
-Route::get('/web-design', [GetQuoteController::class, 'web_design']);
 Route::get('/digital-solutions', [GetQuoteController::class, 'digital_solutions']);
 Route::get('/digital-marketing', [GetQuoteController::class, 'digital_marketing']);
 Route::get('/seo-resources', [GetQuoteController::class, 'seo_resources']);
@@ -107,4 +106,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function(){
 Route::group(['namespace' => 'App\Http\Controllers','middleware' => ['IsAdmin']], function(){ 
     Route::get('/dashboard/admin', 'AdminMainController@index');
     Route::get('/dashboard/admin/users/list', 'AdminMainController@all_users');
+});
+
+Route::group(['namespace' => 'App\Http\Controllers'], function(){ 
+    Route::get('/plan/list', 'StripePlanController@plan_list');
 });

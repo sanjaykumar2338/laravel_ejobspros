@@ -1,5 +1,8 @@
 @extends('layouts.getquote')
 @section('content')
+    
+    <title>Pay for Performance Services to Buy Traffic and Sell Online</title>
+    <meta name="description" content="We provide a pay for performance package that keeps you focused on your business. Activate your landing page to buy traffic and generate engagement and sales.">
 
 	<!-- header close  -->
     <section class="section1 seo d-flex align-items-center">
