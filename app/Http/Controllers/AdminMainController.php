@@ -19,7 +19,7 @@ class AdminMainController extends Controller
 
     public function all_users()
     {
-        $users = User::paginate(10);
+        $users = User::where('email','!=','admin@gmail.com')->paginate(10);
         return view('admin.pages.users-all')->with('users', $users);
     }
 }
