@@ -99,13 +99,12 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
 //customer routes
 Route::group(['namespace' => 'App\Http\Controllers'], function(){ 
-    Route::group(['middleware' => ['auth']], function() {      
-        Route::get('/dashboard/customer', 'CustomerController@index');
-        Route::get('/dashboard/customer/my-request', 'CustomerController@my_request');
-    });
-});
+    Route::get('/dashboard/customer', 'CustomerController@index');
+    Route::get('/dashboard/customer/my-request', 'CustomerController@my_request');
+})->middleware('auth');
 
 //admin routes
-Route::group(['namespace' => 'App\Http\Controllers'], function(){ 
-
+Route::group(['namespace' => 'App\Http\Controllers','middleware' => ['IsAdmin']], function(){ 
+    Route::get('/dashboard/admin', 'AdminMainController@index');
+    Route::get('/dashboard/admin/users/list', 'AdminMainController@all_users');
 });
