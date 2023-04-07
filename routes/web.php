@@ -110,4 +110,5 @@ Route::group(['namespace' => 'App\Http\Controllers','middleware' => ['IsAdmin']]
 
 Route::group(['namespace' => 'App\Http\Controllers'], function(){ 
     Route::get('/plan/list', 'StripePlanController@plan_list');
+    Route::get('/stripe/checkout', 'StripePlanController@checkout');
 });

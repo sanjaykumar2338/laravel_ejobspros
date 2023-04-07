@@ -14,4 +14,9 @@ class StripePlanController extends Controller
     {
         return view('stripe.plan');
     }
+
+    public function checkout()
+    {
+        return view('stripe.checkout');
+    }
 }
