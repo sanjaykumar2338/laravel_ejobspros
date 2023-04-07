@@ -25,7 +25,7 @@
 .pricingTable10 .pricing-content ul:after{right:44px}
 .pricingTable10 .pricing-content ul li{font-size:15px;font-weight:700;color:#777473;padding:10px 0;border-bottom:1px solid #d9d9d8}
 .pricingTable10 .pricing-content ul li:last-child{border-bottom:none}
-.pricingTable10 .read{display:inline-block;font-size:16px;color:#fff;text-transform:uppercase;background:#d9d9d8;padding:8px 25px;margin:30px 0;transition:all .3s ease 0s}
+.pricingTable10 .read{display:inline-block;font-size:13px;color:#fff;text-transform:uppercase;background:#d9d9d8;padding:8px 25px;margin:30px 0;transition:all .3s ease 0s}
 .pricingTable10 .read:hover{text-decoration:none}
 .pricingTable10:hover .read{background:#09b1c5}
 @media screen and (max-width:990px){.pricingTable10{margin-bottom:25px}
@@ -36,6 +36,7 @@
         <div class="demo10">
             <div class="container">
                 <h4 class="py-4 text-center">Our Plans</h4>
+                <h4 class="py-4 text-center">Here are strategies that we offer, starting with a proposal, we will achieve your business goals!</h4>
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
                         <div class="pricingTable10">
@@ -46,14 +47,12 @@
                                     <span class="month">/mo</span>
                                 </span>
                             </div>
-                            <div class="pricing-content">
+                            <div class="pricing-content">                               
                                 <ul>
-                                    <li>50GB Disk Space</li>
-                                    <li>50 Email Accounts</li>
-                                    <li>50GB Monthly Bandwidth</li>
-                                    <li>10 Subdomains</li>
-                                    <li>15 Domains</li>
+                                    <li>Build an organic foundation</li>
                                 </ul>
+                                <br>
+                                <a href="{{url('/digital-solutions/success-essentials')}}" class="read">Get Proposal</a>
                                 <a href="#" class="read">sign up</a>
                             </div>
                         </div>
@@ -70,12 +69,10 @@
                             </div>
                             <div class="pricing-content">
                                 <ul>
-                                    <li>60GB Disk Space</li>
-                                    <li>60 Email Accounts</li>
-                                    <li>60GB Monthly Bandwidth</li>
-                                    <li>15 Subdomains</li>
-                                    <li>20 Domains</li>
+                                    <li>Compete for Orders</li>
                                 </ul>
+                                <br>
+                                <a href="{{url('/digital-solutions/competitive-edge')}}" class="read">Get Proposal</a>
                                 <a href="#" class="read">sign up</a>
                             </div>
                         </div>
@@ -92,12 +89,9 @@
                             </div>
                             <div class="pricing-content">
                                 <ul>
-                                    <li>70GB Disk Space</li>
-                                    <li>70 Email Accounts</li>
-                                    <li>70GB Monthly Bandwidth</li>
-                                    <li>20 Subdomains</li>
-                                    <li>25 Domains</li>
+                                    <li>Social Integration & Promotion</li>
                                 </ul>
+                                <a href="{{url('/digital-solutions/social-ecommerce')}}" class="read">Get Proposal</a>
                                 <a href="#" class="read">sign up</a>
                             </div>
                         </div>
@@ -114,12 +108,10 @@
                             </div>
                             <div class="pricing-content">
                                 <ul>
-                                    <li>80GB Disk Space</li>
-                                    <li>80 Email Accounts</li>
-                                    <li>80GB Monthly Bandwidth</li>
-                                    <li>25 Subdomains</li>
-                                    <li>30 Domains</li>
+                                    <li>Social Platform Ads</li>
                                 </ul>
+                                <br>
+                                <a href="{{url('/digital-solutions/pay-per-lead')}}" class="read">Get Proposal</a>
                                 <a href="#" class="read">sign up</a>
                             </div>
                         </div>
@@ -139,12 +131,10 @@
                             </div>
                             <div class="pricing-content">
                                 <ul>
-                                    <li>80GB Disk Space</li>
-                                    <li>80 Email Accounts</li>
-                                    <li>80GB Monthly Bandwidth</li>
-                                    <li>25 Subdomains</li>
-                                    <li>30 Domains</li>
+                                    <li>Landing Page Rental</li>                                    
                                 </ul>
+                                <br>
+                                <a href="{{url('/digital-solutions/pay-per-performance-2')}}" class="read">Get Proposal</a>
                                 <a href="#" class="read">sign up</a>
                             </div>
                         </div>
@@ -161,12 +151,9 @@
                             </div>
                             <div class="pricing-content">
                                 <ul>
-                                    <li>80GB Disk Space</li>
-                                    <li>80 Email Accounts</li>
-                                    <li>80GB Monthly Bandwidth</li>
-                                    <li>25 Subdomains</li>
-                                    <li>30 Domains</li>
+                                    <li>Brand Recognition& Reputation Management</li>
                                 </ul>
+                                <a href="{{url('/digital-solutions/branding2')}}" class="read">Get Proposal</a>
                                 <a href="#" class="read">sign up</a>
                             </div>
                         </div>
@@ -183,12 +170,9 @@
                             </div>
                             <div class="pricing-content">
                                 <ul>
-                                    <li>80GB Disk Space</li>
-                                    <li>80 Email Accounts</li>
-                                    <li>80GB Monthly Bandwidth</li>
-                                    <li>25 Subdomains</li>
-                                    <li>30 Domains</li>
+                                    <li>Design Update & Maintenance</li>
                                 </ul>
+                                <a href="{{url('/digital-solutions/maintenance')}}" class="read">Get Proposal</a>
                                 <a href="#" class="read">sign up</a>
                             </div>
                         </div>

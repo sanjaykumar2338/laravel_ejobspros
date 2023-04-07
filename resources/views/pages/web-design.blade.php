@@ -108,6 +108,9 @@
               <h4>LANDING PAGE DESIGN</h4>
               <p> Designing funnel form promotions, tracking systems and custom Call-to-Action landing pages that invoke reaction is a skill we excel at. Track conversion rate, improve sales results and get the best ROI with effective sales pages.
                 Meet your landing page designer, explore our lead conversion resources and generate more online sales with our high conversion landing page design.</p>
+                
+              <a href="{{url('/web-design')}}"><button class="Get mt-3">Get a Quote</button></a>
+              <a href="tel:347-391-1811"><button class="tel">347-391-1811 </button></a>
               </div>
             </div>
           </div>
