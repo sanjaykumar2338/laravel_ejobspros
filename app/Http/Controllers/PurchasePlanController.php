@@ -30,6 +30,9 @@ class PurchasePlanController extends Controller
         $input = $request->all();
         $token =  $request->stripeToken;
         $paymentMethod = $request->paymentMethod;
+        $plan = Plan::where('test_stripe_id',$input['plane'])->first();
+
+
         try {
 
             Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
@@ -43,7 +46,7 @@ class PurchasePlanController extends Controller
                 ['source' => $token]
             );
 
-            $user->newSubscription('test',$input['plane'])
+            $user->newSubscription($plan->name,$input['plane'])
                 ->create($paymentMethod, [
                 'email' => $user->email,
             ]);
