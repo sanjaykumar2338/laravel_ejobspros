@@ -537,14 +537,14 @@ header{
 
 /* .section4 */
 .section4 section{
-	position:relative;
+    position:relative;
     height: 300px;
 }
-	
+    
 
 .section4 section:nth-child(odd){
-	 background-color: grey;
-	  background-color: #005cff;
+     background-color: grey;
+      background-color: #005cff;
       min-height: 300px;
 }
 .section4 section .text{
@@ -1594,7 +1594,7 @@ section .Website{
 }
 .digital-section-1 .style .text h4{
     font-family: 'Poppins', sans-serif;
-    font-size: 26PX;
+    font-size: 24PX;
     letter-spacing: 1PX;
     font-weight: 600;
     color: white;
@@ -3330,6 +3330,7 @@ padding: 50px 0px 50px 0px;
 .section1 .style{
     min-height: 350px;
     backdrop-filter: blur(0px);
+    padding: 20px;
     background-color: transparent;
 }
 .section1 .style h3{

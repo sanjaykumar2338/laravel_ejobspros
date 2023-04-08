@@ -239,6 +239,7 @@
 
 
 
+
  }
 /* close the 991 media  */
 
@@ -333,6 +334,7 @@
     .about-section-2 .style-box .text h4 {
         font-size: 15px;
     }
+    
  }
 /* close the 767 media  */
 
@@ -432,6 +434,7 @@
 .section1::before {
     height: 100% !important;
 }
+
 }
 /* close the 575 media  */
 
@@ -543,6 +546,7 @@
      margin-left: 0px; 
   
 }
+
 
 }
 
