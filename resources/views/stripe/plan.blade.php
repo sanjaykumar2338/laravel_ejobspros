@@ -13,7 +13,7 @@
 
 .pricingTable10 .pricingTable-header {
     padding: 30px 0;
-    background: #4d4d4d;
+    background: #005cff;
     position: relative;
     transition: all .3s ease 0s
 }
@@ -126,7 +126,7 @@
 
 .pricingTable10:hover .pricing-content ul:after,
 .pricingTable10:hover .pricing-content ul:before {
-    background: linear-gradient(to bottom, #40c4db 50%, #34bacc 50%)
+    background: #005cff;
 }
 
 .pricingTable10 .pricing-content ul:before {
@@ -165,7 +165,7 @@
 }
 
 .pricingTable10:hover .read {
-    background: #09b1c5
+    background: #005cff
 }
 
 @media screen and (max-width:990px) {
