@@ -112,3 +112,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function(){
     Route::get('/plan/list', 'StripePlanController@plan_list');
     Route::get('/stripe/checkout', 'StripePlanController@checkout');
 });
+
+Route::group(['namespace' => 'App\Http\Controllers','middleware' => ['LoginCheck']], function(){ 
+    Route::get('/purchase/plan/{id}', 'PurchasePlanController@purchase_plan');
+    Route::post('order-post', 'PurchasePlanController@order_post');
+});

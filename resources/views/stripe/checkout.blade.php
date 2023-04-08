@@ -22,6 +22,12 @@
     .credit-card-box .display-tr {
         display: table-row;
     }
+
+    .parsley-required{
+        color: red;
+        list-style: none;
+        margin-left: -31px;
+    }
 </style>
 <br><br><br>
 <div class="row">
@@ -31,26 +37,21 @@
     <div class="panel panel-default credit-card-box">
         <div class="panel-heading display-table" >
             <div class="row display-tr" >
-                <strong>Laravel 8 Stripe Subscription Example - CodeSolutionStuff</strong>
+                <strong><a target="_blank" href="{{url('digital-solutions')}}/{{str_replace(' ', '-', strtolower($plan->name))}}">Plan Name: {{$plan->name}}. more info</a></strong><br>
+                <strong>Price: $1500.00/mo</strong>             
             </div>                    
         </div>
+        <br>
         <div class="panel-body">
             <div class="col-md-12">
-              {!! Form::open(['url' => '', 'data-parsley-validate', 'id' => 'payment-form']) !!}
+              {!! Form::open(['url' => url('order-post'), 'data-parsley-validate', 'id' => 'payment-form']) !!}
                 @if ($message = Session::get('success'))
                 <div class="alert alert-success alert-block">
                   <button type="button" class="close" data-dismiss="alert">×</button> 
                         <strong>{{ $message }}</strong>
                 </div>
-                @endif
-                <div class="form-group" id="product-group">
-                    {!! Form::label('plane', 'Select Plan:') !!}
-                    {!! Form::select('plane', ['laravel' => 'Laravel ($10)', 'vue' => 'Vue ($20)', 'react' => 'React ($15)'], 'Book', [
-                        'class'                       => 'form-control',
-                        'required'                    => 'required',
-                        'data-parsley-class-handler'  => '#product-group'
-                        ]) !!}
-                </div>
+                @endif   
+                <input type="hidden" name="plane" value="{{$plan->test_stripe_id}}">             
                 <div class="form-group" id="cc-group">
                     {!! Form::label(null, 'Credit card number:') !!}
                     {!! Form::text(null, null, [
@@ -105,6 +106,7 @@
                         <span class="payment-errors" style="color: red;margin-top:10px;"></span>
                     </div>
                   </div>
+                  <input type="hidden" name="publish_key" id="publish_key" value="pk_test_51MsUEMJ1zQ0384IFCFTnMFJNPdDhbKvU0X7YBMVYrB7QnamXdvMU7Q0GL9FVYFP8pZGDa0pkmji2OWotLzslzMge00OzOz0EEc">
               {!! Form::close() !!}
             </div>
         </div>
@@ -113,47 +115,6 @@
   <div class="col-md-3 col-md-offset-3">
   </div>
 </div>
-    
-<script>
-    window.ParsleyConfig = {
-        errorsWrapper: '<div></div>',
-        errorTemplate: '<div class="alert alert-danger parsley" role="alert"></div>',
-        errorClass: 'has-error',
-        successClass: 'has-success'
-    };
-</script>
-
-<script src="http://parsleyjs.org/dist/parsley.js"></script>
-<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-<script>
-    Stripe.setPublishableKey("<?php echo env('STRIPE_PUBLISHABLE_SECRET') ?>");
-    jQuery(function($) {
-        $('#payment-form').submit(function(event) {
-            var $form = $(this);
-            $form.parsley().subscribe('parsley:form:validate', function(formInstance) {
-                formInstance.submitEvent.preventDefault();
-                alert();
-                return false;
-            });
-            $form.find('#submitBtn').prop('disabled', true);
-            Stripe.card.createToken($form, stripeResponseHandler);
-            return false;
-        });
-    });
-    function stripeResponseHandler(status, response) {
-        var $form = $('#payment-form');
-        if (response.error) {
-            $form.find('.payment-errors').text(response.error.message);
-            $form.find('.payment-errors').addClass('alert alert-danger');
-            $form.find('#submitBtn').prop('disabled', false);
-            $('#submitBtn').button('reset');
-        } else {
-            var token = response.id;
-            $form.append($('<input type="hidden" name="stripeToken" />').val(token));
-            $form.get(0).submit();
-        }
-    };
-</script>
 @stop
 
        

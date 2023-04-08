@@ -53,7 +53,7 @@
                                 </ul>
                                 <br>
                                 <a href="{{url('/digital-solutions/success-essentials')}}" class="read">Get Proposal</a>
-                                <a href="#" class="read">sign up</a>
+                                <a href="{{url('/purchase/plan')}}/7" class="read">sign up</a>
                             </div>
                         </div>
                     </div>
@@ -73,7 +73,7 @@
                                 </ul>
                                 <br>
                                 <a href="{{url('/digital-solutions/competitive-edge')}}" class="read">Get Proposal</a>
-                                <a href="#" class="read">sign up</a>
+                                <a href="{{url('/purchase/plan')}}/6" class="read">sign up</a>
                             </div>
                         </div>
                     </div>
@@ -92,7 +92,7 @@
                                     <li>Social Integration & Promotion</li>
                                 </ul>
                                 <a href="{{url('/digital-solutions/social-ecommerce')}}" class="read">Get Proposal</a>
-                                <a href="#" class="read">sign up</a>
+                                <a href="{{url('/purchase/plan')}}/5" class="read">sign up</a>
                             </div>
                         </div>
                     </div>
@@ -112,7 +112,7 @@
                                 </ul>
                                 <br>
                                 <a href="{{url('/digital-solutions/pay-per-lead')}}" class="read">Get Proposal</a>
-                                <a href="#" class="read">sign up</a>
+                                <a href="{{url('/purchase/plan')}}/3" class="read">sign up</a>
                             </div>
                         </div>
                     </div>
@@ -135,7 +135,7 @@
                                 </ul>
                                 <br>
                                 <a href="{{url('/digital-solutions/pay-per-performance-2')}}" class="read">Get Proposal</a>
-                                <a href="#" class="read">sign up</a>
+                                <a href="{{url('/purchase/plan')}}/3" class="read">sign up</a>
                             </div>
                         </div>
                     </div>
@@ -154,7 +154,7 @@
                                     <li>Brand Recognition& Reputation Management</li>
                                 </ul>
                                 <a href="{{url('/digital-solutions/branding2')}}" class="read">Get Proposal</a>
-                                <a href="#" class="read">sign up</a>
+                                <a href="{{url('/purchase/plan')}}/2" class="read">sign up</a>
                             </div>
                         </div>
                     </div>
@@ -173,7 +173,7 @@
                                     <li>Design Update & Maintenance</li>
                                 </ul>
                                 <a href="{{url('/digital-solutions/maintenance')}}" class="read">Get Proposal</a>
-                                <a href="#" class="read">sign up</a>
+                                <a href="{{url('/purchase/plan')}}/1" class="read">sign up</a>
                             </div>
                         </div>
                     </div>
@@ -181,8 +181,6 @@
                 </div>
             </div>
         </div>
-
-
 @stop
 
        
