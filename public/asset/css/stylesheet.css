@@ -386,7 +386,7 @@ header{
 }
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     width: 100%;
-    max-width: 95%;
+    max-width: 100%;
     border-radius: 3px;
     padding: 15px 25px 15px 25px;
     margin:6px;
@@ -396,7 +396,7 @@ header{
 }
 .nav-pills .nav-link{
     width: 100%;
-    max-width: 95%;
+    max-width: 100%;
     border-radius: 3px;
     padding: 15px 25px 15px 25px;
     font-size: 16px;
@@ -1523,17 +1523,52 @@ section .Website{
 .web-section1 .card-style:hover .text{
     transform: translateY(0px);
 }
+ .web-section1 .card-style .text .Learn{
+    padding: 10px 17px;
+    border: 1px solid white;
+    outline: none;
+    border-radius: 3px;
+    font-size: 17px;
+    font-weight: 600;
+    margin-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    background-color: transparent;
+    position: relative;
+    z-index: 7;
+    color: white;
+ }
+ .web-section1 .card-style .text .Learn:before{
+    position: absolute;
+    content: '';
+    height: 100px;
+    width: 0%;
+    left: 0%;
+    top: 0%;
+    background-color: transparent;
+    z-index: -7;
+    transition: 0.2s;
+ }
+  .web-section1 .card-style .text .Learn:hover:before{
+    width: 100%;
+    background-color: #005cff;
+  }
+  .web-section1 .card-style .text .Learn:hover{
+    border:1px solid #005cff;
+  }
+
 .web-section1 .card-style .text h4{
     color: white;
-    font-size: 22px;
+    font-size: 21px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
 .web-section1 .card-style .text p{
-    font-size: 13px;
-    line-height: 24px;
+      font-size: 14px;
+    line-height: 21px;
     font-family: 'Poppins', sans-serif;
-    margin-top: 20px;
+    margin-top: 1px;
+    text-align: justify;
 }
 /* web sectionc close  */
 .web-section-2{
@@ -3294,14 +3329,8 @@ padding: 50px 0px 50px 0px;
 /* col-one style close  */
 .section1 .style{
     min-height: 350px;
-    padding: 26px;
-    border-radius: 9px;
-    backdrop-filter: blur(4px);
-    /* border: 1px solid #eee; */
-    /* opacity: 0.3; */
-    background: rgb(128 146 174 / 34%);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-    position: relative;    
+    backdrop-filter: blur(0px);
+    background-color: transparent;
 }
 .section1 .style h3{
     text-align: center;
