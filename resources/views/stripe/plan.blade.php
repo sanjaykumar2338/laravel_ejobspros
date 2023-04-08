@@ -13,7 +13,7 @@
 
 .pricingTable10 .pricingTable-header {
     padding: 30px 0;
-    background: #005cff;
+    background: #4d4d4d;
     position: relative;
     transition: all .3s ease 0s
 }
