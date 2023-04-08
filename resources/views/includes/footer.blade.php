@@ -216,6 +216,6 @@
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<script src="http://parsleyjs.org/dist/parsley.js"></script>
+<script src="https://parsleyjs.org/dist/parsley.js"></script>
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script src="{{url('/asset/js/common.js')}}?v={{time()}}"></script>
