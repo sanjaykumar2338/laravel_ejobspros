@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Quote;
 use App\Models\Appointment;
 use App\Models\Contactus;
+use App\Models\Plan;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Auth;
 
@@ -19,5 +21,12 @@ class CustomerController extends Controller
     {
         $quote = Quote::where('email',auth()->user()->email)->orwhere('user_id',auth()->user()->id)->paginate();
         return view('customer.pages.my-request')->with('quote',$quote);
+    }
+
+    public function subscription_list()
+    {
+        //echo auth()->user()->id;
+        $subscription_list = \DB::table('subscriptions')->where('user_id',auth()->user()->id)->get();
+        return view('customer.pages.subscription-list')->with('subscription_list',$subscription_list);
     }
 }

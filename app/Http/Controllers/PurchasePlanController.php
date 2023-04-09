@@ -6,7 +6,9 @@ use App\Models\Quote;
 use App\Models\Appointment;
 use App\Models\Contactus;
 use App\Models\Plan;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Stripe\Exception\InvalidRequestException;
 use Auth;
 use Stripe;
 use Session;
@@ -14,8 +16,21 @@ use Exception;
 
 class PurchasePlanController extends Controller
 {
+
+    public function __construct()
+    {
+        Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+    }
+
     public function purchase_plan(Request $request)
-    {   
+    {  
+        $user_id = Auth::id();
+        $active_plan = \DB::table('subscriptions')->where('user_id',$user_id)->where('stripe_status','active')->count();
+        if($active_plan > 0){
+            $active_plan = \DB::table('subscriptions')->where('user_id',$user_id)->where('stripe_status','active')->first();
+            return redirect()->back()->with('message', 'You already have a plan '.$active_plan->name.' You can manage your plan from customer dashboard.');  
+        }
+
         $plan = Plan::find($request->id);
         if($plan){                        
             return view('stripe.checkout')->with('plan',$plan);   
@@ -33,10 +48,7 @@ class PurchasePlanController extends Controller
         $plan = Plan::where('test_stripe_id',$input['plane'])->first();
 
 
-        try {
-
-            Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
-            
+        try {            
             if (is_null($user->stripe_id)) {
                 $stripeCustomer = $user->createAsStripeCustomer();
             }
@@ -55,5 +67,18 @@ class PurchasePlanController extends Controller
         } catch (Exception $e) {
             return back()->with('success',$e->getMessage());
         }   
+    }
+
+    public function cancel_subscription(Request $request)
+    {
+        try {
+            $subscription = \Stripe\Subscription::retrieve($request->stripe_id);
+            $subscription->cancel();
+
+            \DB::table('subscriptions')->where('stripe_id',$request->stripe_id)->update(['stripe_status'=>'inactive']);
+            return back()->with('message','Subscription cancelled successfully.');
+        } catch (InvalidRequestException $e) {
+            return back()->with('message',$e->getMessage());
+        }
     }
 }

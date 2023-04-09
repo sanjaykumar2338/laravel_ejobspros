@@ -175,7 +175,10 @@
 }
 /* Credit to https://bootsnipp.com/snippets/92erW */
 </style>
-
+        @if (Session::has('message'))
+           <div class="alert alert-info">{{ Session::get('message') }}</div>
+        @endif
+        
         <div class="demo10">
             <div class="container">
                 <h4 class="py-4 text-center">Our Plans</h4>

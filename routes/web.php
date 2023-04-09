@@ -97,10 +97,11 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
 
 //customer routes
-Route::group(['namespace' => 'App\Http\Controllers'], function(){ 
+Route::group(['namespace' => 'App\Http\Controllers','middleware' => ['LoginCheck']], function(){ 
     Route::get('/dashboard/customer', 'CustomerController@index');
     Route::get('/dashboard/customer/my-request', 'CustomerController@my_request');
-})->middleware('auth');
+    Route::get('/dashboard/customer/subscription-list', 'CustomerController@subscription_list');
+});
 
 //admin routes
 Route::group(['namespace' => 'App\Http\Controllers','middleware' => ['IsAdmin']], function(){ 
@@ -115,5 +116,6 @@ Route::group(['namespace' => 'App\Http\Controllers'], function(){
 
 Route::group(['namespace' => 'App\Http\Controllers','middleware' => ['LoginCheck']], function(){ 
     Route::get('/purchase/plan/{id}', 'PurchasePlanController@purchase_plan');
-    Route::post('order-post', 'PurchasePlanController@order_post');
+    Route::post('/order-post', 'PurchasePlanController@order_post');
+    Route::get('/stripe/subscription/cancel/{stripe_id}', 'PurchasePlanController@cancel_subscription');
 });

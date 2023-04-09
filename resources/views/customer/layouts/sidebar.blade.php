@@ -23,7 +23,7 @@
 </nav>
 <!-- /.navbar -->
 
-<aside class="main-sidebar sidebar-dark-primary elevation-4">    
+<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #2b725d;">    
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
@@ -49,7 +49,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{url('dashboard/customer/my-request')}}" class="nav-link">
+            <a href="{{url('dashboard/customer/subscription-list')}}" class="nav-link {{ Request::is('dashboard/customer/subscription-list') ? 'active' : '' }}">
               <i class="far fa fa-list nav-icon"></i>
               <p>
                 My Subscription

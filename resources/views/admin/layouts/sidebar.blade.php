@@ -40,7 +40,7 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">          
           <li class="nav-item">
-            <a href="{{url('dashboard/customer')}}" class="nav-link {{ Request::is('dashboard/customer') ? 'active' : '' }}">
+            <a href="{{url('dashboard/admin/users/list')}}" class="nav-link {{ Request::is('dashboard/customer') ? 'active' : '' }}">
               <i class="far fa fa-home nav-icon"></i>
               <p>
                 Dashboard
@@ -57,15 +57,15 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{url('dashboard/customer/my-request')}}" class="nav-link">
+            <a href="{{url('dashboard/admin/users/subscription/list')}}" class="nav-link">
               <i class="far fa fa-list nav-icon"></i>
               <p>
-                My Subscription
+                All Users Subscription
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{url('dashboard/customer/my-request')}}" class="nav-link">
+            <a href="{{url('dashboard/admin/message')}}" class="nav-link">
               <i class="far fa fa-list nav-icon"></i>
               <p>
                 Messages
@@ -76,7 +76,7 @@
             <a href="{{url('dashboard/customer/my-request')}}" class="nav-link {{ Request::is('dashboard/customer/my-request') ? 'active' : '' }}">
               <i class="far fa fa-list nav-icon"></i>
               <p>
-                My Request
+                All Users Requests
               </p>
             </a>
           </li>
