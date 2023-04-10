@@ -43,4 +43,18 @@ class AdminMainController extends Controller
         $users = \DB::table('appointment')->paginate(10);
         return view('admin.pages.appointment-list')->with('users', $users);      
     }
+
+    public function send_proposal(Request $request){
+        return view('admin.pages.send-proposal')->with('id',$request->id);
+    }
+
+    public function quote_reply(Request $request){
+        //echo $request->id;
+        try{
+            \DB::table('quote_proposal')->insert(['quote_id'=>$request->id,'title'=>$request->title,'description'=>$request->description,'price'=>$request->price,'date'=>$request->date]);
+            return redirect()->back()->with('message', 'Proposal send successfully');      
+        }catch(\Exceptions $e){
+            return redirect()->back()->with('message',$e->getMessage());     
+        }
+    }
 }

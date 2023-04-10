@@ -76,7 +76,6 @@
               <i class="far fa fa-list nav-icon"></i>
               <p>
                 All Quotes Request
-                
               </p>
             </a>
           </li>

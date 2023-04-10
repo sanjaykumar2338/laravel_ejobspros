@@ -112,6 +112,8 @@ Route::group(['namespace' => 'App\Http\Controllers','middleware' => ['IsAdmin']]
     Route::get('/dashboard/admin/quotes', 'AdminMainController@all_quotes');
     Route::get('/dashboard/admin/contactus/list', 'AdminMainController@contactus_list');
     Route::get('/dashboard/admin/appointments/list', 'AdminMainController@appointments_list');
+    Route::get('/dashboard/admin/quote/send-proposal/{id}', 'AdminMainController@send_proposal');
+    Route::post('/dashboard/admin/quote/reply/{id}', 'AdminMainController@quote_reply');
 });
 
 Route::group(['namespace' => 'App\Http\Controllers'], function(){ 

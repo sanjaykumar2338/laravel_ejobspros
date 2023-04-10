@@ -62,7 +62,7 @@
                         <td>{{$row->category}}</td>
                         <td>{{$row->sub_category}}</td>
                         <td>{{$row->created_at}}</td>
-                        <td><a class="btn btn-primary" href="#">Send Proposal</a></td>
+                        <td><a class="btn btn-primary" href="{{url('/dashboard/admin/quote/send-proposal')}}/{{$row->id}}">Send Proposal</a></td>
                       </tr>
                     @endforeach
                   @endif
