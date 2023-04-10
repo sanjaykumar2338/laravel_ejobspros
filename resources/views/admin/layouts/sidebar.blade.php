@@ -75,7 +75,7 @@
             <a href="{{url('dashboard/admin/quotes')}}" class="nav-link {{ Request::is('dashboard/admin/quotes') ? 'active' : '' }}">
               <i class="far fa fa-list nav-icon"></i>
               <p>
-                All Quotes
+                All Quotes Request
               </p>
             </a>
           </li>
