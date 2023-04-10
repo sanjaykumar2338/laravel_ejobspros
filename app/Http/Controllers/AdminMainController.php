@@ -27,6 +27,8 @@ class AdminMainController extends Controller
         $users = \DB::table('subscriptions')->join('users','users.id','=','subscriptions.user_id')->select('users.name as user_name','users.email as user_email','Subscriptions.*')->paginate(10);
         //echo "<pre>"; print_r($users); die();
         return view('admin.pages.subscription-list')->with('users', $users);   
+
+        
     }
 
     public function all_quotes(){
