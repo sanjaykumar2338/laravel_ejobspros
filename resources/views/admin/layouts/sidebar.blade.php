@@ -23,6 +23,12 @@
 </nav>
 <!-- /.navbar -->
 
+<style>
+  .nav-sidebar li.active{
+    background: #3498db;
+  }
+</style>
+
 <aside class="main-sidebar sidebar-dark-primary elevation-4">    
     <!-- Sidebar -->
     <div class="sidebar">
@@ -40,7 +46,7 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">          
           <li class="nav-item">
-            <a href="{{url('dashboard/admin/users/list')}}" class="nav-link {{ Request::is('dashboard/customer') ? 'active' : '' }}">
+            <a href="{{url('dashboard/admin')}}" class="nav-link {{ Request::is('dashboard/admin') ? 'active' : '' }}">
               <i class="far fa fa-home nav-icon"></i>
               <p>
                 Dashboard
@@ -48,7 +54,7 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item {{ Request::is('dashboard/admin/users/list') ? 'active' : '' }}">
             <a href="{{url('dashboard/admin/users/list')}}" class="nav-link">
               <i class="far fa fa-list nav-icon"></i>
               <p>
@@ -57,14 +63,24 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{url('dashboard/admin/users/subscription/list')}}" class="nav-link">
+            <a href="{{url('dashboard/admin/users/subscription/list')}}" class="nav-link {{ Request::is('dashboard/admin/users/subscription/list') ? 'active' : '' }}">
               <i class="far fa fa-list nav-icon"></i>
               <p>
                 All Users Subscription
               </p>
             </a>
           </li>
+          
           <li class="nav-item">
+            <a href="{{url('dashboard/admin/quotes')}}" class="nav-link {{ Request::is('dashboard/admin/quotes') ? 'active' : '' }}">
+              <i class="far fa fa-list nav-icon"></i>
+              <p>
+                All Quotes
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item" style="display:none;">
             <a href="{{url('dashboard/admin/message')}}" class="nav-link">
               <i class="far fa fa-list nav-icon"></i>
               <p>
@@ -72,14 +88,25 @@
               </p>
             </a>
           </li>
+
           <li class="nav-item">
-            <a href="{{url('dashboard/customer/my-request')}}" class="nav-link {{ Request::is('dashboard/customer/my-request') ? 'active' : '' }}">
+            <a href="{{url('dashboard/admin/contactus/list')}}" class="nav-link {{ Request::is('dashboard/admin/contactus/list') ? 'active' : '' }}">
               <i class="far fa fa-list nav-icon"></i>
               <p>
-                All Users Requests
+               All Contact Us
               </p>
             </a>
           </li>
+
+          <li class="nav-item">
+            <a href="{{url('dashboard/admin/appointments/list')}}" class="nav-link {{ Request::is('dashboard/admin/appointments/list') ? 'active' : '' }}">
+              <i class="far fa fa-list nav-icon"></i>
+              <p>
+               All Appointments
+              </p>
+            </a>
+          </li>
+
           <li class="nav-item" style="display: none;">
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-envelope"></i>

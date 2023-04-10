@@ -16,12 +16,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">My Request List(s)</h1>
+            <h1 class="m-0">Appointment List(s)</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="{{url('dashboard/admin')}}">Home</a></li>
-              <li class="breadcrumb-item active">All Users</li>
+              <li class="breadcrumb-item active">Appointment List(s)</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -42,6 +42,11 @@
                     <th>Sr. No.</th>
                     <th>Name</th>
                     <th>Email</th>
+                    <th>Phone</th>
+                    <th>Website URL</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Place</th>
                     <th>Created On</th>
                   </tr>
                   </thead>
@@ -50,8 +55,13 @@
                     @foreach($users as $index => $row)
                       <tr>
                         <td>{{$index + $users->firstItem()}}</td>
-                        <td>{{$row->name}}</td>
+                        <td>{{$row->first_name}} {{$row->last_name}}</td>
                         <td>{{$row->email}}</td>
+                        <td>{{$row->phone_number}}</td>
+                        <td>{{$row->website_url}}</td>
+                        <td>{{$row->date}}</td>
+                        <td>{{$row->time}}</td>
+                        <td>{{$row->place}}</td>
                         <td>{{$row->created_at}}</td>
                       </tr>
                     @endforeach

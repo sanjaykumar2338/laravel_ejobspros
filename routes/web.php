@@ -84,6 +84,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         Route::get('/register', 'RegisterController@show')->name('register.show');
         Route::post('/register', 'RegisterController@register')->name('register.perform');
         Route::get('/login', 'LoginController@show')->name('login.show');
+        Route::get('/admin', 'LoginController@show')->name('login.show');
         Route::post('/login', 'LoginController@login')->name('login.perform');
     });
 
@@ -107,6 +108,10 @@ Route::group(['namespace' => 'App\Http\Controllers','middleware' => ['LoginCheck
 Route::group(['namespace' => 'App\Http\Controllers','middleware' => ['IsAdmin']], function(){ 
     Route::get('/dashboard/admin', 'AdminMainController@index');
     Route::get('/dashboard/admin/users/list', 'AdminMainController@all_users');
+    Route::get('/dashboard/admin/users/subscription/list', 'AdminMainController@subscription_list');
+    Route::get('/dashboard/admin/quotes', 'AdminMainController@all_quotes');
+    Route::get('/dashboard/admin/contactus/list', 'AdminMainController@contactus_list');
+    Route::get('/dashboard/admin/appointments/list', 'AdminMainController@appointments_list');
 });
 
 Route::group(['namespace' => 'App\Http\Controllers'], function(){ 

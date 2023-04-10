@@ -147,8 +147,8 @@
               <p class="Build"> Build you online presence by relating your vision and goals to a professional website designer. Explore responsive and effective page designs here.</p>
               <p class="design"> Get a website design quote now!</p><hr>
               <p class="development"> cl Get a quote from a website development company that offers small business pricing plans.</p>
-            <a href="{{url('/web-design')}}"><button class="Get mt-3">Get a Quote</button></a>
-            <a href="tel:347-391-1811"><button class="tel">347-391-1811 </button></a>
+              <a href="{{url('/web-design')}}"><button class="Get mt-3">Get a Quote</button></a>
+              <a href="tel:347-391-1811"><button class="tel">347-391-1811 </button></a>
             </div>
 
             <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">

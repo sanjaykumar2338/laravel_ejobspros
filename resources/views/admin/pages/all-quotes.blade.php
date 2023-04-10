@@ -16,12 +16,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">My Request List(s)</h1>
+            <h1 class="m-0">Quote List(s)</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="{{url('dashboard/admin')}}">Home</a></li>
-              <li class="breadcrumb-item active">All Users</li>
+              <li class="breadcrumb-item active">Quote List(s)</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -40,9 +40,14 @@
                   <thead>
                   <tr>
                     <th>Sr. No.</th>
-                    <th>Name</th>
+                    <th>Customer Name</th>
                     <th>Email</th>
+                    <th>Phone</th>
+                    <th>Site URL</th>
+                    <th>Category</th>
+                    <th>Sub Category</th>
                     <th>Created On</th>
+                    <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -50,9 +55,14 @@
                     @foreach($users as $index => $row)
                       <tr>
                         <td>{{$index + $users->firstItem()}}</td>
-                        <td>{{$row->name}}</td>
+                        <td>{{$row->first_name}} {{$row->last_name}}</td>
                         <td>{{$row->email}}</td>
+                        <td>{{$row->phone_number}}</td>
+                        <td>{{$row->website_url}}</td>
+                        <td>{{$row->category}}</td>
+                        <td>{{$row->sub_category}}</td>
                         <td>{{$row->created_at}}</td>
+                        <td><a class="btn btn-primary" href="#">Send Proposal</a></td>
                       </tr>
                     @endforeach
                   @endif

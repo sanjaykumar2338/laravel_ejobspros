@@ -16,12 +16,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">My Request List(s)</h1>
+            <h1 class="m-0">All Users Subscription</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="{{url('dashboard/admin')}}">Home</a></li>
-              <li class="breadcrumb-item active">All Users</li>
+              <li class="breadcrumb-item active">Subscription List(s)</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -40,8 +40,11 @@
                   <thead>
                   <tr>
                     <th>Sr. No.</th>
-                    <th>Name</th>
-                    <th>Email</th>
+                    <th>Customer Name</th>                    
+                    <th>Customer Subscription ID</th>
+                    <th>Customer Email</th>
+                    <th>Plan Name</th>                    
+                    <th>Plan Status</th>                    
                     <th>Created On</th>
                   </tr>
                   </thead>
@@ -50,8 +53,11 @@
                     @foreach($users as $index => $row)
                       <tr>
                         <td>{{$index + $users->firstItem()}}</td>
+                        <td>{{$row->user_name}}</td>
+                        <td>{{$row->stripe_id}}</td>
+                        <td>{{$row->user_email}}</td>
                         <td>{{$row->name}}</td>
-                        <td>{{$row->email}}</td>
+                        <td>{{$row->stripe_status}}</td>
                         <td>{{$row->created_at}}</td>
                       </tr>
                     @endforeach
