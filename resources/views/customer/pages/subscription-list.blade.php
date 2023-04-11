@@ -43,7 +43,7 @@
                     <th>Plan Name</th>
                     <th>Status</th>
                     <th>Created On</th>
-                    <th>Status</th>
+                    <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>

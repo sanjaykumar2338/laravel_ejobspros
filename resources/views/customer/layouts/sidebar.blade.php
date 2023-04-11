@@ -56,7 +56,7 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" style="display:none;">
             <a href="{{url('dashboard/customer/my-request')}}" class="nav-link">
               <i class="far fa fa-list nav-icon"></i>
               <p>

@@ -102,6 +102,7 @@ Route::group(['namespace' => 'App\Http\Controllers','middleware' => ['LoginCheck
     Route::get('/dashboard/customer', 'CustomerController@index');
     Route::get('/dashboard/customer/my-request', 'CustomerController@my_request');
     Route::get('/dashboard/customer/subscription-list', 'CustomerController@subscription_list');
+    Route::get('/dashboard/customer/quote/proposal/{id}', 'CustomerController@quote_proposal');
 });
 
 //admin routes
@@ -113,7 +114,7 @@ Route::group(['namespace' => 'App\Http\Controllers','middleware' => ['IsAdmin']]
     Route::get('/dashboard/admin/contactus/list', 'AdminMainController@contactus_list');
     Route::get('/dashboard/admin/appointments/list', 'AdminMainController@appointments_list');
     Route::get('/dashboard/admin/quote/send-proposal/{id}', 'AdminMainController@send_proposal');
-    Route::post('/dashboard/admin/quote/reply/{id}', 'AdminMainController@quote_reply');
+    Route::post('/dashboard/admin/quote/reply/{id}', 'AdminMainController@quote_reply');    
 });
 
 Route::group(['namespace' => 'App\Http\Controllers'], function(){ 

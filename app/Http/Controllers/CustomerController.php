@@ -29,4 +29,9 @@ class CustomerController extends Controller
         $subscription_list = \DB::table('subscriptions')->where('user_id',auth()->user()->id)->get();
         return view('customer.pages.subscription-list')->with('subscription_list',$subscription_list);
     }
+
+    public function quote_proposal(Request $request){
+        $subscription_list = \DB::table('quote_proposal')->where('quote_id',$request->id)->paginate(10);
+        return view('customer.pages.quote-proposal')->with('subscription_list', $subscription_list);    
+    }
 }
