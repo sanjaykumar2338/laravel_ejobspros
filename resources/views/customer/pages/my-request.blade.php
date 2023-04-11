@@ -51,7 +51,7 @@
                   </tr>
                   </thead>
                   <tbody>
-                  @if($quote->hasPages())
+                  @if($quote)
                     @foreach($quote as $index => $row)
                       <tr>
                         <td>{{$index + $quote->firstItem()}}</td>
