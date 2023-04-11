@@ -19,7 +19,7 @@ class CustomerController extends Controller
 
     public function my_request()
     {
-        $quote = Quote::where('email',auth()->user()->email)->orwhere('user_id',auth()->user()->id)->paginate();
+        $quote = Quote::where('email',auth()->user()->email)->orwhere('user_id',auth()->user()->id)->get();
         return view('customer.pages.my-request')->with('quote',$quote);
     }
 
