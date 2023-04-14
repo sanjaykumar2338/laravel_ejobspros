@@ -17,6 +17,19 @@ class CustomerController extends Controller
         return view('customer.pages.main');
     }
 
+     public function chat()
+    {
+        $loggedUser = User::where('id',auth()->user()->id)->get();
+        $chatUsers = User::where('id','!=',auth()->user()->id)->get();
+        //echo "<pre>"; print_r($chatUsers); die;
+        $senderUserid = '';
+        $recieverUserid = '';
+        $output = '';
+
+        return view('customer.pages.chatpage')->with('loggedUser',$loggedUser)->with('chatUsers',$chatUsers)->with('output',$output);
+    }
+
+
     public function my_request()
     {
         $quote = Quote::where('email',auth()->user()->email)->orwhere('user_id',auth()->user()->id)->get();

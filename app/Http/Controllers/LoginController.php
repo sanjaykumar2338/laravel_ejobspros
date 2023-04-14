@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\LoginRequest;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class LoginController extends Controller
 {
@@ -50,7 +51,10 @@ class LoginController extends Controller
      * @return \Illuminate\Http\Response
      */
     protected function authenticated(Request $request, $user) 
-    {
+    {   
+        
+        User::where('id',Auth::user()->id)->update(['online'=>1]);
+
         if(Auth::check() && Auth::user()->role != "admin"){
             return redirect()->intended();
         }else{

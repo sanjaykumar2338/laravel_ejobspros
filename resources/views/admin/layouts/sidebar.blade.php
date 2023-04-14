@@ -80,8 +80,8 @@
             </a>
           </li>
 
-          <li class="nav-item" style="display:none;">
-            <a href="{{url('dashboard/admin/message')}}" class="nav-link">
+          <li class="nav-item">
+            <a href="{{url('dashboard/admin/chat')}}" class="nav-link {{ Request::is('dashboard/admin/chat') ? 'active' : '' }}">
               <i class="far fa fa-list nav-icon"></i>
               <p>
                 Messages
@@ -137,7 +137,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="{{route('logout.perform')}}" class="nav-link">
+            <a href="{{route('logout2.perform')}}" class="nav-link">
               <i class="far fa fa-list nav-icon"></i>
               <p>
                 Logout

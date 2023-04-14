@@ -56,8 +56,8 @@
               </p>
             </a>
           </li>
-          <li class="nav-item" style="display:none;">
-            <a href="{{url('dashboard/customer/my-request')}}" class="nav-link">
+          <li class="nav-item">
+            <a href="{{url('dashboard/customer/chat')}}" class="nav-link {{ Request::is('dashboard/customer/chat') ? 'active' : '' }}">
               <i class="far fa fa-list nav-icon"></i>
               <p>
                 Messages
@@ -102,7 +102,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="{{route('logout.perform')}}" class="nav-link">
+            <a href="{{route('logout2.perform')}}" class="nav-link">
               <i class="far fa fa-list nav-icon"></i>
               <p>
                 Logout
