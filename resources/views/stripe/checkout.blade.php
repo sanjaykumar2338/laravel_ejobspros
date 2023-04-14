@@ -98,7 +98,17 @@
                     </div>
                   </div>
                 </div>
-                  <div class="form-group">
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group" id="coupon_code">
+                        <label>Coupon Code</label>
+                        <input type="text" class="form-control" name="coupon_code">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
                       {!! Form::submit('Place order!', ['class' => 'btn btn-lg btn-block btn-primary btn-order', 'id' => 'submitBtn', 'style' => 'margin-bottom: 10px;']) !!}
                   </div>
                   <div class="row">

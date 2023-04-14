@@ -28,7 +28,7 @@ class PurchasePlanController extends Controller
         $active_plan = \DB::table('subscriptions')->where('user_id',$user_id)->where('stripe_status','active')->count();
         if($active_plan > 0){
             $active_plan = \DB::table('subscriptions')->where('user_id',$user_id)->where('stripe_status','active')->first();
-            return redirect()->back()->with('message', 'You already have a plan '.$active_plan->name.' You can manage your plan from customer dashboard.');  
+            //return redirect()->back()->with('message', 'You already have a plan '.$active_plan->name.' You can manage your plan from customer dashboard.');  
         }
 
         $plan = Plan::find($request->id);
@@ -58,10 +58,18 @@ class PurchasePlanController extends Controller
                 ['source' => $token]
             );
 
-            $user->newSubscription($plan->name,$input['plane'])
-                ->create($paymentMethod, [
-                'email' => $user->email,
-            ]);
+            if($request->coupon_code!=""){                
+                $user->newSubscription($plan->name,$input['plane'])
+                    ->withCoupon($request->coupon_code)
+                    ->create($paymentMethod, [
+                    'email' => $user->email,
+                ]);
+            }else{                
+                $user->newSubscription($plan->name,$input['plane'])                    
+                    ->create($paymentMethod, [
+                    'email' => $user->email,
+                ]);   
+            }
 
             return back()->with('success','Subscription is completed.');
         } catch (Exception $e) {
