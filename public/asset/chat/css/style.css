@@ -620,7 +620,7 @@
   float: left;
   border: none;
   width: calc(100% - 90px);
-  padding: 11px 59px 40px 55px
+  padding: 11px 59px 40px 55px;
   font-size: 0.8em;
   color: #32465a;
 }
