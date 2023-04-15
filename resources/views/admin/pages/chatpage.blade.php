@@ -36,7 +36,7 @@
         <div class="row">
           <div class="col-12">
             <div class="card">
-              <div class="card-body">
+              <div class="card-body" style="padding:1.25rem">
                 <div class="container" style="min-height:500px;">
          <div class=''></div>
          <div class="container">
