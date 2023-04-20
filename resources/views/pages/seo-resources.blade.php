@@ -77,7 +77,7 @@
         </div>
     </section>
     <!-- section close  -->
-    <section class="seo-section-1">
+    <section class="web-section1">
         <div class="container">
             <div class="text-center">
                 <h5> SEO RESOURCES
@@ -85,7 +85,7 @@
             </div>
             <div class="row g-md-3  g-sm-3 mt-4">
                 <div class="col-lg-4 col-md-6 col-sm-12 ">
-                    <div class="style-box ">
+                  <div class="card-style">
                       <div class="img">
                         <img src="{{url('/asset/images/w-1.png')}}" alt="">
                       </div>
@@ -94,12 +94,16 @@
                             Audit
                             </h3>
                             <p> Let us perform a website audit to analyze your web presence. The use of an audit is the first step needed to implement a successful SEO plan and achieve measurable future results. Using an SEO audit, we can identify issues that might impact your site’s organic search performance. This is an integral first step towards your website’s long term success so you gain valuable traffic, optimum ranking, and increased revenue.</p>
+
+                            <a href="{{url('seo-resources/website-audit')}}"><button style="padding: 2px 17px;" class="Learn">Learn more</button></a>
+                            <a href="{{url('free-consultation/get-a-quote')}}"><button style="padding: 2px 17px;" class="Learn">start now</button></a>
+
                       </div>
                     </div>
                   </div>
 
                   <div class="col-lg-4 col-md-6 col-sm-12 ">
-                    <div class="style-box">
+                    <div class="card-style">
                       <div class="img">
                         <img src="{{url('/asset/images/wp-1.png')}}" alt="">
                       </div>
@@ -108,11 +112,16 @@
                             Grade
                             </h3>
                             <p> Your website requires speed for success. Ideally, an e-commerce web page should load in under two seconds but the best should only take half a second. Honestly, speed matters when it comes to customer service. Most people will navigate away from a page if it takes too long to load. Let our experts look at your web speed grade and then help achieve the fast response you need to pull ahead of the competition.</p>
+
+                            <a href="{{url('seo-resources/website-speed')}}"><button style="padding: 2px 17px;" class="Learn">Learn more</button></a>
+                            <a href="{{url('free-consultation/get-a-quote')}}"><button style="padding: 2px 17px;" class="Learn">start now</button></a>
+
+
                       </div>
                     </div>
                   </div>
                   <div class="col-lg-4 col-md-6 col-sm-12 ">
-                    <div class="style-box">
+                    <div class="card-style">
                       <div class="img">
                         <img src="{{url('/asset/images/ca-1.png')}}" alt="">
                       </div>
@@ -121,6 +130,10 @@
                             Analysis
                             </h3>
                             <p> In order to achieve success, you have to know and understand your competition. We can perform a competitive analysis which is a strategy used to examine your major competitors. Our team will research their products, marketing strategies, SEO, and sales. We will look at their customer reviews, too. The crucial intelligence information that we gather will lay the framework for your own success.</p>
+
+                            <a href="{{url('seo-resources/competitor-analysis')}}"><button style="padding: 2px 17px;" class="Learn">Learn more</button></a>
+                            <a href="{{url('free-consultation/get-a-quote')}}"><button style="padding: 2px 17px;" class="Learn">start now</button></a>
+                            
                       </div>
                     </div>
                   </div>
