@@ -20,7 +20,7 @@ class CustomerController extends Controller
      public function chat()
     {
         $loggedUser = User::where('id',auth()->user()->id)->get();
-        $chatUsers = User::where('id','!=',auth()->user()->id)->get();
+        $chatUsers = User::where('role','admin')->get();
         //echo "<pre>"; print_r($chatUsers); die;
         $senderUserid = '';
         $recieverUserid = '';
