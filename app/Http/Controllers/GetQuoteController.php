@@ -5,8 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Quote;
 use App\Models\Appointment;
 use App\Models\Contactus;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Auth;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\Query;
 
 class GetQuoteController extends Controller
 {
@@ -204,6 +207,8 @@ class GetQuoteController extends Controller
             }
 
             if($quote->save()){
+                $user = User::where('role','admin')->first();
+                Mail::to($user)->send(new Query($quote));
                 return redirect()->back()->with('message', 'Quote Send Successfully!');   
             }
 

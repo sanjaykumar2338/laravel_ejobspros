@@ -96,7 +96,7 @@
                               </td>
                            </tr>
                            <tr class="">
-                              <td class="headline">Hi {{$username}}, Welcome to ejobs4pros!</td>
+                              <td class="headline">Hi Admin</td>
                            </tr>
                            <tr>
                               <td>
@@ -105,8 +105,15 @@
                                        <tbody class="">
                                           <tr class="">
                                              <td class="" style="color:#444; font-weight: 400;"><br><br>
-                                                We design, build and optimize lead generating landing pages, organic and paid ads, websites, videos and social media business pages.
-                                                <br>                                                
+                                                Following customer contact you !!!                                                
+                                                <br>                              
+                                                First Name : {{$quote->first_name}}<br>
+                                                Last Name : {{$quote->last_name}}<br>                   
+                                                Email : {{$quote->email}}<br>                   
+                                                Phone Number : {{$quote->phone_number}}<br>
+                                                Website URL : {{$quote->website_url}}<br>
+                                                Category : {{$quote->category}}<br>
+                                                Sub Category : {{$quote->sub_category}}<br><br><br>
                                              </td>
                                           </tr>
                                        </tbody>
@@ -117,7 +124,7 @@
                            <tr>
                               <td class="">
                                  <div class="">
-                                    <a style="background-color:#674299;border-radius:4px;color:#fff;display:inline-block;font-family:Helvetica, Arial, sans-serif;font-size:18px;font-weight:normal;line-height:50px;text-align:center;text-decoration:none;width:350px;-webkit-text-size-adjust:none;" href="{{url('/')}}">Visit Account and Start Managing</a>
+                                    <a style="background-color:#674299;border-radius:4px;color:#fff;display:inline-block;font-family:Helvetica, Arial, sans-serif;font-size:18px;font-weight:normal;line-height:50px;text-align:center;text-decoration:none;width:350px;-webkit-text-size-adjust:none;" href="{{url('/')}}">ejobs4pros</a>
                                  </div>
                                  <br>
                               </td>
