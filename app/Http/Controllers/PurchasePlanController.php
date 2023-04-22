@@ -46,8 +46,7 @@ class PurchasePlanController extends Controller
         $token =  $request->stripeToken;
         $paymentMethod = $request->paymentMethod;
         $plan = Plan::where('live_stripe_id',$input['plane'])->first();
-
-
+        
         try {            
             if (is_null($user->stripe_id)) {
                 $stripeCustomer = $user->createAsStripeCustomer();

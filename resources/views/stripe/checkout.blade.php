@@ -51,7 +51,7 @@
                         <strong>{{ $message }}</strong>
                 </div>
                 @endif   
-                <input type="hidden" name="plane" value="{{$plan->test_stripe_id}}">             
+                <input type="hidden" name="plane" value="{{$plan->live_stripe_id}}">             
                 <div class="form-group" id="cc-group">
                     {!! Form::label(null, 'Credit card number:') !!}
                     {!! Form::text(null, null, [
@@ -116,7 +116,7 @@
                         <span class="payment-errors" style="color: red;margin-top:10px;"></span>
                     </div>
                   </div>
-                  <input type="hidden" name="publish_key" id="publish_key" value="pk_test_51MsUEMJ1zQ0384IFCFTnMFJNPdDhbKvU0X7YBMVYrB7QnamXdvMU7Q0GL9FVYFP8pZGDa0pkmji2OWotLzslzMge00OzOz0EEc">
+                  <input type="hidden" name="publish_key" id="publish_key" value="{{env('STRIPE_KEY')}}">
               {!! Form::close() !!}
             </div>
         </div>
