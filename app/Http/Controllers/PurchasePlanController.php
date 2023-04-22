@@ -45,7 +45,7 @@ class PurchasePlanController extends Controller
         $input = $request->all();
         $token =  $request->stripeToken;
         $paymentMethod = $request->paymentMethod;
-        $plan = Plan::where('test_stripe_id',$input['plane'])->first();
+        $plan = Plan::where('live_stripe_id',$input['plane'])->first();
 
 
         try {            
