@@ -107,7 +107,7 @@
           <h4> DIGITAL MARKETING</h4>
         </div>
         <div class="row  g-md-3  g-sm-3 mt-3">
-          <div class="col-lg-4 col-md-6 col-sm-12 ">
+          <div class="col-lg-4 col-md-6 col-sm-12 " style="display:none;">
             <div class="card-style">
               <div class="img">
                 <img src="{{url('/asset/images/d-1.png')}}" alt="">

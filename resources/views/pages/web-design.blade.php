@@ -125,26 +125,10 @@
               <h4>LANDING PAGE DESIGN</h4>
                 <p> Designing funnel form promotions, tracking systems and custom Call-to-Action landing pages that invoke reaction is a skill we excel at. Track conversion rate, improve sales results and get the best ROI with effective sales pages.
                 Meet your landing page designer, explore our lead conversion resources and generate more online sales with our high conversion landing page design.</p>
-                 <a href="{{url('web-design/website')}}"><button class="Learn">Learn more</button></a>
-                 <a href="{{url('web-design/website')}}"><button class="Learn">start now</button></a>
+                 <a href="{{url('/web-design/landing-page')}}"><button class="Learn">Learn more</button></a>
+                 <a href="{{url('/free-consultation/get-a-quote')}}"><button class="Learn">start now</button></a>
               </div>
             </div><br>
-          </div>
-          <!-- col-close  -->
-          <div class="col-lg-4 col-md-6 col-sm-12 ">
-            <div class="card-style">
-              <div class="img">
-                <img src="{{ url('/asset/images/web-2.png')}}" alt="">
-              </div>
-              <div class="text">
-              <h4>LANDING PAGE DESIGN</h4>
-              <p> Designing funnel form promotions, tracking systems and custom Call-to-Action landing pages that invoke reaction is a skill we excel at. Track conversion rate, improve sales results and get the best ROI with effective sales pages.
-                Meet your landing page designer, explore our lead conversion resources and generate more online sales with our high conversion landing page design.</p>
-                 <a href="{{url('web-design/landing-page')}}"><button class="Learn">Learn more</button></a>
-            <a href="{{url('web-design/landing-page')}}"><button class="Learn">start now</button></a>
-              </div>
-            </div>
-            <br>
           </div>
           <!-- col-close  -->
           <div class="col-lg-4 col-md-6 col-sm-12 ">
@@ -155,8 +139,8 @@
               <div class="text">
                 <h4>SOCIAL SHOP DESIGN</h4>
                 <p> Customize your social store, revamp brand pages and upgrade your product catalog to an ecommerce solution that fits your social media strategy, track inventory and maximize online sales. Our digital design services are perfect for fashion designers, product sellers and entrepreneurs.</p>
-                 <a href="{{url('web-design/social-shop')}}"><button class="Learn">Learn more</button></a>
-            <a href="{{url('web-design/social-shop')}}"><button class="Learn">start now</button></a>
+                <a href="{{url('web-design/social-shop')}}"><button class="Learn">Learn more</button></a>
+                <a href="{{url('free-consultation/get-a-quote')}}"><button class="Learn">start now</button></a>
               </div>
             </div>
              <br>
@@ -171,8 +155,8 @@
                   <h4>MARKETING
                     AUTOMATION</h4>
                     <p> Email template design and social automation strategies play a principal role in taking a business to the next level. Talk about the best platform option for your business with an email, social and expert digital marketing automation tool designer for successful sales campaigns.</p>
-                     <a href="{{url('web-design/marketing-automation')}}"><button class="Learn">Learn more</button></a>
-              <a href="{{url('web-design/marketing-automation')}}"><button class="Learn">start now</button></a>
+                    <a href="{{url('web-design/marketing-automation')}}"><button class="Learn">Learn more</button></a>
+                    <a href="{{url('free-consultation/get-a-quote')}}"><button class="Learn">start now</button></a>
                 </div>
               </div><br>
             </div>
@@ -186,8 +170,8 @@
                   <h4>CAMPAIGN
                     DESIGN</h4>
                     <p> High conversion rate is a result of organic pages, successful display advertising and social ad campaigns. Display ads, videos and pages to maximize reaction. Get custom ads, pages, campaigns and strategies that follow digital stories, creative goals and marketing plans.</p>
-                     <a href="{{url('web-design/campaign-design')}}"><button class="Learn">Learn more</button></a>
-              <a href="{{url('web-design/campaign-design')}}"><button class="Learn">start now</button></a>
+                    <a href="{{url('web-design/campaign-design')}}"><button class="Learn">Learn more</button></a>
+                    <a href="{{url('free-consultation/get-a-quote')}}"><button class="Learn">start now</button></a>
                 </div>
               </div><br>
             </div>
@@ -201,7 +185,7 @@
                   <h4>E-CATALOG AND INVENTORY PLATFORM DESIGN</h4>
                   <p> Sell on social media, integrate a catalog with inventory and use a professional order fulfilment process. Use social media to generate more online sales, adopt to market changes and customer habits.                  </p>
                   <a href="{{url('web-design/e-catalog-inventory')}}"><button class="Learn">Learn more</button></a>
-              <a href="{{url('web-design/e-catalog-inventory')}}"><button class="Learn">start now</button></a>
+                  <a href="{{url('free-consultation/get-a-quote')}}"><button class="Learn">start now</button></a>
                 </div>
               </div><br>
             </div>
