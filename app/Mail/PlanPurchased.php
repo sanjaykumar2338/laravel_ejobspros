@@ -12,15 +12,19 @@ use Illuminate\Queue\SerializesModels;
 class PlanPurchased extends Mailable
 {
     use Queueable, SerializesModels;
+    
+    protected $plan;
+    protected $user;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($plan, $user)
     {
-        //
+        $this->plan = $plan;
+        $this->user = $user;
     }
 
     /**
@@ -41,9 +45,13 @@ class PlanPurchased extends Mailable
      * @return \Illuminate\Mail\Mailables\Content
      */
     public function content()
-    {
+    {   
         return new Content(
-            view: 'view.name',
+            view: 'emails.planpurchased',
+            with: [
+                'user' => $this->user,
+                'plan' => $this->plan
+            ]
         );
     }
 

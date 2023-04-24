@@ -13,6 +13,8 @@ use Auth;
 use Stripe;
 use Session;
 use Exception;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\PlanPurchased;
 
 class PurchasePlanController extends Controller
 {
@@ -28,7 +30,7 @@ class PurchasePlanController extends Controller
         $active_plan = \DB::table('subscriptions')->where('user_id',$user_id)->where('stripe_status','active')->count();
         if($active_plan > 0){
             $active_plan = \DB::table('subscriptions')->where('user_id',$user_id)->where('stripe_status','active')->first();
-            return redirect()->back()->with('message', 'You already have a plan '.$active_plan->name.' You can manage your plan from customer dashboard.');  
+            //return redirect()->back()->with('message', 'You already have a plan '.$active_plan->name.' You can manage your plan from customer dashboard.');  
         }
 
         $plan = Plan::find($request->id);
@@ -45,7 +47,11 @@ class PurchasePlanController extends Controller
         $input = $request->all();
         $token =  $request->stripeToken;
         $paymentMethod = $request->paymentMethod;
-        $plan = Plan::where('live_stripe_id',$input['plane'])->first();
+        if(env('STRIPE_LIVE')==1){
+            $plan = Plan::where('live_stripe_id',$input['plane'])->first();
+        }else{
+            $plan = Plan::where('test_stripe_id',$input['plane'])->first();
+        }
         
         try {            
             if (is_null($user->stripe_id)) {
@@ -70,6 +76,7 @@ class PurchasePlanController extends Controller
                 ]);   
             }
 
+            Mail::to($user)->send(new PlanPurchased($plan,$user));
             return back()->with('success','Subscription is completed.');
         } catch (Exception $e) {
             return back()->with('success',$e->getMessage());

@@ -51,7 +51,12 @@
                         <strong>{{ $message }}</strong>
                 </div>
                 @endif   
-                <input type="hidden" name="plane" value="{{$plan->live_stripe_id}}">             
+
+                @if(env('STRIPE_LIVE')==1)
+                  <input type="hidden" name="plane" value="{{$plan->live_stripe_id}}">  
+                @else
+                  <input type="hidden" name="plane" value="{{$plan->test_stripe_id}}">  
+                @endif
                 <div class="form-group" id="cc-group">
                     {!! Form::label(null, 'Credit card number:') !!}
                     {!! Form::text(null, null, [
