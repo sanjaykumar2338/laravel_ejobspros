@@ -18,6 +18,8 @@
                   <a href="https://www.youtube.com/c/Ejobs4pros/featured" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                   <a href="https://www.linkedin.com/in/ejobs4pros" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
+                <li class="li" style="padding-left: 0px;">Copyrights © {{date('Y')}} www.ejobs4pros.com
+								All Rights Reserved</li>
               </div>
             <!-- col-close  -->
             

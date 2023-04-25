@@ -149,6 +149,10 @@ class GetQuoteController extends Controller
         return view('pages.web-design');
     }
 
+    public function email_marketing(){
+        return view('pages.web-design.email-marketing');
+    }
+
     public function landing_page(){
         return view('pages.web-design.landing-page');
     }

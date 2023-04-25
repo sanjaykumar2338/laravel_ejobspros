@@ -149,7 +149,7 @@
                   MARKETING</h3>
                   <p> Build a valued B2C relationship using creative email marketing strategies. Start a powerful email campaign with custom graphics and relevant messages. We utilize digital marketing sales techniques, effective template graphics and consistent newsletter blasts to maximize email conversion rate.</p>
 
-                  <a href="{{url('digital-marketing/content-marketing')}}"><button class="Learn">Learn more</button></a>
+                  <a href="{{url('digital-marketing/email-marketing')}}"><button class="Learn">Learn more</button></a>
                   <a href="{{url('free-consultation/get-a-quote')}}"><button class="Learn">start now</button></a>
               </div>
             </div>
