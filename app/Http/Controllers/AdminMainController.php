@@ -45,17 +45,17 @@ class AdminMainController extends Controller
     }
 
     public function all_quotes(){
-        $users = \DB::table('quote')->paginate(10);
+        $users = \DB::table('quote')->paginate(100);
         return view('admin.pages.all-quotes')->with('users', $users);      
     }
 
     public function contactus_list(){
-        $users = \DB::table('contactus')->get();
+        $users = \DB::table('contactus')->paginate(100);
         return view('admin.pages.contactus-list')->with('users', $users);      
     }
 
     public function appointments_list(){
-        $users = \DB::table('appointment')->paginate(10);
+        $users = \DB::table('appointment')->paginate(100);
         return view('admin.pages.appointment-list')->with('users', $users);      
     }
 
