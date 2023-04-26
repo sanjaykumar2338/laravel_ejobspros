@@ -50,7 +50,7 @@ class AdminMainController extends Controller
     }
 
     public function contactus_list(){
-        $users = \DB::table('contactus')->paginate(10);
+        $users = \DB::table('contactus')->get();
         return view('admin.pages.contactus-list')->with('users', $users);      
     }
 
