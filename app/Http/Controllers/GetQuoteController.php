@@ -79,6 +79,14 @@ class GetQuoteController extends Controller
         return view('pages.digital_solutions_menu.sem');
     }
 
+    public function search_engine_optimization_seo2(){
+        return view('pages.web-design.search-engine-optimization-seo');
+    }
+
+    public function video_marketing(){
+        return view('pages.web-design.video-marketing');
+    }
+
     public function search_media_marketing_smm(){
         return view('pages.digital_solutions_menu.smm');
     }
@@ -129,6 +137,10 @@ class GetQuoteController extends Controller
         return view('pages.digital_solutions_menu.digital-marketing-professionals');
     }
 
+    public function paid_search_advertising(){
+        return view('pages.web-design.paid-search-advertising');
+    }
+
     public function seo_resources()
     {
         return view('pages.seo-resources');
@@ -151,6 +163,10 @@ class GetQuoteController extends Controller
 
     public function email_marketing(){
         return view('pages.web-design.email-marketing');
+    }
+
+    public function mobile_marketing(){
+        return view('pages.web-design.mobile-marketing');
     }
 
     public function landing_page(){

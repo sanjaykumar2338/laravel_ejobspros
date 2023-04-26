@@ -67,6 +67,10 @@ Route::get('/digital-marketing/social-media-marketing-smm', [GetQuoteController:
 Route::get('/digital-marketing/email-marketing', [GetQuoteController::class, 'email_marketing']);
 Route::get('/digital-marketing/local-marketing', [GetQuoteController::class, 'local_marketing']);
 Route::get('/digital-marketing/content-marketing', [GetQuoteController::class, 'content_marketing']);
+Route::get('/digital-marketing/mobile-marketing', [GetQuoteController::class, 'mobile_marketing']);
+Route::get('/digital-marketing/paid-search-advertising', [GetQuoteController::class, 'paid_search_advertising']);
+Route::get('/digital-marketing/search-engine-optimization-seo2', [GetQuoteController::class, 'search_engine_optimization_seo2']);
+Route::get('/digital-marketing/video-marketing', [GetQuoteController::class, 'video_marketing']);
 
 Route::get('/contact-website-design-and-digital-marketing-professionals', [GetQuoteController::class, 'digital_marketing_professionals']);
 Route::get('/web-design/website', [GetQuoteController::class, 'website']);

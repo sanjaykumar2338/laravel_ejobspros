@@ -180,7 +180,7 @@
                   MARKETING</h3>
                   <p> Target locals with effective mobile optimization services such as social and text messaging, display ads and sales suggestions that convert. Reach customers, introduce your small business and get online orders. generate reaction from mobile shoppers.</p>
 
-                  <a href="{{url('digital-marketing/local-marketing')}}"><button class="Learn">Learn more</button></a>
+                  <a href="{{url('digital-marketing/mobile-marketing')}}"><button class="Learn">Learn more</button></a>
                   <a href="{{url('free-consultation/get-a-quote')}}"><button class="Learn">start now</button></a>
 
               </div>
@@ -196,7 +196,7 @@
                   ADVERTISING</h3>
                   <p> Hire a PPC advertising strategist for best conversion results. Get the most out of your marketing budget and the best ROI for paid social ads. Compete for top placement at search engine pages with optimized actionable ads.</p>
 
-                  <a href="{{url('digital-solutions/pay-per-lead')}}"><button class="Learn">Learn more</button></a>
+                  <a href="{{url('digital-marketing/paid-search-advertising')}}"><button class="Learn">Learn more</button></a>
                   <a href="{{url('free-consultation/get-a-quote')}}"><button class="Learn">start now</button></a>
 
               </div>
@@ -212,7 +212,7 @@
                   OPTIMIZATION – SEO</h3>
                   <p>Market research, competitive and customer trends analysis are the basis of insightful customer experience optimization. Explore the organic SEO tools here and hire a top rated SEO company for on-page and off-page optimization.                  </p>
 
-                  <a href="{{url('seo-resources')}}"><button class="Learn">Learn more</button></a>
+                  <a href="{{url('digital-marketing/search-engine-optimization-seo2')}}"><button class="Learn">Learn more</button></a>
                   <a href="{{url('free-consultation/get-a-quote')}}"><button class="Learn">start now</button></a>
 
               </div>
@@ -228,7 +228,7 @@
                   MARKETING</h3>
                   <p> Essential to brand growth, consistent video marketing provides is the best conversion tool for small businesses looking to reach customers and influence a target market. Hire a professional video marketing agency for the creative strategies.</p>
 
-                  <a href="{{url('web-design/website')}}"><button class="Learn">Learn more</button></a>
+                  <a href="{{url('digital-marketing/video-marketing')}}"><button class="Learn">Learn more</button></a>
                   <a href="{{url('free-consultation/get-a-quote')}}"><button class="Learn">start now</button></a>
 
               </div>
