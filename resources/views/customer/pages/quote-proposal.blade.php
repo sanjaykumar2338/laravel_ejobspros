@@ -43,6 +43,7 @@
                     <th>Title</th>
                     <th>Price</th>
                     <th>Description</th>
+                    <th>Attachments</th>
                     <th>Created On</th>
                   </tr>
                   </thead>
@@ -54,6 +55,7 @@
                         <td>{{$row->title }}</td>
                         <td>{{$row->price}}</td>
                         <td>{{$row->description}}</td>
+                        <td><a href="{{url('dashboard/customer/quote/proposal/documentlist/')}}/{{$row->id}}">Click</a></td>
                         <td>{{$row->created_at}}</td>
                       </tr>
                     @endforeach

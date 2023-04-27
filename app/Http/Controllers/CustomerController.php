@@ -44,7 +44,12 @@ class CustomerController extends Controller
     }
 
     public function quote_proposal(Request $request){
-        $subscription_list = \DB::table('quote_proposal')->where('quote_id',$request->id)->paginate(10);
+        $subscription_list = \DB::table('quote_proposal')->where('quote_id',$request->id)->orderBy('id', 'DESC')->get();
         return view('customer.pages.quote-proposal')->with('subscription_list', $subscription_list);    
+    }
+
+    public function documentlist(Request $request){
+        $subscription_list = \DB::table('quote_proposal_file')->where('proposal_id',$request->id)->orderBy('id', 'DESC')->get();
+        return view('customer.pages.documentlist')->with('subscription_list', $subscription_list); 
     }
 }

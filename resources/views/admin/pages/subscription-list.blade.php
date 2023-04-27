@@ -52,7 +52,7 @@
                   @if($users)
                     @foreach($users as $index => $row)
                       <tr>
-                        <td>{{$index + $users->firstItem()}}</td>
+                        <td>{{$index + 1}}</td>
                         <td>{{$row->user_name}}</td>
                         <td>{{$row->stripe_id}}</td>
                         <td>{{$row->user_email}}</td>

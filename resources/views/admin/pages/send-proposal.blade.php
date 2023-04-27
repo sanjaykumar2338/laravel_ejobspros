@@ -36,7 +36,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-body">
-                <form action="{{url('dashboard/admin/quote/reply')}}/{{$id}}" method="post">
+                <form action="{{url('dashboard/admin/quote/reply')}}/{{$id}}" method="post" enctype="multipart/form-data">
                   @csrf
                   <div class="form-group">
                     <label for="title">Title:</label>
@@ -56,6 +56,11 @@
                   <div class="form-group" style="display:none;">
                     <label for="time">Time:</label>
                     <input type="date" class="form-control" id="time" placeholder="Select Time" name="time">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="time">Attachments:</label>
+                    <input type="file" multiple name="attachment[]" class="form-control">
                   </div>
                   
                   <button type="submit" class="btn btn-default">Submit</button>

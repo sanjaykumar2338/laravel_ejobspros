@@ -51,7 +51,7 @@
                   @if($users)
                     @foreach($users as $index => $row)
                       <tr>
-                        <td>{{$index + $users->firstItem()}}</td>
+                        <td>{{$index + 1}}</td>
                         <td>{{$row->name}}</td>
                         <td>{{$row->email}}</td>
                         <td>{{$row->phone_number}}</td>

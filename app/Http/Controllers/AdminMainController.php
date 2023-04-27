@@ -23,7 +23,7 @@ class AdminMainController extends Controller
     public function chat()
     {
         $loggedUser = User::where('id',auth()->user()->id)->get();
-        $chatUsers = User::where('id','!=',auth()->user()->id)->get();
+        $chatUsers = User::where('id','!=',auth()->user()->id)->orderBy('id', 'DESC')->get();
         //echo "<pre>"; print_r($chatUsers); die;
         $senderUserid = '';
         $recieverUserid = '';
@@ -34,28 +34,28 @@ class AdminMainController extends Controller
 
     public function all_users()
     {
-        $users = User::where('email','!=','admin@gmail.com')->paginate(10);
+        $users = User::where('email','!=','admin@gmail.com')->orderBy('id', 'DESC')->get();
         return view('admin.pages.users-all')->with('users', $users);
     }
 
     public function subscription_list(){
-        $users = \DB::table('subscriptions')->join('users','users.id','=','subscriptions.user_id')->select('users.name as user_name','users.email as user_email','subscriptions.*')->paginate(10);
+        $users = \DB::table('subscriptions')->join('users','users.id','=','subscriptions.user_id')->select('users.name as user_name','users.email as user_email','subscriptions.*')->orderBy('subscriptions.id', 'DESC')->get();
         //echo "<pre>"; print_r($users); die();
         return view('admin.pages.subscription-list')->with('users', $users);   
     }
 
     public function all_quotes(){
-        $users = \DB::table('quote')->paginate(100);
+        $users = \DB::table('quote')->orderBy('id', 'DESC')->get();
         return view('admin.pages.all-quotes')->with('users', $users);      
     }
 
     public function contactus_list(){
-        $users = \DB::table('contactus')->paginate(100);
+        $users = \DB::table('contactus')->orderBy('id', 'DESC')->get();
         return view('admin.pages.contactus-list')->with('users', $users);      
     }
 
     public function appointments_list(){
-        $users = \DB::table('appointment')->paginate(100);
+        $users = \DB::table('appointment')->orderBy('id', 'DESC')->get();
         return view('admin.pages.appointment-list')->with('users', $users);      
     }
 
@@ -66,7 +66,18 @@ class AdminMainController extends Controller
     public function quote_reply(Request $request){
         //echo $request->id;
         try{
-            \DB::table('quote_proposal')->insert(['quote_id'=>$request->id,'title'=>$request->title,'description'=>$request->description,'price'=>$request->price,'date'=>$request->date]);
+
+            $id = \DB::table('quote_proposal')->insertGetId(['quote_id'=>$request->id,'title'=>$request->title,'description'=>$request->description,'price'=>$request->price,'date'=>$request->date]);
+            
+            if($request->hasFile('attachment')){
+                $files = $request->file('attachment');
+                foreach ($files as $file) {                    
+                    $name = time().'.'.$file->extension();
+                    $file->move(base_path() . '/storage/app/public', $name);
+                    \DB::table('quote_proposal_file')->insertGetId(['proposal_id'=>$id,'file'=>$name]);
+                }
+            }
+
             return redirect()->back()->with('message', 'Proposal send successfully');      
         }catch(\Exceptions $e){
             return redirect()->back()->with('message',$e->getMessage());     
