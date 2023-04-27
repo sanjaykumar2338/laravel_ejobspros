@@ -60,7 +60,8 @@
               @endauth
 
               @guest
-                  <a class="login" href="{{url('login')}}"><i class="fa-solid fa-user"></i>client login </a>
+                  <a class="login" href="{{url('login')}}"><i class="fa-solid fa-user"></i>login </a>
+                  <a class="login" href="{{url('register')}}"><i class="fa-solid fa-user"></i>register</a>
               @endguest
             </ul>
           </div>
