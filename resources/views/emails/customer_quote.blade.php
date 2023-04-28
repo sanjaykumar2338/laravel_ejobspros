@@ -106,7 +106,7 @@
                                           <tr class="">
                                              <td class="" style="color:#444; font-weight: 400;"><br><br>
 
-                                                <p>Thank you for your interest in our {{$quote->category}}/{{$quote->sub_category}}. We're excited to work with you!</p>
+                                                <p>Thank you for your interest in our {{$quote->category}}/{{$quote->sub_category}} service. We're excited to work with you!</p>
 
                                                 <p>Our team has worked hard to provide you with the best possible pricing and service.</p>
 
