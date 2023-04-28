@@ -10,6 +10,8 @@ use Illuminate\Http\Request;
 use Auth;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Query;
+use App\Mail\CustomerQuote;
+use App\Mail\QuoteReply;
 
 class GetQuoteController extends Controller
 {
@@ -229,6 +231,22 @@ class GetQuoteController extends Controller
             if($quote->save()){
                 $user = User::where('role','admin')->first();
                 Mail::to($user)->send(new Query($quote));
+                $rec = User::where('email',$request->email)->count();
+
+                if($rec == 0){
+                    $password = rand();
+                    $new_user = New User;
+                    $new_user->name = $request->your_name.' '.$request->last_name;
+                    $new_user->email = $request->email;
+                    $new_user->password = \Hash::make($password);
+                    $new_user->role = 'customer';
+                    $new_user->save();
+                    Mail::to($new_user)->send(new CustomerQuote($quote,$new_user,true,$password));
+                }else{
+                    $rec = User::where('email',$request->email)->first();
+                    Mail::to($rec)->send(new CustomerQuote($quote,$rec,false,''));
+                }
+
                 return redirect()->back()->with('message', 'Quote Send Successfully!');   
             }
 
