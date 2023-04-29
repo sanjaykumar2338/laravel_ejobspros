@@ -16,14 +16,14 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Send Proposal</h1>
+            <h1 class="m-0">View Proposal</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="{{url('dashboard/admin')}}">Home</a></li>
-              <li class="breadcrumb-item active">Send Proposal</li>
-            </ol>
-          </div><!-- /.col -->
+              <li class="breadcrumb-item active">View Proposal</li>
+            </ol>            
+          </div><!-- /.col -->          
         </div><!-- /.row -->
         <button onclick="history.back()" class="btn btn-info">Go Back</button>
       </div><!-- /.container-fluid -->
@@ -37,26 +37,26 @@
           <div class="col-12">
             <div class="card">
               <div class="card-body">
-                <form action="{{url('dashboard/admin/quote/reply')}}/{{$id}}" method="post" enctype="multipart/form-data">
+                <form action="{{url('dashboard/admin/update/quote/reply')}}/{{$proposal->id}}" method="post" enctype="multipart/form-data">
                   @csrf
                   <div class="form-group">
                     <label for="title">Title:</label>
-                    <input type="text" required class="form-control" id="title" placeholder="Enter Title" name="title">
+                    <input type="text" value="{{$proposal->title}}" required class="form-control" id="title" placeholder="Enter Title" name="title">
                   </div>
                   
                   <div class="form-group">
                     <label for="description">Description:</label>
-                    <textarea class="form-control" required rows="7" id="description" placeholder="Enter Description" name="description"></textarea>
+                    <textarea class="form-control" required rows="7" id="description" placeholder="Enter Description" name="description">{{$proposal->description}}</textarea>
                   </div>
 
                   <div class="form-group">
                     <label for="price">Price:</label>
-                    <input type="number" class="form-control" id="price" placeholder="Enter Price" name="price">
+                    <input type="number" class="form-control" value="{{$proposal->price}}" id="price" placeholder="Enter Price" name="price">
                   </div>
 
                   <div class="form-group">
                     <label for="price">Coupon:</label>
-                    <input type="text" class="form-control" id="coupon" placeholder="Coupon" name="coupon">
+                    <input type="text" class="form-control" value="{{$proposal->coupon}}" id="coupon" placeholder="Coupon" name="coupon">
                   </div>
 
                   <div class="form-group" style="display:none;">
@@ -68,8 +68,16 @@
                     <label for="time">Attachments:</label>
                     <input type="file" multiple name="attachment[]" class="form-control">
                   </div>
+
+                  @if($proposal_file)
+                    <ul>
+                      @foreach($proposal_file as $row)
+                        <li><a href="{{ Storage::url('public/'.$row->file)}}" target="_blank">{{$row->file }}</a></li>
+                      @endforeach
+                    </ul>  
+                  @endif
                   
-                  <button type="submit" class="btn btn-default">Submit</button>
+                  <button type="submit" class="btn btn-default">Update</button>
                 </form>
               </div>
             </div>

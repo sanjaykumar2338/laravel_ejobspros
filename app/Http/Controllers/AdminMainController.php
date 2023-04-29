@@ -8,6 +8,7 @@ use App\Models\Appointment;
 use App\Models\Contactus;
 use Illuminate\Http\Request;
 use Auth;
+use App\Mail\CustomerQuoteUpdate;
 
 class AdminMainController extends Controller
 {
@@ -45,7 +46,7 @@ class AdminMainController extends Controller
     }
 
     public function all_quotes(){
-        $users = \DB::table('quote')->orderBy('id', 'DESC')->get();
+        $users = \DB::table('quote')->orderBy('updated_at', 'DESC')->get();
         return view('admin.pages.all-quotes')->with('users', $users);      
     }
 
@@ -63,11 +64,19 @@ class AdminMainController extends Controller
         return view('admin.pages.send-proposal')->with('id',$request->id);
     }
 
+    public function view_sent_proposal(Request $request){
+        $proposal =  \DB::table('quote_proposal')->where('quote_id', $request->id)->first();
+        $proposal_file = \DB::table('quote_proposal_file')->where('proposal_id', $proposal->id)->get();
+
+        //echo "<pre>"; print_r($proposal_file); die();
+        return view('admin.pages.view-proposal')->with('id',$request->id)->with('proposal',$proposal)->with('proposal_file',$proposal_file);   
+    }
+
     public function quote_reply(Request $request){
         //echo $request->id;
         try{
 
-            $id = \DB::table('quote_proposal')->insertGetId(['quote_id'=>$request->id,'title'=>$request->title,'description'=>$request->description,'price'=>$request->price,'date'=>$request->date]);
+            $id = \DB::table('quote_proposal')->insertGetId(['quote_id'=>$request->id,'title'=>$request->title,'description'=>$request->description,'price'=>$request->price,'date'=>$request->date,'coupon'=>$request->coupon]);
             
             if($request->hasFile('attachment')){
                 $files = $request->file('attachment');
@@ -78,7 +87,48 @@ class AdminMainController extends Controller
                 }
             }
 
+            $quote_proposal = \DB::table('quote_proposal')->where('id',$id)->first();
+            $quote = \DB::table('quote')->where('id',$quote_proposal->quote_id)->first();
+            $new_user = \DB::table('users')->where('email',$quote->email)->first();
+            $title = 'Ejobspros - Your Quote Reply';
+
+            if($new_user){
+                \Mail::to($new_user)->send(new CustomerQuoteUpdate($quote,$new_user,$quote_proposal,$title));   
+            }
+
             return redirect()->back()->with('message', 'Proposal send successfully');      
+        }catch(\Exceptions $e){
+            return redirect()->back()->with('message',$e->getMessage());     
+        }
+    }
+
+    public function update_quote_reply(Request $request){
+        //echo $request->id;
+        try{
+
+            \DB::table('quote_proposal')->where('id',$request->id)->update(['title'=>$request->title,'description'=>$request->description,'price'=>$request->price,'date'=>$request->date,'coupon'=>$request->coupon]);
+            
+            if($request->hasFile('attachment')){
+                \DB::table('quote_proposal_file')->where(['proposal_id'=>$request->id])->delete();
+
+                $files = $request->file('attachment');
+                foreach ($files as $file) {                    
+                    $name = time().'.'.$file->extension();
+                    $file->move(base_path() . '/storage/app/public', $name);
+                    \DB::table('quote_proposal_file')->insert(['proposal_id'=> $request->id,'file'=>$name]);
+                }
+            }
+
+            $quote_proposal = \DB::table('quote_proposal')->where('id',$request->id)->first();
+            $quote = \DB::table('quote')->where('id',$quote_proposal->quote_id)->first();
+            $new_user = \DB::table('users')->where('email',$quote->email)->first();
+            $title = 'Ejobspros New Updates In Proposal';
+
+            if($new_user){
+                \Mail::to($new_user)->send(new CustomerQuoteUpdate($quote,$new_user,$quote_proposal,$title));   
+            }
+
+            return redirect()->back()->with('message', 'Proposal updated successfully');      
         }catch(\Exceptions $e){
             return redirect()->back()->with('message',$e->getMessage());     
         }
