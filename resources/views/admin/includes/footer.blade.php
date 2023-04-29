@@ -56,9 +56,8 @@
       "searching": false,
       "ordering": true,
       "info": true,
-      "autoWidth": false,
-      "responsive": true,
-      "pageLength": 10
+      "pageLength": 10,
+      "scrollX": true
     });
   });
 </script>
