@@ -19,7 +19,7 @@
               <div class="card-body" style="padding:1.25rem">
                 <div class="container" style="min-height:500px;">
          <div class=''></div>
-         <div class="container">
+         <div class="container" style="padding-left: 160px;">
             <div class="chat">
                <div id="frame">
                   <div id="sidepanel">
