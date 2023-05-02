@@ -25,7 +25,7 @@ class AdminMainController extends Controller
     {
         $loggedUser = User::where('id',auth()->user()->id)->get();
         $chatUsers = User::where('id','!=',auth()->user()->id)->orderBy('id', 'DESC')->get();
-        //echo "<pre>"; print_r($chatUsers); die;
+        //echo "<pre>"; echo count($chatUsers); print_r($chatUsers); die;
         $senderUserid = '';
         $recieverUserid = '';
         $output = '';

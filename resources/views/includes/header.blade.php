@@ -55,8 +55,14 @@
                   <li><a class="dropdown-item" href="{{url('plan/list')}}">buy plan</a></li>
                 </ul>
               </li>
-              @auth                
-                  <a class="login" href="{{url('dashboard/customer')}}"><i class="fa-solid fa-user"></i>Dashboard</a>
+              @auth       
+                  
+                  @if(Auth::user()->role != "admin"){         
+                    <a class="login" href="{{url('dashboard/customer')}}"><i class="fa-solid fa-user"></i>Dashboard</a>
+                  @else
+                    <a class="login" href="{{url('dashboard/admin')}}"><i class="fa-solid fa-user"></i>Dashboard</a>
+                  @endif
+
               @endauth
 
               @guest
