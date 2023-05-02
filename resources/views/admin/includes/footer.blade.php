@@ -60,6 +60,17 @@
       "searching": true,
       "ordering": true,
       "info": true,
+      "pageLength":5
+    });
+  });
+
+  $(function () {    
+    $('#example3').DataTable({
+      "paging": true,
+      "lengthChange": true,
+      "searching": true,
+      "ordering": true,
+      "info": true,
       "pageLength":5,
       "scrollX": true
     });
