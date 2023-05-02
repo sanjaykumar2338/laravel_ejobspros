@@ -9,6 +9,7 @@ use App\Models\Contactus;
 use Illuminate\Http\Request;
 use Auth;
 use App\Mail\CustomerQuoteUpdate;
+use Stripe;
 
 class AdminMainController extends Controller
 {
@@ -16,6 +17,16 @@ class AdminMainController extends Controller
     private $chatUsersTable = 'users';
     private $chatLoginDetailsTable = 'chat_login_details';
     
+    public function __construct(){
+        //Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+        //$invoices = \Stripe\Invoice::all(array("customer" => "cus_NfsPF5d0dqFzIR"));
+        //foreach ($invoices->autoPagingIterator() as $invoice) {
+          //echo "<pre>"; print_r($invoice); die;
+          //echo $invoice->id . " - " . $invoice->amount_due . " - " . $invoice->status . "\n";
+        //}      
+    }
+
+
     public function index()
     {
         return view('admin.pages.main');
