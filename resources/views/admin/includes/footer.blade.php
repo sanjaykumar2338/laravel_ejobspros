@@ -65,5 +65,20 @@
     });
   });
 </script>
+<script>
+$("#search_fld").on("keyup", function() {
+  var value = $(this).val().toLowerCase().trim();
+  var v = value.split("%");
+  $(".list li").each(function(j,k) {
+    var s = true;
+    $.each(v, function(i, x) {
+      if (s) {
+        s = $(k).text().toLowerCase().indexOf(x) > -1;
+      }
+    });
+    $(this).toggle(s);
+  });
+});
+</script>
 </body>
 </html>

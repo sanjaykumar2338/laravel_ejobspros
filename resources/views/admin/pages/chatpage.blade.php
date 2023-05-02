@@ -48,13 +48,13 @@
                            echo '</div>';
                            ?>
                      </div>
-                     <div id="search" style="display:none;">
+                     <div id="search">
                         <label for=""><i class="fa fa-search" aria-hidden="true"></i></label>
-                        <input type="text" placeholder="Search contacts..." />               
+                        <input type="text" id="search_fld" name="search_fld" placeholder="Search contacts by name, email..." />               
                      </div>
                      <div id="contacts">  
                         <?php
-                           echo '<ul>';               
+                           echo '<ul class="list">';               
                            foreach ($chatUsers as $user) {
                               //echo $user->id; die();
                               $image = '';
@@ -73,7 +73,7 @@
                               echo '<span id="status_'.$user->id.'" class="contact-status '.$status.'"></span>';
                               echo '<img src="'.$image.'" alt="" />';
                               echo '<div class="meta">';
-                              echo '<p class="name">'.$user['name'].'<span id="unread_'.$user['userid'].'" class="unread">'.\App\Http\Controllers\ChatController::getUnreadMessageCount($user['userid'], auth()->user()->id).'</span></p>';
+                              echo '<p class="name">'.$user['name'].'<span style="display:none">'.$user['email'].'</span><span id="unread_'.$user['userid'].'" class="unread">'.\App\Http\Controllers\ChatController::getUnreadMessageCount($user['userid'], auth()->user()->id).'</span></p>';
                               echo '<p class="preview"><span id="isTyping_'.$user->id.'" class="isTyping"></span></p>';
                               echo '</div>';
                               echo '</div>';
@@ -134,5 +134,7 @@
   <aside class="control-sidebar control-sidebar-dark">
   </aside>  
 </div>
+
+
 
 @stop

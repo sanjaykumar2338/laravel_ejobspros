@@ -42,6 +42,11 @@ $(document).ready(function(){
 		};
 		$("#status-options").removeClass("active");
 	});	
+
+	$(document).ready(function(){
+		$(".list li").first().click();
+	});
+	
 	$(document).on('click', '.contact', function(){		
 		$('.contact').removeClass('active');
 		$(this).addClass('active');

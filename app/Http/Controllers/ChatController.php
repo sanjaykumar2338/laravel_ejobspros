@@ -179,7 +179,8 @@ class ChatController extends Controller
 
 			$image = url('/asset/chat/userpics').'/'.$user['avatar'];
 			$userSection = '<img src="'.$image.'" alt="" />
-				<p>'.$user['username'].'</p>
+				<p>'.$user['name'].' <em style="font-weight: 600;
+    font-size: 12px;">('.$user['email'].')</em>'.'</p>
 				<div class="social-media">
 					<i class="fa fa-facebook" aria-hidden="true"></i>
 					<i class="fa fa-twitter" aria-hidden="true"></i>
