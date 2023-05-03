@@ -109,6 +109,7 @@ Route::group(['namespace' => 'App\Http\Controllers','middleware' => ['LoginCheck
     Route::get('/dashboard/customer', 'CustomerController@index');
     Route::get('/dashboard/customer/my-request', 'CustomerController@my_request');
     Route::get('/dashboard/customer/subscription-list', 'CustomerController@subscription_list');
+    Route::get('/dashboard/customer/invoice-list/{id}', 'CustomerController@invoice_list');
     
     Route::get('/dashboard/customer/quote/proposal/{id}', 'CustomerController@quote_proposal');
     Route::get('/dashboard/customer/quote/proposal/documentlist/{id}', 'CustomerController@documentlist');

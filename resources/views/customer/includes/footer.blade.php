@@ -47,16 +47,20 @@
 <script src="{{url('/asset/customer/plugins/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
 
 <script src="{{url('/asset/chat/js/chat.js')}}?v={{time()}}"></script> 
-
+<style type="text/css">
+  #example2_filter{
+    float: right;
+  }
+</style>
 <script>
   $(function () {    
     $('#example2').DataTable({
       "paging": true,
-      "lengthChange": false,
+      "lengthChange": true,
       "searching": true,
       "ordering": true,
       "info": true,
-      "autoWidth": false,
+      "autoWidth": true,
       "responsive": true,
       "pageLength": 8
     });

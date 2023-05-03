@@ -9,9 +9,19 @@ use App\Models\Plan;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Auth;
+use Stripe;
 
 class CustomerController extends Controller
 {
+    public function __construct(){
+        Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+        //$invoices = \Stripe\Invoice::all(array("customer" => "cus_NfsPF5d0dqFzIR"));
+        //foreach ($invoices->autoPagingIterator() as $invoice) {
+          //echo "<pre>"; print_r($invoice); die;
+          //echo $invoice->id . " - " . $invoice->amount_due . " - " . $invoice->status . "\n";
+        //}      
+    }
+
     public function index()
     {
         return view('customer.pages.main');
@@ -41,6 +51,19 @@ class CustomerController extends Controller
         //echo auth()->user()->id;
         $subscription_list = \DB::table('subscriptions')->where('user_id',auth()->user()->id)->get();
         return view('customer.pages.subscription-list')->with('subscription_list',$subscription_list);
+    }
+
+    public function invoice_list(Request $request)
+    {
+        $id = $request->id;
+        $subscription = \DB::table('subscriptions')->where('id',$id)->first();
+        $invoices = '';
+
+        if($subscription && $subscription->stripe_id){
+            $invoices = \Stripe\Invoice::all(array("subscription" => $subscription->stripe_id));
+        }
+
+        return view('customer.pages.invoicelist')->with('invoices',$invoices);
     }
 
     public function quote_proposal(Request $request){
