@@ -48,7 +48,7 @@
 
 <script src="{{url('/asset/chat/js/chat.js')}}?v={{time()}}"></script> 
 <style type="text/css">
-  #example2_filter{
+  #example2_filter,#example3_filter{
     float: right;
   }
 </style>
@@ -60,7 +60,7 @@
       "searching": true,
       "ordering": true,
       "info": true,
-      "pageLength":5
+      "pageLength":8
     });
   });
 

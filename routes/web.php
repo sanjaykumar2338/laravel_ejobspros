@@ -124,6 +124,8 @@ Route::group(['namespace' => 'App\Http\Controllers','middleware' => ['LoginCheck
 Route::group(['namespace' => 'App\Http\Controllers','middleware' => ['IsAdmin']], function(){ 
     Route::get('/dashboard/admin', 'AdminMainController@index');
     Route::get('/dashboard/admin/users/list', 'AdminMainController@all_users');
+    Route::get('/dashboard/admin/view-subscription/{id}', 'AdminMainController@user_all_subscriptions');
+
     Route::get('/dashboard/admin/users/subscription/list', 'AdminMainController@subscription_list');
     Route::get('/dashboard/admin/quotes', 'AdminMainController@all_quotes');
     Route::get('/dashboard/admin/contactus/list', 'AdminMainController@contactus_list');

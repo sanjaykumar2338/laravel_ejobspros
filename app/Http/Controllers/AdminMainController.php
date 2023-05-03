@@ -18,7 +18,7 @@ class AdminMainController extends Controller
     private $chatLoginDetailsTable = 'chat_login_details';
     
     public function __construct(){
-        //Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+        Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
         //$invoices = \Stripe\Invoice::all(array("customer" => "cus_NfsPF5d0dqFzIR"));
         //foreach ($invoices->autoPagingIterator() as $invoice) {
           //echo "<pre>"; print_r($invoice); die;
@@ -48,6 +48,18 @@ class AdminMainController extends Controller
     {
         $users = User::where('email','!=','admin@gmail.com')->orderBy('id', 'DESC')->get();
         return view('admin.pages.users-all')->with('users', $users);
+    }
+
+    public function user_all_subscriptions(Request $request){
+        $user = User::find($request->id);
+        $invoices = '';
+
+        if($user && $user->stripe_id){
+            $invoices = \Stripe\Invoice::all(array("customer" => $user->stripe_id));   
+        }
+        
+        //echo "<pre>"; print_r($invoices); die();        
+        return view('admin.pages.view-subscription')->with('user', $user)->with('invoices', $invoices);
     }
 
     public function subscription_list(){
