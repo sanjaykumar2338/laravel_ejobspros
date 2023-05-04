@@ -31,7 +31,7 @@ class PurchasePlanController extends Controller
         $active_plan = \DB::table('subscriptions')->where('user_id',$user_id)->where('stripe_status','active')->count();
         if($active_plan > 0){
             $active_plan = \DB::table('subscriptions')->where('user_id',$user_id)->where('stripe_status','active')->first();
-            //return redirect()->back()->with('message', 'You already have a plan '.$active_plan->name.' You can manage your plan from customer dashboard.');  
+            return redirect()->back()->with('message', 'You already have a plan '.$active_plan->name.' You can manage your plan from customer dashboard.');  
         }
 
         $plan = Plan::find($request->id);
@@ -80,7 +80,7 @@ class PurchasePlanController extends Controller
             
             $subscription = Subscription::where('user_id',$user->id)->orderBy('created_at','DESC')->first();
             //echo "<pre>"; print_r($subscription); die;
-            
+
 
             if ($subscription) {
                 $user->current_subscription_id = $subscription->stripe_id;
