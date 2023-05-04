@@ -82,7 +82,7 @@ class PurchasePlanController extends Controller
             //echo "<pre>"; print_r($subscription); die;
 
 
-            if ($subscription) {
+            if (false) {
                 $new_user = User::find($user->id);
                 $new_user->current_subscription_id = $subscription->stripe_id;
                 $new_user->save();
