@@ -15,4 +15,8 @@ class SitemapController extends Controller
             'post' => $post,
         ])->header('Content-Type', 'text/xml');
     }
+
+    public function webhook_stripe(Request $request){
+        echo "test";
+    }
 }

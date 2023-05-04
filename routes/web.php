@@ -101,6 +101,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
 
     Route::get('/sitemap.xml', 'SitemapController@index')->name('sitemap.index');
+    Route::get('/webhook_stripe', 'SitemapController@webhook_stripe')->name('webhook_stripe');
 });
 
 
