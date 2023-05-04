@@ -83,8 +83,9 @@ class PurchasePlanController extends Controller
 
 
             if ($subscription) {
-                $user->current_subscription_id = $subscription->stripe_id;
-                $user->save();
+                $new_user = User::find($user->id);
+                $new_user->current_subscription_id = $subscription->stripe_id;
+                $new_user->save();
 
                 $today = date("Y-m-d H:i:s");
                 $date = date('Y-m-d H:i:s', strtotime('+1 month', strtotime($today)));  
