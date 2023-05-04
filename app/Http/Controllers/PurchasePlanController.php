@@ -80,6 +80,7 @@ class PurchasePlanController extends Controller
             
             $subscription = Subscription::where('user_id',$user->id)->orderBy('created_at','DESC')->first();
             //echo "<pre>"; print_r($subscription); die;
+            
 
             if ($subscription) {
                 $user->current_subscription_id = $subscription->stripe_id;
@@ -93,7 +94,7 @@ class PurchasePlanController extends Controller
                 $subscription->sub_end_at = $date;
                 $subscription->save();
             }
-            
+
             Mail::to($user)->send(new PlanPurchased($plan,$user));
             return back()->with('success','Subscription is completed.');
         } catch (Exception $e) {

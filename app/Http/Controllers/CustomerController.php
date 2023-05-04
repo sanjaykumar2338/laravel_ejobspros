@@ -52,6 +52,7 @@ class CustomerController extends Controller
         $subscription_list = \DB::table('subscriptions')->where('user_id',auth()->user()->id)->get();
         return view('customer.pages.subscription-list')->with('subscription_list',$subscription_list);
     }
+    
 
     public function invoice_list(Request $request)
     {

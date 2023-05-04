@@ -20,6 +20,7 @@ class SitemapController extends Controller
     public function webhook_stripe(Request $request){
         $payload = $request->all();
         $event = null;
+        
 
         try {
             $event = \Stripe\Event::constructFrom($payload);
