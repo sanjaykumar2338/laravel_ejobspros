@@ -57,7 +57,7 @@
               </li>
               @auth       
                   
-                  @if(Auth::user()->role != "admin"){         
+                  @if(Auth::user()->role != "admin")        
                     <a class="login" href="{{url('dashboard/customer')}}"><i class="fa-solid fa-user"></i>Dashboard</a>
                   @else
                     <a class="login" href="{{url('dashboard/admin')}}"><i class="fa-solid fa-user"></i>Dashboard</a>
