@@ -98,10 +98,12 @@ class PurchasePlanController extends Controller
 
             Mail::to($user)->send(new PlanPurchased($plan,$user));
             //return back()->with('success','Subscription is completed.');
-            return redirect('home')->with('success','Subscription is completed.');
+            //return redirect('home')->with('success','Subscription is completed.');
         } catch (Exception $e) {
-            return back()->with('success',$e->getMessage());
+            //return back()->with('success',$e->getMessage());
         }   
+
+        echo "test"; 
     }
 
     public function cancel_subscription(Request $request)
