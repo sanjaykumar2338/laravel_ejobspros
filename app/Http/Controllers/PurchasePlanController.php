@@ -76,27 +76,7 @@ class PurchasePlanController extends Controller
                     'email' => $user->email,
                 ]);   
             }
-
             
-            $subscription = Subscription::where('user_id',$user->id)->orderBy('created_at','DESC')->first();
-            //echo "<pre>"; print_r($subscription); die;
-
-
-            if ($subscription) {
-                $new_user = User::find($user->id);
-                $new_user->current_subscription_id = $subscription->stripe_id;
-                $new_user->save();
-
-                $today = date("Y-m-d H:i:s");
-                $date = date('Y-m-d H:i:s', strtotime('+1 month', strtotime($today)));  
-
-                $subscription->stripe_status = 'active';
-                $subscription->sub_start_at = date('Y-m-d H:i:s');
-                $subscription->sub_end_at = $date;
-                $subscription->save();
-            }
-
-            //Mail::to($user)->send(new PlanPurchased($plan,$user));
             return back()->with('success','Subscription is completed.');
         } catch (Exception $e) {
             return back()->with('success',$e->getMessage());
