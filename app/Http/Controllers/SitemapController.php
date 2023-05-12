@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Subscription;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Models\Quote;
 
 class SitemapController extends Controller
 {
@@ -18,7 +19,17 @@ class SitemapController extends Controller
     }
 
     public function movetolead(Request $request){
-        echo "test";
+        $quote = New Quote;
+        $quote->first_name = $request->name;
+        $quote->email = $request->email;
+        $quote->phone_number = $request->phonenumber;
+        $quote->website_url = $request->website;
+        $quote->category = @explode(',',$request->tags)[0];
+        $quote->sub_category = @explode(',',$request->tags)[1];
+        $quote->location = $request->location;
+        $quote->save();
+
+        return response()->json($quote)->header('Content-Type', 'application/x-www-form-urlencoded');
     }
 
     public function webhook_stripe(Request $request){
