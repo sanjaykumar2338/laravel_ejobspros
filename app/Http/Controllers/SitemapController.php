@@ -17,6 +17,10 @@ class SitemapController extends Controller
         ])->header('Content-Type', 'text/xml');
     }
 
+    public function movetolead(Request $request){
+        echo "test";
+    }
+
     public function webhook_stripe(Request $request){
         $payload = $request->all();
         $event = null;
