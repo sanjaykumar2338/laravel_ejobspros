@@ -232,6 +232,16 @@ class GetQuoteController extends Controller
             }
 
             if($quote->save()){
+                $contactus_email = new \stdClass();
+                $contactus_email->email = 'contact@ejobs4pros.com';
+                Mail::to($contactus_email)->send(new Query($quote));
+
+                $contactus_email->email = 'dev@ejobs4pros.com';
+                Mail::to($contactus_email)->send(new Query($quote));
+
+                $contactus_email->email = 'gabriel@ejobs4pros.com';
+                Mail::to($contactus_email)->send(new Query($quote));
+
                 $user = User::where('role','admin')->first();
                 Mail::to($user)->send(new Query($quote));
                 $rec = User::where('email',$request->email)->count();
@@ -289,6 +299,17 @@ class GetQuoteController extends Controller
                 $user = User::where('role','admin')->first();
                 $type='Appointment';
 
+                $contactus_email = new \stdClass();
+                $contactus_email->email = 'contact@ejobs4pros.com';
+                Mail::to($contactus_email)->send(new AdminMessage($objt,$type,$objt));
+
+                $contactus_email->email = 'dev@ejobs4pros.com';
+                Mail::to($contactus_email)->send(new AdminMessage($objt,$type,$objt));
+
+                $contactus_email->email = 'gabriel@ejobs4pros.com';
+                Mail::to($contactus_email)->send(new AdminMessage($objt,$type,$objt));
+
+              
                 Mail::to($user)->send(new AdminMessage($objt,$type,$objt));
                 Mail::to($objt)->send(new Thankyou($objt,$type));
                 
@@ -323,8 +344,19 @@ class GetQuoteController extends Controller
                 $user = User::where('role','admin')->first();
                 $type='contactus';
 
+                $contactus_email = new \stdClass();
+                $contactus_email->email = 'contact@ejobs4pros.com';
+                Mail::to($contactus_email)->send(new ContactsMail($objt));
+
+                $contactus_email->email = 'dev@ejobs4pros.com';
+                Mail::to($contactus_email)->send(new ContactsMail($objt,$type,$objt));
+
+                $contactus_email->email = 'gabriel@ejobs4pros.com';
+                Mail::to($contactus_email)->send(new ContactsMail($objt,$type,$objt));
+
                 Mail::to($objt)->send(new Thankyou($objt,$type));
                 Mail::to($user)->send(new ContactsMail($objt));
+                
                 return redirect()->back()->with('message', 'We will contact you soon, Your welcome !');   
             }
 
