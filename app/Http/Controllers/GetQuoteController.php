@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\Query;
 use App\Mail\CustomerQuote;
 use App\Mail\QuoteReply;
+use App\Mail\Thankyou;
+use App\Mail\AdminMessage;
+use App\Mail\Contactus as ContactsMail;
 
 class GetQuoteController extends Controller
 {
@@ -283,6 +286,12 @@ class GetQuoteController extends Controller
             $objt->user_id = Auth::id();
 
             if($objt->save()){
+                $user = User::where('role','admin')->first();
+                $type='Appointment';
+
+                Mail::to($user)->send(new AdminMessage($objt,$type,$objt));
+                Mail::to($objt)->send(new Thankyou($objt,$type));
+                
                 return redirect()->back()->with('message', 'Appointment Schedule Successfully!');   
             }
 
@@ -311,6 +320,11 @@ class GetQuoteController extends Controller
             $objt->user_id = Auth::id();
 
             if($objt->save()){
+                $user = User::where('role','admin')->first();
+                $type='contactus';
+
+                Mail::to($objt)->send(new Thankyou($objt,$type));
+                Mail::to($user)->send(new ContactsMail($objt));
                 return redirect()->back()->with('message', 'We will contact you soon, Your welcome !');   
             }
 
