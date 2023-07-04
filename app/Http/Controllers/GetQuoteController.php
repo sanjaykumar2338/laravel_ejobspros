@@ -242,6 +242,9 @@ class GetQuoteController extends Controller
                 $contactus_email->email = 'gabriel@ejobs4pros.com';
                 Mail::to($contactus_email)->send(new Query($quote));
 
+                $contactus_email->email = 'ejobspros@gmail.com';
+                Mail::to($contactus_email)->send(new Query($quote));               
+
                 $user = User::where('role','admin')->first();
                 Mail::to($user)->send(new Query($quote));
                 $rec = User::where('email',$request->email)->count();
@@ -309,6 +312,8 @@ class GetQuoteController extends Controller
                 $contactus_email->email = 'gabriel@ejobs4pros.com';
                 Mail::to($contactus_email)->send(new AdminMessage($objt,$type,$objt));
 
+                $contactus_email->email = 'ejobspros@gmail.com';
+                Mail::to($contactus_email)->send(new AdminMessage($objt,$type,$objt)); 
               
                 Mail::to($user)->send(new AdminMessage($objt,$type,$objt));
                 Mail::to($objt)->send(new Thankyou($objt,$type));
@@ -349,10 +354,13 @@ class GetQuoteController extends Controller
                 Mail::to($contactus_email)->send(new ContactsMail($objt));
 
                 $contactus_email->email = 'dev@ejobs4pros.com';
-                Mail::to($contactus_email)->send(new ContactsMail($objt,$type,$objt));
+                Mail::to($contactus_email)->send(new ContactsMail($objt));
 
                 $contactus_email->email = 'gabriel@ejobs4pros.com';
-                Mail::to($contactus_email)->send(new ContactsMail($objt,$type,$objt));
+                Mail::to($contactus_email)->send(new ContactsMail($objt));
+
+                $contactus_email->email = 'ejobspros@gmail.com';
+                Mail::to($contactus_email)->send(new ContactsMail($objt)); 
 
                 Mail::to($objt)->send(new Thankyou($objt,$type));
                 Mail::to($user)->send(new ContactsMail($objt));
