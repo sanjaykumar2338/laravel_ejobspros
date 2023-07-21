@@ -1,14 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
    <head>
-      <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-      <meta content="width=device-width, initial-scale=1" name="viewport">
-      <title>ejobs4pros</title>
-      <!-- Designed by https://github.com/kaytcat --><!-- Robot header image designed by Freepik.com -->
       <style type="text/css">
-         @import url(https://fonts.googleapis.com/css?family=Nunito);
-         /* Take care of image borders and formatting */
          img {
          max-width: 600px;
          outline: none;
