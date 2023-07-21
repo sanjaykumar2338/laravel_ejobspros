@@ -92,7 +92,7 @@
                         <tbody style="margin-top: 15px;">
                            <tr class="">
                               <td class="">
-                                 <img alt="ejobs4pros" class="" height="" src="{{url('/asset/images/logo.png')}}" width="">
+                                 <img alt="{{url('/')}}" class="" height="" src="{{url('/asset/images/logo.png')}}" width="">
                               </td>
                            </tr>
                            <tr class="">
