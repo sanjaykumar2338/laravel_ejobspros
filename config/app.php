@@ -191,7 +191,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-        // ...
+        'ReCaptcha' => ReCaptcha\ReCaptcha::class
     ])->toArray(),
 
 ];

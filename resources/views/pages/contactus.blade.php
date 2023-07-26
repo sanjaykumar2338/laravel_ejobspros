@@ -5,6 +5,8 @@
        <div class="alert alert-info">{{ Session::get('message') }}</div>
     @endif
     
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <section class="contact-banner d-flex align-items-center">
         <div class="container">
             <div class="col-lg-12 col-md-12 col-sm-12 z-3">
@@ -96,6 +98,9 @@
                           <input type="url"placeholder="website url" name="website_url">
                         </div>
                       </div>
+
+                      <div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
+
                       <button class="s-b mt-3"> send</button>
                     </form>
                   </div>
@@ -132,8 +137,6 @@
 
     <!-- section close  -->
     <section class="c-f-1">
-      @include('includes.map')q
+      @include('includes.map')
     </section>
-    <!-- section close  -->
-    <!-- section close  -->
 @stop
