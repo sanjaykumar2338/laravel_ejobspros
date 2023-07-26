@@ -337,7 +337,7 @@ class GetQuoteController extends Controller
 
         if (!$response->isSuccess()) {
             // reCAPTCHA validation failed, handle the error
-            return redirect()->back()->with('error', 'reCAPTCHA validation failed.');
+            return redirect()->back()->with('message', 'reCAPTCHA validation failed.');
         }
 
 
