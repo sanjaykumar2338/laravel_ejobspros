@@ -3540,3 +3540,7 @@ padding: 50px 0px 50px 0px;
 
 /* Add a blue color to the author */
 .slideshow-container .author {color: cornflowerblue;}
+
+.section1 .GET-A-QUOTE .form-style-2 {
+    height: 530px !important;
+}
