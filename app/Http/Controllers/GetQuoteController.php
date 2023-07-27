@@ -207,6 +207,18 @@ class GetQuoteController extends Controller
 
     public function post_quote(Request $request)
     {   
+
+        //print_r($request->all()); die;
+        // Verify reCAPTCHA response
+        $recaptcha = new ReCaptcha(env('RECAPTCHA_SECRET_KEY'));
+        $response = $recaptcha->verify($request->input('g-recaptcha-response'), $request->ip());
+
+        if (!$response->isSuccess()) {
+            // reCAPTCHA validation failed, handle the error
+            return redirect()->back()->with('message', 'reCAPTCHA validation failed.');
+        }
+
+        
         try{
             $validated = $request->validate([
                 'your_name' => 'required',
@@ -275,6 +287,17 @@ class GetQuoteController extends Controller
 
     public function post_appointment(Request $request)
     {   
+
+        //print_r($request->all()); die;
+        // Verify reCAPTCHA response
+        $recaptcha = new ReCaptcha(env('RECAPTCHA_SECRET_KEY'));
+        $response = $recaptcha->verify($request->input('g-recaptcha-response'), $request->ip());
+
+        if (!$response->isSuccess()) {
+            // reCAPTCHA validation failed, handle the error
+            return redirect()->back()->with('message', 'reCAPTCHA validation failed.');
+        }
+
         //print_r($request->all()); die;
         try{
             $validated = $request->validate([

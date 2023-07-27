@@ -19,7 +19,7 @@
                         <input type="email" required name="email" placeholder="email">
                         <input type="tel" name="contact_number" placeholder="contact number">
                         <input type="text" name="website_url" placeholder="Website url">
-
+                        <div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
                         <input type="hidden" name="category" value="Seo Resources" id="category">
                         <input type="hidden" name="sub_category" value="Website Speed Up" id="sub_category">
 

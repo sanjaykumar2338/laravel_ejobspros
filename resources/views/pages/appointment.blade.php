@@ -65,7 +65,7 @@
                     <span class="text-danger">{{ $errors->first('place') }}</span>
                 @endif
 	        </div>
-
+	        <div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
 	        <input type="hidden" name="category" value="Free Consultation" id="category">
             <input type="hidden" name="sub_category" value="Quote" id="sub_category">
 	     </div> 

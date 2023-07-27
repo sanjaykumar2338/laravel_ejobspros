@@ -88,7 +88,7 @@
 
                         <input type="hidden" name="category" value="Web Design" id="category">
                         <input type="hidden" name="sub_category" id="sub_category">
-
+                        <div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
                         <button class="" type="submit" name="frm_submit">Send</button>
                         <button class="back_last_btn"> Back</button>
                       </div>
